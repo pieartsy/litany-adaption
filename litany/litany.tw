@@ -1,0 +1,36 @@
+:: Start
+An adaption of [[Litany In Which Certain Things Are Crossed Out | https://www.poetryfoundation.org/poems/48158/litany-in-which-certain-things-are-crossed-out]] by Richard Siken.
+[[Litany]]
+
+:: Litany
+Okay, if you’re so great, you do it—
+<<nobr>>
+@@display:inline-block;text-indent:6em;here’s the pencil, make it work
+<<linkreplace "''.''">>.
+    <<append "#bedwindow" t8n>>If the window is on your right, you are in your own bed.<</append>>
+<</linkreplace>>
+<<linkreplace "''.''">>.
+    <<append "#heartwindow" t8n>>If the window<br>
+@@display:inline-block;text-indent:3em;is over your heart, and it is painted shut, then we are breathing@@<br>
+river water.<</append>>
+<</linkreplace>>
+<<linkreplace "''.''">>.
+    <<append "#jerusalem" t8n>>@@display:inline-block;text-indent:3em;Build me a city and call it
+        @@ <<typesim "Jerusalem.">>
+            <<append "#jerusalemtwo" t8n>>Build me another and call it<br>
+                @@display:inline-block;text-indent:30em;<<fadein 500ms 1250ms>>Jerusalem.<</fadein>>@@
+            <</append>>
+        <</typesim>>
+    <</append>>
+<</linkreplace>>@@
+<</nobr>>
+@@#bedwindow;@@ @@#heartwindow;@@
+@@#jerusalem;@@ @@#jerusalemtwo;@@
+/*
+Okay, if you’re so great, you do it—
+@@display:inline-block;text-indent:6em;here’s the pencil, make it work . . .@@
+If the window is on your right, you are in your own bed. If the window
+@@display:inline-block;text-indent:3em;is over your heart, and it is painted shut, then we are breathing@@
+river water.
+@@display:inline-block;text-indent:3em;Build me a city and call it Jerusalem. Build me another and call it@@
+@@display:inline-block;text-indent:28em;Jerusalem.@@*/
