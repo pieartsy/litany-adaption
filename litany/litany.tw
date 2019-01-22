@@ -1,36 +1,147 @@
 :: Start
 An adaption of [[Litany In Which Certain Things Are Crossed Out | https://www.poetryfoundation.org/poems/48158/litany-in-which-certain-things-are-crossed-out]] by Richard Siken.
-[[Litany]]
+<br>[[Litany1]]
+<br>[[Litany2]]
 
-:: Litany
-Okay, if you’re so great, you do it—
-<<nobr>>
-@@display:inline-block;text-indent:6em;here’s the pencil, make it work
+
+:: Litany1
+<<silently>>
+<<set _noparty to ["I'm sorry I couldn't come to your party."]>>
+<<set _yesparty to ["I'm sorry I came to your party ", "and seduced you ", "and left you bruised and ruined, you poor sad thing."]>>
+<<set _die to "You will be alone always and then you will die.">>
+<<set _dietime to _die.length * 60 + 'ms'>>
+<<set _yespartytime to _yesparty[0].length * 50 + 'ms'>>
+<<set _nopartytime to _noparty[0].length * 50 + 'ms'>>
+<</silently>>
+Every morning the <<linkreplace "maple leaves." t8n>>maple leaves.<br>
+<<indent 8 "Every morning another chapter where the hero shifts">><br>
+<<indent 3 "from one foot to the other. Every morning the same big">><br>
+and little words
+    <<linkreplace "all spelling out desire," t8n>>
+        all spelling out<br>
+        @@#die;display:inline-block;font:courier;text-indent:11em;@@
+        <<timed 500ms>>
+            <em><<typewriter _die "#die">></em>
+        <</timed>><br>
+        <<timed _dietime t8n>>
+            So maybe I wanted to give you something more than a catalog<br>
+            <<indent 2 "of non-definitive acts,">><br>
+            something other than the desperation.<br>
+          /*  @@#dear;display:inline-block;font:courier;text-indent:5em;
+                <<linkreplace "Dear So-and-So,">>Dear So-and-So,
+                        <<typewriter _noparty[0] "#party">>
+                        <<timed _nopartytime t8n>>
+                            <<replace "#dear">>
+                                <<linkreplace "Dear So-and-So, ">>Dear So-and-So,
+                                    <<backspace _noparty "#party" "Display NoParty">>
+                                    <<timed _nopartytime t8n>>
+                                        <<replace "#dear">>
+                                            
+                                        <</replace>>
+                                    <</timed>>
+                                <</linkreplace>>
+                            <</replace>>
+                        <</timed>>
+                    <</linkreplace>>
+            @@*/
+            <<linkreplace "Dear So-and-So, ">>Dear So-and-So,
+                                                <<typewriter _yesparty[0] "#party">>
+                                                    <<timed _yespartytime t8n>>
+                                                        @@text-indent:2em;<<typewriter _yesparty[1] "#party">>@@
+                                                    <<next>>
+                                                        <<typewriter _yesparty[2] "#party">>
+                                                    <</timed>>
+                                            <</linkreplace>>
+            @@#party;
+            @@
+        <</timed>>
+    <</linkreplace>>
+<</linkreplace>>
+
+:: Litany2
+<<silently>><<set _badman to ["you are not", "feeding yourself to a bad man", "against a black sky prickled with small lights."]>>
+<<set _caskets to ["The wooden halls like caskets. These terms from the lower depths."]>>
+<<set _lover to ["Here is the repeated image of the lover destroyed."]>>
+<<set _hands to ["Clumsy hands in a dark room."]>>
+<<set _floorboards to ["There is something", "underneath the floorboards."]>>
+<<set _badmantime to (_badman[0].length + _badman[1].length + _badman[2].length) * 50 + 'ms'>>
+<<set _casketstime to _caskets[0].length * 50 + 'ms'>>
+<<set _lovertime to _lover[0].length * 50 + 'ms'>>
+<<set _handstime to _hands[0].length * 50 + 'ms'>>
+<<set _floorboardstime to (_floorboards[0].length + _floorboards[1].length) * 50 + 'ms'>>
+<</silently>>
+<<indent 5 "I’m not really sure why I do it, but in this version">>
+@@#badman;<<include "Display Badman">>@@
+<<indent 3 "I take it">>
+    <<linkreplace "back.">>back.<br>
+            <<backspace _badman "#badman" "Display Badman">>
+            <<timed _badmantime t8n>>
+            @@#caskets;<<include "Display Caskets">>@@<br>
+            <<indent 12 "I take them">>
+            <<linkreplace "back.">>back.<br>
+                <<backspace _caskets "#caskets" "Display Caskets">>
+                <<timed _casketstime t8n>>
+                @@#lover;<<include "Display Lover">>@@<br>
+                <<indent 24 "Crossed">>
+                    <<linkreplace "out.">>out.<br>
+                        <<backspace _lover "#lover" "Display Lover">>
+                        <<timed _lovertime t8n>>
+                            @@#hands;display:inline-block;text-indent:3em;<<include "Display Hands">>@@
+                            Crossed
+                            <<linkreplace "out.">>out.
+                                <<backspace _hands "#hands" "Display Hands">>
+                                <<timed _handstime t8n>>
+                                    @@#floorboards;<<include "Display Floorboards">>@@<br>
+                                    <<indent 5 "Crossed">>
+                                    <<linkreplace "out.">>out.<br>
+                                            <<backspace _floorboards "#floorboards" "Display Floorboards">>
+                                            <<timed _floorboardstime t8n>>
+                                                And here is the tabernacle<br>
+                                            <<next 1s>>
+                                                    @@#reconstructed;display:inline-block;text-indent:24em;@@
+                                                    <<typewriter "reconstructed." "#reconstructed">>
+                                            <</timed>>
+                                    <</linkreplace>>
+                                <</timed>>
+                            <</linkreplace>>
+                        <</timed>>
+                    <</linkreplace>>
+                <</timed>>
+            <</linkreplace>>
+        <</timed>>
+    <</linkreplace>>
+/*<<indent 5 "I’m not really sure why I do it, but in this version you are not">><br>
+feeding yourself to a bad man<br>
+<<indent 13 "against a black sky prickled with small lights.">><br>
+<<indent 3 "I take it back.">><br>
+The wooden halls like caskets. These terms from the lower depths.<br>
+<<indent 12 "I take them back.">><br>
+Here is the repeated image of the lover destroyed.<br>
+<<indent 24 "Crossed out.">><br>
+<<indent 3 "Clumsy hands in a dark room. Crossed out. There is something">><br>
+underneath the floorboards.<br>
+<<indent 5 "Crossed out. And here is the tabernacle">><br>
+<<indent 24 "reconstructed.">>*/
+
+:: Litany3
+Okay, if you’re so great, you do it—<br>
+<<indent 6 "here’s the pencil, make it work">>
 <<linkreplace "''.''">>.
     <<append "#bedwindow" t8n>>If the window is on your right, you are in your own bed.<</append>>
 <</linkreplace>>
 <<linkreplace "''.''">>.
     <<append "#heartwindow" t8n>>If the window<br>
-@@display:inline-block;text-indent:3em;is over your heart, and it is painted shut, then we are breathing@@<br>
+<<indent 3 "is over your heart, and it is painted shut, then we are breathing">><br>
 river water.<</append>>
 <</linkreplace>>
 <<linkreplace "''.''">>.
-    <<append "#jerusalem" t8n>>@@display:inline-block;text-indent:3em;Build me a city and call it
-        @@ <<typesim "Jerusalem.">>
+    <<append "#jerusalem" t8n>><<indent 3 "Build me a city and call it">>
+        <<typesim "Jerusalem.">>
             <<append "#jerusalemtwo" t8n>>Build me another and call it<br>
-                @@display:inline-block;text-indent:30em;<<fadein 500ms 1250ms>>Jerusalem.<</fadein>>@@
+                <<fadein 500ms 1250ms>><<indent 30 "Jerusalem.">><</fadein>>
             <</append>>
         <</typesim>>
     <</append>>
-<</linkreplace>>@@
-<</nobr>>
-@@#bedwindow;@@ @@#heartwindow;@@
+<</linkreplace>>
+@@#bedwindow;@@ @@#heartwindow;@@<br>
 @@#jerusalem;@@ @@#jerusalemtwo;@@
-/*
-Okay, if you’re so great, you do it—
-@@display:inline-block;text-indent:6em;here’s the pencil, make it work . . .@@
-If the window is on your right, you are in your own bed. If the window
-@@display:inline-block;text-indent:3em;is over your heart, and it is painted shut, then we are breathing@@
-river water.
-@@display:inline-block;text-indent:3em;Build me a city and call it Jerusalem. Build me another and call it@@
-@@display:inline-block;text-indent:28em;Jerusalem.@@*/

@@ -1,0 +1,3 @@
+::Config [script]
+Config.passages.nobr = true;
+//UIBar.destroy();

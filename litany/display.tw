@@ -1,0 +1,41 @@
+:: Display Badman
+<<if _badman.length > 0>>
+    _badman[0]
+    <br>
+    <<if _badman.length > 1>>
+        _badman[1]
+        <br>
+        <<if _badman.length > 2>>
+            <<indent 13 _badman[2]>>
+        <</if>>
+    <</if>>
+<</if>>
+
+:: Display Caskets
+<<if _caskets.length > 0>>
+    _caskets[0]
+<</if>>
+
+:: Display Lover
+<<if _lover.length > 0>>
+    _lover[0]
+<</if>>
+
+:: Display Hands
+<<if _hands.length > 0>>
+    _hands[0]
+<</if>>
+
+:: Display Floorboards
+<<if _floorboards.length > 0>>
+    _floorboards[0]
+    <br>
+    <<if _floorboards.length > 1>>
+        _floorboards[1]
+    <</if>>
+<</if>>
+
+:: Display NoParty
+<<if _noparty.length > 0>>
+    _noparty[0]
+<</if>>

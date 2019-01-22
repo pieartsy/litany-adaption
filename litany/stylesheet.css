@@ -1,7 +1,7 @@
 /* Typed.js text (and cursor) styling. */
 .typed, .typed-cursor {
-	font-family: monospace, monospace;
-	color: lime;
+	font-family: 'Courier New', Courier, monospace, monospace;
+	color: rgb(255, 255, 255);
 }
 
 /* Typed.js animated cursor styling. */
