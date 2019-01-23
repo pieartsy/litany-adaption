@@ -27,9 +27,9 @@
                         <<backspace _lover "#lover" "Display Lover">>
                         <<timed _lovertime t8n>>
                             @@#hands;display:inline-block;text-indent:2em;<<include "Display Hands">>@@
-                            @@#crossed;Crossed @@
+                            Crossed
                             <<linkreplace "out.">>out.
-                                <<backspace _hands "#hands" "Display Hands" "#crossed">>
+                                <<backspace _hands "#hands" "Display Hands" "stay">>
                                 <<timed _handstime t8n>>
                                     @@#floorboards;<<include "Display Floorboards">>@@<br>
                                     <<indent 5 "Crossed">>
@@ -41,7 +41,7 @@
                                                 @@#reconstructed;display:inline-block;text-indent:24em;@@
                                                 <<typewriter "reconstructed." "#reconstructed">>
                                             <<next 1350ms>>
-                                                <br><br>[[Next | Litany3]]
+                                                <br><br>[[Next | Jerusalem]]
                                             <</timed>>
                                     <</linkreplace>>
                                 <</timed>>

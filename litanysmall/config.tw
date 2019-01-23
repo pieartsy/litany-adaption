@@ -1,0 +1,2 @@
+::Config [script]
+Config.passages.nobr = true;

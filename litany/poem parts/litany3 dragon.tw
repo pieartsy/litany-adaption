@@ -1,7 +1,7 @@
 ::Dragon
 I can tell already you think I’m the
 <<linkreplace "@@.dragon;dragon,@@" t8n>>@@.dragon;dragon,@@
-    <<removeclass "#that" "hide">>
+    <<addclass "#that" "show">>
     <<replace #notprincess>>
         <<timed 1350ms t8n>>
             I'm not the
@@ -14,24 +14,25 @@ I can tell already you think I’m the
                         I walk through your dreams and invent the future.
                         <<linkreplace "Sure,">>Sure,
                             <<addclass "#boat" "hide">>
-                            <<removeclass "#laterone">>
+                            <<addclass "#laterone" "show">>
                         <<replace "#yes">>
                         <<linkreplace "yes,">>yes,
                             <<addclass "#swallow" "hide">>
-                            <<removeclass "#latertwo" "hide">>
+                            <<addclass "#latertwo" "show">>
                             <<timed 1s>>
                                 <<append "#bricks" t8n>>
-                                    And the part where I push you<br>
-                                    flush against the wall and every part of your body rubs against the bricks,
+                                    <<indent 15 "And the part where I push you<br>
+                                    flush against the wall and every part of your body rubs against the bricks,">>
                                 <</append>>
                             <<next 1s>>
                                 <<append "#toit">>
                                     <<indent 3 "shut up">>
-                                    <<addclass "#bricks" "hide">>
+                                    <<addclass "#bricks" "bricks">>
                                 <</append>>
                             <<next 1s>>
                                 <<append "#toit" t8n>>
                                     <br>I’m getting to it.
+                                    <br>[[Next | Crossed out]]
                                 <</append>>
                             <</timed>>
                         <</linkreplace>>
@@ -40,7 +41,7 @@ I can tell already you think I’m the
                         @@#boat;display:inline-block;text-indent:4em;I sink the boat of love,@@ @@#laterone;.hide;but that comes later.@@ And @@#yes;yes,@@
                         @@#swallow;I swallow<br>
                         glass,@@ @@#latertwo;.hide;but that comes later.@@<br>
-                        @@#bricks;display:inline-block;text-indent:15em;@@<br>
+                        @@#bricks;@@<br>
                     <</linkreplace>>
                 <</append>>
             <</linkreplace>>

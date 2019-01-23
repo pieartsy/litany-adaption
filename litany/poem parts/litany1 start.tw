@@ -2,9 +2,12 @@
 An adaption of [[Litany In Which Certain Things Are Crossed Out | https://www.poetryfoundation.org/poems/48158/litany-in-which-certain-things-are-crossed-out]] by Richard Siken.<br>
 <br>
 [[Begin]].
+/*<br>[[Crossed out]]
+<br>[[Jerusalem]]
+<br>[[test]]*/
 
 :: Begin
-@@#flames;<<silently>>
+<<silently>>
 <<set _noparty to ["I'm sorry I couldn't come to your party."]>>
 <<set _nopartyback to ["ouldn't come to your party."]>>
 <<set _yesparty to ["ame to your party ", "and seduced you ", "\nand left you bruised and ruined, you poor sad thing."]>>
@@ -15,7 +18,7 @@ An adaption of [[Litany In Which Certain Things Are Crossed Out | https://www.po
 <<set _nopartytime to _noparty[0].length * 50 + 'ms'>>
 <<set _nopartybacktime to _nopartyback[0].length * 50 + 'ms'>>
 <</silently>>
-Every morning the <<linkreplace "maple leaves." t8n>>maple leaves.<br>
+@@#begin;Every morning the <<linkreplace "maple leaves." t8n>>maple leaves.<br>
 <<indent 8 "Every morning another chapter where the hero shifts">><br>
 <<indent 3 "from one foot to the other. Every morning the same big">><br>
 and little words
@@ -29,7 +32,7 @@ and little words
             So maybe I wanted to give you something more than a catalog<br>
             <<indent 2 "of non-definitive acts,">><br>
             something other than the desperation.<br>
-            @@#dear;display:inline-block;font-family:courier;text-indent:5em;
+            @@#dear;display:inline-block;font-family:courier new, courier, monospace;text-indent:5em;
                 <<linkreplace "Dear So-and-So,">>Dear So-and-So,
                         <<typewriter _noparty[0] "#party">>
                         <<timed _nopartytime>>
@@ -53,7 +56,10 @@ and little words
                                                 <<next 1s>>
                                                     <<append "#better" t8n>>
                                                         Who <<linkreplace "@@color:rgb(27, 95, 27);wouldn't?@@">>wouldn't?
-                                                                <br><<include "Forest">>
+                                                                <<addclass "#begin" "lighter">>
+                                                                <<append "#forest">><br>
+                                                                <<include "Forest">>
+                                                                <</append>>
                                                                 <<addclass "body" "forest">>
                                                             <</linkreplace>>
                                                     <</append>>
@@ -71,4 +77,5 @@ and little words
     <</linkreplace>>
 <</linkreplace>>
 @@
+@@#forest;@@
 @@#everywhere;@@

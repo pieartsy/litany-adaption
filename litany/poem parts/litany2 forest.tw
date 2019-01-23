@@ -4,7 +4,8 @@ A forest, then. Beautiful trees. And a lady singing.<br>
 What a sweet lady. Sing lady, sing! Of course, she wakes the dragon.<br>
 <<indent 3 "Love always wakes the dragon and">><<linkreplace "@@color:rgb(148, 21, 4);suddenly@@" t8n>><br>
         <<addclass "body" "flames">>
-        <<replace "#flames" t8n>><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><</replace>>
+        <<addclass "#begin" "bricks">>
+        <<addclass "#forest" "bricks">>
         <<replace "#everywhere" t8n>>
-            @@display:inline-block;text-indent:24em;[[flames everywhere. | Dragon]]@@<</replace>>
+            <<indent 24 "[[flames everywhere. | Dragon]]">><</replace>>
 <</linkreplace>>

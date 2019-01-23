@@ -1,0 +1,9 @@
+:: Start
+<<silently>>
+<<set _hands to ["Clumsy hands in a dark room."]>>
+<</silently>>
+ @@#hands;display:inline-block;text-indent:2em;<<include "Display Hands">>@@
+ Crossed 
+ <<linkreplace "out.">>out.
+        <<backspace _hands "#hands" "Display Hands" "stay">>
+<</linkreplace>>

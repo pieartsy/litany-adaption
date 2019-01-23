@@ -6,6 +6,12 @@
 
 <<widget "backspace">>
 /*<<backspace "$badman" "#badman" "Display Badman">>*/
+    <<if $args[3] is "stay">>
+        <<script>>
+            const $el = $(State.variables.args[1]);
+            $el.css('width', $el.width() + 'px');
+        <</script>>
+    <</if>>
     <<set _current to $args[0].length - 1>>    /* Third element of the array. */
     <<repeat 5ms>>
         <<if $args[0].length > 0>>
@@ -22,9 +28,6 @@
                 /* The current phrase is an empty string. */
                 <<run $args[0].deleteAt(_current)>>
                 <<set _current -= 1>>
-            <</if>>
-            <<if $args[3]>>
-                <<prepend $args[3]>>&#8199;<</prepend>>
             <</if>>
         <<else>>
             /* The array has no elements */

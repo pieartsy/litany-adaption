@@ -8,7 +8,7 @@ textarea.macro-typesim {
 	border-right: none;
 	border-top:none;
 	border-radius: 4px;
-	width: 5em;
+	width: 6em;
 	height: 1.2em;
 	overflow: hidden;
 	display: inline-block;
@@ -42,10 +42,11 @@ body {
 	font-family: 'Vollkorn', serif;
 	font-size: 125%;
 }
-
-#story {
-	padding-left: 10em;
-  }
+@media screen and (min-width: 720px) {
+    #story {
+		padding-left: 10em;
+	}
+}
 
 .passage a {
 	color: rgb(145, 63, 1);
@@ -60,17 +61,35 @@ body {
 .forest {
 	background-color: #618856;
 	color: rgb(9, 49, 9);
-	-webkit-transition: background-color 1000ms linear, color 1000ms linear;
-    -ms-transition: background-color 1000ms linear, color 1000ms linear;
-    transition: background-color 1000ms linear, color 1000ms linear;
+	-webkit-transition: background-color 1000ms ease-in, color 1000ms ease-in;
+    -ms-transition: background-color 1000ms ease-in, color 1000ms ease-in;
+    transition: background-color 1000ms ease-in, color 1000ms ease-in;
+}
+
+.lighter {
+	opacity: 0.4;
+	-webkit-transition: opacity 1000ms ease-in;
+    -ms-transition: opacity 1000ms ease-in;
+    transition: opacity 1000ms ease-in;
+}
+
+.hide {
+	opacity: 0;
+	-webkit-transition: opacity 400ms ease-in;
+    -ms-transition: opacity 400ms ease-in;
+    transition: opacity 400ms ease-in;
+}
+
+.show {
+	opacity: 1;
 }
 
 .flames {
 	background-color:#fc9621;
 	color: rgb(148, 21, 4);
-    -webkit-transition: background-color 1000ms linear, color 1000ms linear;
-    -ms-transition: background-color 1000ms linear, color 1000ms linear;
-    transition: background-color 1000ms linear, color 1000ms linear;
+    -webkit-transition: background-color 1000ms ease-in, color 1000ms ease-in;
+    -ms-transition: background-color 1000ms ease-in, color 1000ms ease-in;
+    transition: background-color 1000ms ease-in, color 1000ms ease-in;
 }
 
 .flames a {
@@ -94,6 +113,20 @@ body {
 	color: rgb(255, 90, 68);
 }
 
-.hide {
+/*.hide {
+	visibility:hidden;
+	-webkit-transition: visibility 1000ms ease-in;
+    -ms-transition: visibility 1000ms ease-in;
+    transition: visibility 1000ms ease-in;
+}
+
+.show {
+	visibility: visible;
+	-webkit-transition: visibility 1000ms ease-in;
+    -ms-transition: visibility 1000ms ease-in;
+    transition: visibility 1000ms ease-in;
+}*/
+
+.bricks {
 	visibility:hidden;
 }

@@ -1,0 +1,35 @@
+:: Widgets [widget silently]
+<<widget "backspace">>
+/*<<backspace "$badman" "#badman" "Display Badman">>*/
+    /* the current width of an element in pixels. */
+    <<if $args[3] is "stay">>
+        <<script>>
+            const $el = $(State.variables.args[1]);
+            $el.css('width', $el.width() + 'px');
+        <</script>>
+    <</if>>
+    <<set _current to $args[0].length - 1>>    /* Third element of the array. */
+    <<repeat 5ms>>
+        <<if $args[0].length > 0>>
+            /* Check if the current phrase has content. */
+            <<if $args[0][_current].length > 0>>
+                <<set $args[0][_current] to $args[0][_current].slice(0, -1)>>
+                <<replace $args[1]>>
+                    <<include $args[2]>>
+                <</replace>>
+                /* If all of the current phrase has been deleted. */
+                <<if $args[0][_current].length is 0>>
+                    <<run $args[0].deleteAt(_current)>>
+                    <<set _current -= 1>>
+                <</if>>
+            <<else>>
+                /* The current phrase is an empty string. */
+                <<run $args[0].deleteAt(_current)>>
+                <<set _current -= 1>>
+            <</if>>
+        <<else>>
+            /* The array has no elements */
+            <<stop>>
+        <</if>>
+    <</repeat>>
+<</widget>>

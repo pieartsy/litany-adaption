@@ -24,11 +24,15 @@
 :: Display Caskets
 <<if _caskets.length > 0>>
     _caskets[0]
+<<else>>
+    <br>
 <</if>>
 
 :: Display Lover
 <<if _lover.length > 0>>
     _lover[0]
+<<else>>
+    <br>
 <</if>>
 
 :: Display Hands
@@ -43,6 +47,8 @@
     <<if _floorboards.length > 1>>
         _floorboards[1]
     <</if>>
+<<else>>
+    <br>
 <</if>>
 
 :: Display NoPartyBack
