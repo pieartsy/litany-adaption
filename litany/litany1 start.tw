@@ -1,0 +1,74 @@
+:: Start
+An adaption of [[Litany In Which Certain Things Are Crossed Out | https://www.poetryfoundation.org/poems/48158/litany-in-which-certain-things-are-crossed-out]] by Richard Siken.<br>
+<br>
+[[Begin]].
+
+:: Begin
+@@#flames;<<silently>>
+<<set _noparty to ["I'm sorry I couldn't come to your party."]>>
+<<set _nopartyback to ["ouldn't come to your party."]>>
+<<set _yesparty to ["ame to your party ", "and seduced you ", "\nand left you bruised and ruined, you poor sad thing."]>>
+<<set _die to "You will be alone always and then you will die.">>
+<<set _dietime to _die.length * 70 + 'ms'>>
+<<set _yespartytime to _yesparty[0].length * 50 + 'ms'>>
+<<set _yespartytime1 to _yesparty[1].length * 50 + 'ms'>>
+<<set _nopartytime to _noparty[0].length * 50 + 'ms'>>
+<<set _nopartybacktime to _nopartyback[0].length * 50 + 'ms'>>
+<</silently>>
+Every morning the <<linkreplace "maple leaves." t8n>>maple leaves.<br>
+<<indent 8 "Every morning another chapter where the hero shifts">><br>
+<<indent 3 "from one foot to the other. Every morning the same big">><br>
+and little words
+    <<linkreplace "all spelling out desire," t8n>>
+        all spelling out<br>
+        @@#die;display:inline-block;font-family:courier new, courier, monospace;font-style:italic;text-indent:11em;@@
+        <<timed 500ms>>
+            <em><<typewriter _die "#die">></em>
+        <</timed>><br>
+        <<timed _dietime t8n>>
+            So maybe I wanted to give you something more than a catalog<br>
+            <<indent 2 "of non-definitive acts,">><br>
+            something other than the desperation.<br>
+            @@#dear;display:inline-block;font-family:courier;text-indent:5em;
+                <<linkreplace "Dear So-and-So,">>Dear So-and-So,
+                        <<typewriter _noparty[0] "#party">>
+                        <<timed _nopartytime>>
+                            <<replace "#dear">>
+                                    <<linkreplace "Dear So-and-So, ">>Dear So-and-So,
+                                    <<silently>>
+                                        <<backspace _nopartyback "#party" "Display NoPartyBack">>
+                                        <<timed _nopartybacktime>>
+                                            <<typewriter _yesparty[0] "#party">>
+                                                <<timed _yespartytime>>
+                                                    <<append "#party">>
+                                                        <br>@@#party-inner1;display:inline-block;text-indent:2em;@@
+                                                    <</append>>
+                                                    <<typewriter `_yesparty[1]` "#party-inner1">>
+                                                <<next _yespartytime1>>
+                                                    <<typewriter `_yesparty[2]` "#party">>
+                                                <<next 3s>>    
+                                                    <<append "#better" t8n>>
+                                                        <br><<indent 14 "You want a better story.">>
+                                                    <</append>>
+                                                <<next 1s>>
+                                                    <<append "#better" t8n>>
+                                                        Who <<linkreplace "@@color:rgb(27, 95, 27);wouldn't?@@">>wouldn't?
+                                                                <br><<include "Forest">>
+                                                                <<addclass "body" "forest">>
+                                                            <</linkreplace>>
+                                                    <</append>>
+                                                <</timed>>
+                                        <</timed>>
+                                    <</silently>>
+                                    <</linkreplace>>
+                            <</replace>>
+                        <</timed>>
+                    <</linkreplace>>
+            @@
+            @@#party;font-family:courier new, courier, monospace;@@
+            @@#better;@@
+        <</timed>>
+    <</linkreplace>>
+<</linkreplace>>
+@@
+@@#everywhere;@@

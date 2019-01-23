@@ -1,14 +1,24 @@
 :: Display Badman
 <<if _badman.length > 0>>
     _badman[0]
-    <br>
     <<if _badman.length > 1>>
-        _badman[1]
+        //_badman[1]//
         <br>
         <<if _badman.length > 2>>
-            <<indent 13 _badman[2]>>
+            _badman[2]
+            <br>
+            <<if _badman.length > 3>>
+                <<indent 13 _badman[3]>>
+            <</if>>
+        <<else>>
+            <br>
         <</if>>
+    <<else>>
+        <br>
+        <br>
     <</if>>
+<<else>>
+    <br>
 <</if>>
 
 :: Display Caskets
@@ -23,7 +33,7 @@
 
 :: Display Hands
 <<if _hands.length > 0>>
-    _hands[0]
+    _hands[0]<br>
 <</if>>
 
 :: Display Floorboards
@@ -35,7 +45,5 @@
     <</if>>
 <</if>>
 
-:: Display NoParty
-<<if _noparty.length > 0>>
-    _noparty[0]
-<</if>>
+:: Display NoPartyBack
+I'm sorry I c<<if _nopartyback.length > 0>>_nopartyback[0]<</if>>

@@ -1,4 +1,4 @@
-:: Widgets [widget nobr]
+:: Widgets [widget silently]
 <<widget "indent">><<nobr>>
     <<set _style to "display:inline-block;text-indent:" + $args[0] + "em">>
     <span @style="_style">$args[1]</span>
@@ -23,6 +23,9 @@
                 <<run $args[0].deleteAt(_current)>>
                 <<set _current -= 1>>
             <</if>>
+            <<if $args[3]>>
+                <<prepend $args[3]>>&#8199;<</prepend>>
+            <</if>>
         <<else>>
             /* The array has no elements */
             <<stop>>
@@ -32,14 +35,19 @@
 
 
 <<widget typewriter>>
-  <<set _textArrayLength to 0>>
-  <<repeat 5ms>>
-      <<if _textArrayLength gte $args[0].length>>
-        <<stop>>
-      <<else>>
-      <<append $args[1]>>$args[0][_textArrayLength]<</append>>
-      <!-- Update the length -->
-      <<set _textArrayLength++>>
-      <</if>>
-   <</repeat>>
+    <<set _textArrayLength to 0>>
+    <<repeat 5ms>>
+        <<if _textArrayLength gte $args[0].length>>
+            <<stop>>
+        <<else>>
+            <<append $args[1]>>$args[0][_textArrayLength]<</append>>
+            <!-- Update the length -->
+            <<set _textArrayLength++>>
+        <</if>>
+    <</repeat>>
+<</widget>>
+
+<<widget "timer">>
+    <<set `$args[0] + 'time'` to $args[0].length * $args[1] + 'ms'>>
+    <<print `$args[0] + time`>>
 <</widget>>

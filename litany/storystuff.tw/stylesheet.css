@@ -1,0 +1,99 @@
+@import url('https://fonts.googleapis.com/css?family=Vollkorn');
+/*Formatting indents and stuff*/
+textarea.macro-typesim {
+	resize: none;
+	min-width: 1px;
+	border-bottom: 1px solid rgb(20, 20, 19);
+	border-left: none;
+	border-right: none;
+	border-top:none;
+	border-radius: 4px;
+	width: 5em;
+	height: 1.2em;
+	overflow: hidden;
+	display: inline-block;
+	margin:0px;
+	color: rgb(20, 20, 19);
+}
+div.macro-typesim {
+	display: none;
+}
+textarea.macro-typesim:hover {
+	background-color: #ece4d3;
+	border-bottom: 1px solid rgb(20, 20, 19);
+	border-left: none;
+	border-right: none;
+	border-top:none;
+	border-radius: 4px;
+}
+
+textarea.macro-typesim:focus {
+	background-color: #ece4d3;
+	border-bottom: 1px solid rgb(20, 20, 19);
+	border-left: none;
+	border-right: none;
+	border-top:none;
+	border-radius: 4px;
+}
+
+body {	
+	background-color: #e0d2b7;
+	color: rgb(20, 20, 19);
+	font-family: 'Vollkorn', serif;
+	font-size: 125%;
+}
+
+#story {
+	padding-left: 10em;
+  }
+
+.passage a {
+	color: rgb(145, 63, 1);
+	font-weight: bold;
+}
+
+.passage a:hover{
+	color: rgb(110, 78, 55);
+	font-weight: bold;
+}
+
+.forest {
+	background-color: #618856;
+	color: rgb(9, 49, 9);
+	-webkit-transition: background-color 1000ms linear, color 1000ms linear;
+    -ms-transition: background-color 1000ms linear, color 1000ms linear;
+    transition: background-color 1000ms linear, color 1000ms linear;
+}
+
+.flames {
+	background-color:#fc9621;
+	color: rgb(148, 21, 4);
+    -webkit-transition: background-color 1000ms linear, color 1000ms linear;
+    -ms-transition: background-color 1000ms linear, color 1000ms linear;
+    transition: background-color 1000ms linear, color 1000ms linear;
+}
+
+.flames a {
+	color: rgb(223, 26, 0);
+}
+
+.flames a:hover {
+	color: rgb(255, 90, 68);
+}
+
+.dragon {
+	color: rgb(148, 21, 4);
+	font-weight: bold;
+}
+
+.dragon a {
+	color: rgb(223, 26, 0);
+}
+
+.dragon a:hover {
+	color: rgb(255, 90, 68);
+}
+
+.hide {
+	visibility:hidden;
+}

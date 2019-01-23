@@ -1,0 +1,28 @@
+:: Jerusalem
+Okay, if you’re so great, you do it—<br>
+<<indent 6 "here’s the">>
+<<linkreplace "pencil">>
+    <<append "#bedwindow" t8n>>
+        <br>If the window is on your right, you are in your own bed.
+    <</append>>
+    <<linkreplace "pencil">>
+        <<append "#heartwindow" t8n>>If the window<br>
+            <<indent 3 "is over your heart, and it is painted shut, then we are breathing">><br>
+            river water.
+        <</append>>
+        <<linkreplace "pencil">>pencil
+            <<append "#jerusalem" t8n>>
+                <<indent 3 "Build me a city and call it">>
+                <<typesim "Jerusalem.">>
+                    <<append "#jerusalemtwo" t8n>>Build me another and call it<br>
+                        <<fadein 500ms 1350ms>><<indent 30 "@@border-radius:3px;border-bottom:1px solid rgb(20, 20, 19);padding:4px;Jerusalem.">><</fadein>>
+                        <<fadein 500ms 2350ms>><br><br>[[Start]]<</fadein>>
+                    <</append>>
+                <</typesim>>
+            <</append>>
+        <</linkreplace>>
+    <</linkreplace>>
+<</linkreplace>>
+, make it work . . .
+@@#bedwindow;@@ @@#heartwindow;@@<br>
+@@#jerusalem;@@ @@#jerusalemtwo;@@

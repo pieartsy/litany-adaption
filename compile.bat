@@ -1,1 +1,1 @@
-tweego -t -o litany.html litany
+tweego -o litany.html litany
