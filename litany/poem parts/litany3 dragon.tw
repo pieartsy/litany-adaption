@@ -1,11 +1,11 @@
 ::Dragon
 I can tell already you think I’m the
-<<linkreplace "@@.dragon;dragon,@@" t8n>>@@.dragon;dragon,@@
-    <<addclass "#that" "show">>
+@@.dragon;<<linkreplace "dragon," t8n>>@@.dragon;dragon,@@
+    <<silently>><<addclass "#that" "show">>
     <<replace #notprincess>>
         <<timed 1350ms t8n>>
             I'm not the
-            <<linkreplace "@@.dragon;dragon.@@" t8n>>@@.dragon;dragon.@@<br>
+            @@.dragon;<<linkreplace "dragon." t8n>>@@.dragon;dragon.@@<br>
                 <<append "#notprincess" t8n>>
                     I’m not the princess either.<br>
                     <<indent 7 "Who am">>
@@ -24,15 +24,15 @@ I can tell already you think I’m the
                                     <<indent 15 "And the part where I push you<br>
                                     flush against the wall and every part of your body rubs against the bricks,">>
                                 <</append>>
-                            <<next 1s>>
+                            <<next 2s>>
                                 <<append "#toit">>
                                     <<indent 3 "shut up">>
-                                    <<addclass "#bricks" "bricks">>
+                                    <<addclass "#bricks" "gone">>
                                 <</append>>
                             <<next 1s>>
                                 <<append "#toit" t8n>>
                                     <br>I’m getting to it.
-                                    <br>[[Next | Crossed out]]
+                                    <br>[[Next | Dragon 2]]
                                 <</append>>
                             <</timed>>
                         <</linkreplace>>
@@ -44,10 +44,10 @@ I can tell already you think I’m the
                         @@#bricks;@@<br>
                     <</linkreplace>>
                 <</append>>
-            <</linkreplace>>
+            <</linkreplace>>@@
         <</timed>>
-    <</replace>>
-<</linkreplace>>
+    <</replace>><</silently>>
+<</linkreplace>>@@
 <br>@@#that;.hide;display:inline-block;text-indent:4em;that would be so like me,@@ but I’m not.
 @@#notprincess;@@
 @@#toit;@@

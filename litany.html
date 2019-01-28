@@ -149,7 +149,7 @@ body {
 }
 @media screen and (min-width: 720px) {
     #story {
-		padding-left: 10em;
+		padding-left: 20%;
 	}
 }
 
@@ -169,6 +169,67 @@ body {
 	-webkit-transition: background-color 1000ms ease-in, color 1000ms ease-in;
     -ms-transition: background-color 1000ms ease-in, color 1000ms ease-in;
     transition: background-color 1000ms ease-in, color 1000ms ease-in;
+}
+
+body[data-tags~="want"] {
+	background-color: rgb(27, 21, 31);
+	color: rgb(255, 252, 213);
+}
+
+
+body[data-tags~="want"] a {
+	color: rgb(255, 246, 122);
+}
+
+body[data-tags~="want"] a:hover {
+	color: rgb(255, 250, 177);
+}
+
+
+body.spotlightone {
+	background-image: [img[spotlightone]];
+	height: 120%; /* You must set a specified height */
+	background-position: center; /* Center the image */
+	  background-repeat: no-repeat; /* Do not repeat the image */
+	  background-size: 120%;
+	  background-attachment: fixed;
+	position: relative;
+	background-color: #2b1e28;
+	color: rgb(255, 252, 213);
+  }
+
+body.spotlighttwo {
+	background-image: [img[spotlightone]], [img[spotlighttwo]];
+	height: 120%; /* You must set a specified height */
+	background-position: center; /* Center the image */
+	  background-repeat: no-repeat; /* Do not repeat the image */
+	  background-size: 120%;
+	  background-attachment: fixed;
+	position: relative;
+	background-color: #42313b;
+	color: rgb(255, 252, 213);
+  }
+
+body.spotlightthree {
+/*spotlight one*/
+	background-image: [img[spotlightone]], [img[spotlighttwo]], [img[spotlightthree]];
+	height: 120%; /* You must set a specified height */
+	background-position: center; /* Center the image */
+	  background-repeat: no-repeat; /* Do not repeat the image */
+	  background-size: 120%;
+	  background-attachment: fixed;
+	position: relative;
+	background-color: #584449;
+	color: rgb(255, 252, 213);
+  }
+
+body.dark {
+	background-color: black;
+	color: rgb(255, 252, 213);
+}
+
+.wantfont {
+	color: rgb(18, 13, 20);
 }
 
 .lighter {
@@ -191,14 +252,10 @@ body {
 
 .flames {
 	background-color:#fc9621;
-	color: rgb(148, 21, 4);
+	color: rgb(223, 26, 0);
     -webkit-transition: background-color 1000ms ease-in, color 1000ms ease-in;
     -ms-transition: background-color 1000ms ease-in, color 1000ms ease-in;
     transition: background-color 1000ms ease-in, color 1000ms ease-in;
-}
-
-.flames a {
-	color: rgb(223, 26, 0);
 }
 
 .flames a:hover {
@@ -206,7 +263,7 @@ body {
 }
 
 .dragon {
-	color: rgb(148, 21, 4);
+	color: rgb(117, 16, 3);
 	font-weight: bold;
 }
 
@@ -232,7 +289,7 @@ body {
     transition: visibility 1000ms ease-in;
 }*/
 
-.bricks {
+.gone {
 	visibility:hidden;
 }</style><script role="script" id="twine-user-script" type="text/twine-javascript">/* twine-user-script #1: "Config" */
 Config.passages.nobr = true;
@@ -365,19 +422,28 @@ Macro.add('typesim', {
     }
 });</script><tw-passagedata pid="1" name="Start" tags="" position="100,100">An adaption of [[Litany In Which Certain Things Are Crossed Out | https://www.poetryfoundation.org/poems/48158/litany-in-which-certain-things-are-crossed-out]] by Richard Siken.&lt;br&gt;
 &lt;br&gt;
+This current version is incomplete.&lt;br&gt;&lt;br&gt;
+&lt;&lt;script&gt;&gt;
+    if ($(window).width() &lt;= 720) {
+        $(output).wiki(&quot;//Note: This works much better on a computer than on a phone or tablet.\n If you want to view it anyway, I recommend you read it in landscape mode.//\n&quot;);
+    }
+&lt;&lt;/script&gt;&gt;
 [[Begin]].
-/*&lt;br&gt;[[Crossed out]]
+/*&lt;br&gt;[[Dragon]]
+&lt;br&gt;[[Crossed out]]
 &lt;br&gt;[[Jerusalem]]
-&lt;br&gt;[[test]]*/</tw-passagedata><tw-passagedata pid="2" name="Begin" tags="" position="225,100">&lt;&lt;silently&gt;&gt;
-&lt;&lt;set _noparty to [&quot;I&#39;m sorry I couldn&#39;t come to your party.&quot;]&gt;&gt;
-&lt;&lt;set _nopartyback to [&quot;ouldn&#39;t come to your party.&quot;]&gt;&gt;
-&lt;&lt;set _yesparty to [&quot;ame to your party &quot;, &quot;and seduced you &quot;, &quot;\nand left you bruised and ruined, you poor sad thing.&quot;]&gt;&gt;
-&lt;&lt;set _die to &quot;You will be alone always and then you will die.&quot;&gt;&gt;
-&lt;&lt;set _dietime to _die.length * 70 + &#39;ms&#39;&gt;&gt;
-&lt;&lt;set _yespartytime to _yesparty[0].length * 50 + &#39;ms&#39;&gt;&gt;
-&lt;&lt;set _yespartytime1 to _yesparty[1].length * 50 + &#39;ms&#39;&gt;&gt;
-&lt;&lt;set _nopartytime to _noparty[0].length * 50 + &#39;ms&#39;&gt;&gt;
-&lt;&lt;set _nopartybacktime to _nopartyback[0].length * 50 + &#39;ms&#39;&gt;&gt;
+&lt;br&gt;[[test]]
+&lt;br&gt;[[Want]]
+*/</tw-passagedata><tw-passagedata pid="2" name="Begin" tags="" position="225,100">&lt;&lt;silently&gt;&gt;
+    &lt;&lt;set _noparty to [&quot;I&#39;m sorry I couldn&#39;t come to your party.&quot;]&gt;&gt;
+    &lt;&lt;set _nopartyback to [&quot;ouldn&#39;t come to your party.&quot;]&gt;&gt;
+    &lt;&lt;set _yesparty to [&quot;ame to your party &quot;, &quot;and seduced you &quot;, &quot;\nand left you bruised and ruined, you poor sad thing.&quot;]&gt;&gt;
+    &lt;&lt;set _die to &quot;You will be alone always and then you will die.&quot;&gt;&gt;
+    &lt;&lt;set _dietime to _die.length * 70 + &#39;ms&#39;&gt;&gt;
+    &lt;&lt;set _yespartytime to _yesparty[0].length * 50 + &#39;ms&#39;&gt;&gt;
+    &lt;&lt;set _yespartytime1 to _yesparty[1].length * 50 + &#39;ms&#39;&gt;&gt;
+    &lt;&lt;set _nopartytime to _noparty[0].length * 50 + &#39;ms&#39;&gt;&gt;
+    &lt;&lt;set _nopartybacktime to _nopartyback[0].length * 50 + &#39;ms&#39;&gt;&gt;
 &lt;&lt;/silently&gt;&gt;
 @@#begin;Every morning the &lt;&lt;linkreplace &quot;maple leaves.&quot; t8n&gt;&gt;maple leaves.&lt;br&gt;
 &lt;&lt;indent 8 &quot;Every morning another chapter where the hero shifts&quot;&gt;&gt;&lt;br&gt;
@@ -416,7 +482,7 @@ and little words
                                                     &lt;&lt;/append&gt;&gt;
                                                 &lt;&lt;next 1s&gt;&gt;
                                                     &lt;&lt;append &quot;#better&quot; t8n&gt;&gt;
-                                                        Who &lt;&lt;linkreplace &quot;@@color:rgb(27, 95, 27);wouldn&#39;t?@@&quot;&gt;&gt;wouldn&#39;t?
+                                                        Who &lt;&lt;linkreplace &quot;@@color:rgb(17, 107, 17);wouldn&#39;t?@@&quot;&gt;&gt;wouldn&#39;t?
                                                                 &lt;&lt;addclass &quot;#begin&quot; &quot;lighter&quot;&gt;&gt;
                                                                 &lt;&lt;append &quot;#forest&quot;&gt;&gt;&lt;br&gt;
                                                                 &lt;&lt;include &quot;Forest&quot;&gt;&gt;
@@ -439,16 +505,17 @@ and little words
 &lt;&lt;/linkreplace&gt;&gt;
 @@
 @@#forest;@@
-@@#everywhere;@@</tw-passagedata><tw-passagedata pid="3" name="Crossed out" tags="" position="350,100">&lt;&lt;silently&gt;&gt;&lt;&lt;set _badman to [&quot;you are&quot;, &quot;not&quot;, &quot;feeding yourself to a bad man&quot;, &quot;against a black sky prickled with small lights.&quot;]&gt;&gt;
-&lt;&lt;set _caskets to [&quot;The wooden halls like caskets. These terms from the lower depths.&quot;]&gt;&gt;
-&lt;&lt;set _lover to [&quot;Here is the repeated image of the lover destroyed.&quot;]&gt;&gt;
-&lt;&lt;set _hands to [&quot;Clumsy hands in a dark room.&quot;]&gt;&gt;
-&lt;&lt;set _floorboards to [&quot;There is something&quot;, &quot;underneath the floorboards.&quot;]&gt;&gt;
-&lt;&lt;set _badmantime to (_badman[0].length + _badman[1].length + _badman[2].length + _badman[3].length) * 50 + &#39;ms&#39;&gt;&gt;
-&lt;&lt;set _casketstime to _caskets[0].length * 50 + &#39;ms&#39;&gt;&gt;
-&lt;&lt;set _lovertime to _lover[0].length * 50 + &#39;ms&#39;&gt;&gt;
-&lt;&lt;set _handstime to _hands[0].length * 50 + &#39;ms&#39;&gt;&gt;
-&lt;&lt;set _floorboardstime to (_floorboards[0].length + _floorboards[1].length) * 50 + &#39;ms&#39;&gt;&gt;
+@@#everywhere;@@</tw-passagedata><tw-passagedata pid="3" name="Crossed out" tags="" position="350,100">&lt;&lt;silently&gt;&gt;
+    &lt;&lt;set _badman to [&quot;you are&quot;, &quot;not&quot;, &quot;feeding yourself to a bad man&quot;, &quot;against a black sky prickled with small lights.&quot;]&gt;&gt;
+    &lt;&lt;set _caskets to [&quot;The wooden halls like caskets. These terms from the lower depths.&quot;]&gt;&gt;
+    &lt;&lt;set _lover to [&quot;Here is the repeated image of the lover destroyed.&quot;]&gt;&gt;
+    &lt;&lt;set _hands to [&quot;Clumsy hands in a dark room.&quot;]&gt;&gt;
+    &lt;&lt;set _floorboards to [&quot;There is something&quot;, &quot;underneath the floorboards.&quot;]&gt;&gt;
+    &lt;&lt;set _badmantime to (_badman[0].length + _badman[1].length + _badman[2].length + _badman[3].length) * 50 + &#39;ms&#39;&gt;&gt;
+    &lt;&lt;set _casketstime to _caskets[0].length * 50 + &#39;ms&#39;&gt;&gt;
+    &lt;&lt;set _lovertime to _lover[0].length * 50 + &#39;ms&#39;&gt;&gt;
+    &lt;&lt;set _handstime to _hands[0].length * 50 + &#39;ms&#39;&gt;&gt;
+    &lt;&lt;set _floorboardstime to (_floorboards[0].length + _floorboards[1].length) * 50 + &#39;ms&#39;&gt;&gt;
 &lt;&lt;/silently&gt;&gt;
 &lt;&lt;indent 5 &quot;I’m not really sure why I do it, but in this version&quot;&gt;&gt;
 @@#badman;&lt;&lt;include &quot;Display Badman&quot;&gt;&gt;@@&lt;br&gt;
@@ -522,17 +589,17 @@ and little words
 What a sweet lady. Sing lady, sing! Of course, she wakes the dragon.&lt;br&gt;
 &lt;&lt;indent 3 &quot;Love always wakes the dragon and&quot;&gt;&gt;&lt;&lt;linkreplace &quot;@@color:rgb(148, 21, 4);suddenly@@&quot; t8n&gt;&gt;&lt;br&gt;
         &lt;&lt;addclass &quot;body&quot; &quot;flames&quot;&gt;&gt;
-        &lt;&lt;addclass &quot;#begin&quot; &quot;bricks&quot;&gt;&gt;
-        &lt;&lt;addclass &quot;#forest&quot; &quot;bricks&quot;&gt;&gt;
+        &lt;&lt;addclass &quot;#begin&quot; &quot;gone&quot;&gt;&gt;
+        &lt;&lt;addclass &quot;#forest&quot; &quot;gone&quot;&gt;&gt;
         &lt;&lt;replace &quot;#everywhere&quot; t8n&gt;&gt;
             &lt;&lt;indent 24 &quot;[[flames everywhere. | Dragon]]&quot;&gt;&gt;&lt;&lt;/replace&gt;&gt;
 &lt;&lt;/linkreplace&gt;&gt;</tw-passagedata><tw-passagedata pid="6" name="Dragon" tags="" position="725,100">I can tell already you think I’m the
-&lt;&lt;linkreplace &quot;@@.dragon;dragon,@@&quot; t8n&gt;&gt;@@.dragon;dragon,@@
-    &lt;&lt;addclass &quot;#that&quot; &quot;show&quot;&gt;&gt;
+@@.dragon;&lt;&lt;linkreplace &quot;dragon,&quot; t8n&gt;&gt;@@.dragon;dragon,@@
+    &lt;&lt;silently&gt;&gt;&lt;&lt;addclass &quot;#that&quot; &quot;show&quot;&gt;&gt;
     &lt;&lt;replace #notprincess&gt;&gt;
         &lt;&lt;timed 1350ms t8n&gt;&gt;
             I&#39;m not the
-            &lt;&lt;linkreplace &quot;@@.dragon;dragon.@@&quot; t8n&gt;&gt;@@.dragon;dragon.@@&lt;br&gt;
+            @@.dragon;&lt;&lt;linkreplace &quot;dragon.&quot; t8n&gt;&gt;@@.dragon;dragon.@@&lt;br&gt;
                 &lt;&lt;append &quot;#notprincess&quot; t8n&gt;&gt;
                     I’m not the princess either.&lt;br&gt;
                     &lt;&lt;indent 7 &quot;Who am&quot;&gt;&gt;
@@ -551,15 +618,15 @@ What a sweet lady. Sing lady, sing! Of course, she wakes the dragon.&lt;br&gt;
                                     &lt;&lt;indent 15 &quot;And the part where I push you&lt;br&gt;
                                     flush against the wall and every part of your body rubs against the bricks,&quot;&gt;&gt;
                                 &lt;&lt;/append&gt;&gt;
-                            &lt;&lt;next 1s&gt;&gt;
+                            &lt;&lt;next 2s&gt;&gt;
                                 &lt;&lt;append &quot;#toit&quot;&gt;&gt;
                                     &lt;&lt;indent 3 &quot;shut up&quot;&gt;&gt;
-                                    &lt;&lt;addclass &quot;#bricks&quot; &quot;bricks&quot;&gt;&gt;
+                                    &lt;&lt;addclass &quot;#bricks&quot; &quot;gone&quot;&gt;&gt;
                                 &lt;&lt;/append&gt;&gt;
                             &lt;&lt;next 1s&gt;&gt;
                                 &lt;&lt;append &quot;#toit&quot; t8n&gt;&gt;
                                     &lt;br&gt;I’m getting to it.
-                                    &lt;br&gt;[[Next | Crossed out]]
+                                    &lt;br&gt;[[Next | Dragon 2]]
                                 &lt;&lt;/append&gt;&gt;
                             &lt;&lt;/timed&gt;&gt;
                         &lt;&lt;/linkreplace&gt;&gt;
@@ -571,13 +638,65 @@ What a sweet lady. Sing lady, sing! Of course, she wakes the dragon.&lt;br&gt;
                         @@#bricks;@@&lt;br&gt;
                     &lt;&lt;/linkreplace&gt;&gt;
                 &lt;&lt;/append&gt;&gt;
-            &lt;&lt;/linkreplace&gt;&gt;
+            &lt;&lt;/linkreplace&gt;&gt;@@
         &lt;&lt;/timed&gt;&gt;
-    &lt;&lt;/replace&gt;&gt;
-&lt;&lt;/linkreplace&gt;&gt;
+    &lt;&lt;/replace&gt;&gt;&lt;&lt;/silently&gt;&gt;
+&lt;&lt;/linkreplace&gt;&gt;@@
 &lt;br&gt;@@#that;.hide;display:inline-block;text-indent:4em;that would be so like me,@@ but I’m not.
 @@#notprincess;@@
-@@#toit;@@</tw-passagedata><tw-passagedata pid="7" name="Display Badman" tags="" position="850,100">&lt;&lt;if _badman.length &gt; 0&gt;&gt;
+@@#toit;@@</tw-passagedata><tw-passagedata pid="7" name="Dragon 2" tags="" position="850,100">For a while I thought I was the dragon.&lt;br&gt;
+I guess I can tell you that now. And, for a while, I thought I was&lt;br&gt;
+                                                                                                the princess,&lt;br&gt;
+cotton candy pink, sitting there in my room, in the tower of the castle,&lt;br&gt;
+          young and beautiful and in love and waiting for you with&lt;br&gt;
+confidence&lt;br&gt;
+            but the princess looks into her mirror and only sees the princess,&lt;br&gt;
+while I’m out here, slogging through the mud, breathing fire,&lt;br&gt;
+                                                               and getting stabbed to death.&lt;br&gt;
+                                    Okay, so I’m the dragon. [[Big deal. | Want]]</tw-passagedata><tw-passagedata pid="8" name="Want" tags="want" position="975,100">@@#hero;You still get to be the 
+&lt;&lt;linkreplace &quot;hero.&quot;&gt;&gt;hero.
+&lt;&lt;silently&gt;&gt;
+    &lt;&lt;addclass &quot;body&quot; &quot;spotlightone&quot;&gt;&gt;
+    &lt;&lt;append &quot;#gloves&quot;&gt;&gt;
+        You get magic 
+        &lt;&lt;linkreplace &quot;gloves!&quot;&gt;&gt;gloves!
+            &lt;&lt;addclass &quot;body&quot; &quot;spotlighttwo&quot;&gt;&gt;
+            &lt;&lt;append &quot;#fish&quot;&gt;&gt;A 
+                &lt;&lt;linkreplace &quot;fish&quot;&gt;&gt;fish
+                    &lt;&lt;addclass &quot;body&quot; &quot;spotlightthree&quot;&gt;&gt;
+                    &lt;&lt;append &quot;#flashlights&quot;&gt;&gt;
+                        You get eyes like &lt;&lt;linkreplace &quot;flashlights!&lt;br&gt;&quot;&gt;&gt;flashlights!&lt;br&gt;
+                        &lt;&lt;indent 4 &quot;What more do you want?&quot;&gt;&gt;&lt;br&gt;
+                            &lt;&lt;timed 1350ms t8n&gt;&gt;
+                                I make you pancakes, I take you hunting, I talk to you as if you’re&lt;br&gt;
+                                &lt;&lt;indent 3 &quot;really&quot;&gt;&gt;
+                                &lt;&lt;linkreplace &quot;there.&lt;br&gt;&quot; t8n&gt;&gt;there.&lt;br&gt;
+                                    Are you there, sweetheart? Do you know 
+                                    &lt;&lt;linkreplace &quot;me?&quot;&gt;&gt;me?
+                                        &lt;&lt;addclass &quot;#hero&quot; &quot;gone&quot;&gt;&gt;
+                                        &lt;&lt;addclass &quot;#gloves&quot; &quot;gone&quot;&gt;&gt;
+                                        &lt;&lt;addclass &quot;#fish&quot; &quot;gone&quot;&gt;&gt;
+                                        &lt;&lt;addclass &quot;#flashlights&quot; &quot;gone&quot;&gt;&gt;
+                                        &lt;&lt;append &quot;#microphone&quot;&gt;&gt;
+                                            Is this microphone live?
+                                            &lt;&lt;removeclass &quot;body&quot;&gt;&gt;
+                                            &lt;&lt;addclass &quot;body&quot; &quot;dark&quot;&gt;&gt;
+                                            &lt;br&gt;[[Next | Crossed out]]
+                                        &lt;&lt;/append&gt;&gt;
+                                    &lt;&lt;/linkreplace&gt;&gt;
+                                &lt;&lt;/linkreplace&gt;&gt;
+                            &lt;&lt;/timed&gt;&gt;
+                        &lt;&lt;/linkreplace&gt;&gt;
+                    &lt;&lt;/append&gt;&gt;
+                &lt;&lt;/linkreplace&gt;&gt;
+            that talks!
+            &lt;&lt;/append&gt;&gt;
+        &lt;&lt;/linkreplace&gt;&gt;
+    &lt;&lt;/append&gt;&gt;
+&lt;&lt;/silently&gt;&gt;
+&lt;&lt;/linkreplace&gt;&gt;&lt;br&gt;@@
+@@#gloves;@@ @@#fish;@@ @@#flashlights;@@
+@@#microphone;@@</tw-passagedata><tw-passagedata pid="9" name="spotlightone" tags="Twine.image" position="1100,100">data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiIHN0YW5kYWxvbmU9Im5vIj8+CjwhLS0gQ3JlYXRlZCB3aXRoIElua3NjYXBlIChodHRwOi8vd3d3Lmlua3NjYXBlLm9yZy8pIC0tPgoKPHN2ZwogICB4bWxuczpkYz0iaHR0cDovL3B1cmwub3JnL2RjL2VsZW1lbnRzLzEuMS8iCiAgIHhtbG5zOmNjPSJodHRwOi8vY3JlYXRpdmVjb21tb25zLm9yZy9ucyMiCiAgIHhtbG5zOnJkZj0iaHR0cDovL3d3dy53My5vcmcvMTk5OS8wMi8yMi1yZGYtc3ludGF4LW5zIyIKICAgeG1sbnM6c3ZnPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIKICAgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIgogICB4bWxuczpzb2RpcG9kaT0iaHR0cDovL3NvZGlwb2RpLnNvdXJjZWZvcmdlLm5ldC9EVEQvc29kaXBvZGktMC5kdGQiCiAgIHhtbG5zOmlua3NjYXBlPSJodHRwOi8vd3d3Lmlua3NjYXBlLm9yZy9uYW1lc3BhY2VzL2lua3NjYXBlIgogICB3aWR0aD0iNDI1LjYyMzE3bW0iCiAgIGhlaWdodD0iMTcyLjY4MzY5bW0iCiAgIHZpZXdCb3g9IjAgMCA0MjUuNjIzMTcgMTcyLjY4MzY5IgogICB2ZXJzaW9uPSIxLjEiCiAgIGlkPSJzdmc4IgogICBpbmtzY2FwZTp2ZXJzaW9uPSIwLjkyLjQgKDVkYTY4OWMzMTMsIDIwMTktMDEtMTQpIgogICBzb2RpcG9kaTpkb2NuYW1lPSJzcG90bGlnaHRvbmUuc3ZnIj4KICA8ZGVmcwogICAgIGlkPSJkZWZzMiIgLz4KICA8c29kaXBvZGk6bmFtZWR2aWV3CiAgICAgaWQ9ImJhc2UiCiAgICAgcGFnZWNvbG9yPSIjZmZmZmZmIgogICAgIGJvcmRlcmNvbG9yPSIjNjY2NjY2IgogICAgIGJvcmRlcm9wYWNpdHk9IjEuMCIKICAgICBpbmtzY2FwZTpwYWdlb3BhY2l0eT0iMC4wIgogICAgIGlua3NjYXBlOnBhZ2VzaGFkb3c9IjIiCiAgICAgaW5rc2NhcGU6em9vbT0iMC4zNSIKICAgICBpbmtzY2FwZTpjeD0iMTEzLjk1NjA4IgogICAgIGlua3NjYXBlOmN5PSIyMTMuNjAzMzIiCiAgICAgaW5rc2NhcGU6ZG9jdW1lbnQtdW5pdHM9Im1tIgogICAgIGlua3NjYXBlOmN1cnJlbnQtbGF5ZXI9ImxheWVyMSIKICAgICBzaG93Z3JpZD0iZmFsc2UiCiAgICAgaW5rc2NhcGU6d2luZG93LXdpZHRoPSIxMzY2IgogICAgIGlua3NjYXBlOndpbmRvdy1oZWlnaHQ9IjcwNSIKICAgICBpbmtzY2FwZTp3aW5kb3cteD0iLTgiCiAgICAgaW5rc2NhcGU6d2luZG93LXk9Ii04IgogICAgIGlua3NjYXBlOndpbmRvdy1tYXhpbWl6ZWQ9IjEiCiAgICAgaW5rc2NhcGU6cGFnZWNoZWNrZXJib2FyZD0idHJ1ZSI+CiAgICA8c29kaXBvZGk6Z3VpZGUKICAgICAgIHBvc2l0aW9uPSI0NDQuNTAwMDEsMTAuNTgzMzM0IgogICAgICAgb3JpZW50YXRpb249IjAsMTYwNC44NzUiCiAgICAgICBpZD0iZ3VpZGU0NjI3IgogICAgICAgaW5rc2NhcGU6bG9ja2VkPSJmYWxzZSIgLz4KICAgIDxzb2RpcG9kaTpndWlkZQogICAgICAgcG9zaXRpb249IjQyNS4xMjMxOCwwLjYwNTIzMjE4IgogICAgICAgb3JpZW50YXRpb249Ii01OTAuMTYzOCwwIgogICAgICAgaWQ9Imd1aWRlNDYyOSIKICAgICAgIGlua3NjYXBlOmxvY2tlZD0iZmFsc2UiIC8+CiAgICA8c29kaXBvZGk6Z3VpZGUKICAgICAgIHBvc2l0aW9uPSIwLDEwNy4zNDUyNCIKICAgICAgIG9yaWVudGF0aW9uPSIwLC0xNjA0Ljg3NSIKICAgICAgIGlkPSJndWlkZTQ2MzEiCiAgICAgICBpbmtzY2FwZTpsb2NrZWQ9ImZhbHNlIiAvPgogICAgPHNvZGlwb2RpOmd1aWRlCiAgICAgICBwb3NpdGlvbj0iLTQ2Ljg2OTA0OSwxNTYuNzUyNzUiCiAgICAgICBvcmllbnRhdGlvbj0iNTkwLjE2MzgsMCIKICAgICAgIGlkPSJndWlkZTQ2MzMiCiAgICAgICBpbmtzY2FwZTpsb2NrZWQ9ImZhbHNlIiAvPgogIDwvc29kaXBvZGk6bmFtZWR2aWV3PgogIDxtZXRhZGF0YQogICAgIGlkPSJtZXRhZGF0YTUiPgogICAgPHJkZjpSREY+CiAgICAgIDxjYzpXb3JrCiAgICAgICAgIHJkZjphYm91dD0iIj4KICAgICAgICA8ZGM6Zm9ybWF0PmltYWdlL3N2Zyt4bWw8L2RjOmZvcm1hdD4KICAgICAgICA8ZGM6dHlwZQogICAgICAgICAgIHJkZjpyZXNvdXJjZT0iaHR0cDovL3B1cmwub3JnL2RjL2RjbWl0eXBlL1N0aWxsSW1hZ2UiIC8+CiAgICAgICAgPGRjOnRpdGxlIC8+CiAgICAgIDwvY2M6V29yaz4KICAgIDwvcmRmOlJERj4KICA8L21ldGFkYXRhPgogIDxnCiAgICAgaW5rc2NhcGU6bGFiZWw9IkxheWVyIDEiCiAgICAgaW5rc2NhcGU6Z3JvdXBtb2RlPSJsYXllciIKICAgICBpZD0ibGF5ZXIxIgogICAgIHRyYW5zZm9ybT0idHJhbnNsYXRlKDMxLjUyODI0OCwtOTEuNTU4MzY2KSI+CiAgICA8cGF0aAogICAgICAgc3R5bGU9Im9wYWNpdHk6MC4zO2ZpbGw6I2ZmZjVkNTtmaWxsLW9wYWNpdHk6MTtzdHJva2U6I2ZmZjZkNTtzdHJva2Utd2lkdGg6MS4wMDAxOTk1NjtzdHJva2Utb3BhY2l0eTowIgogICAgICAgZD0iTSAtMzEuMDI4MjQ2LDM4Ljg2MDc4OSAzOTMuNTk0OTIsMjA1Ljc0MjI4IHYgMCBMIC0zMS4wMjgyNDYsMTAwLjY4NTczIFoiCiAgICAgICBpZD0icGF0aDM3MTMiCiAgICAgICBpbmtzY2FwZTpjb25uZWN0b3ItY3VydmF0dXJlPSIwIgogICAgICAgc29kaXBvZGk6bm9kZXR5cGVzPSJjY2NjYyIgLz4KICA8L2c+Cjwvc3ZnPgo=</tw-passagedata><tw-passagedata pid="10" name="spotlightthree" tags="Twine.image" position="1225,100">data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiIHN0YW5kYWxvbmU9Im5vIj8+CjwhLS0gQ3JlYXRlZCB3aXRoIElua3NjYXBlIChodHRwOi8vd3d3Lmlua3NjYXBlLm9yZy8pIC0tPgoKPHN2ZwogICB4bWxuczpkYz0iaHR0cDovL3B1cmwub3JnL2RjL2VsZW1lbnRzLzEuMS8iCiAgIHhtbG5zOmNjPSJodHRwOi8vY3JlYXRpdmVjb21tb25zLm9yZy9ucyMiCiAgIHhtbG5zOnJkZj0iaHR0cDovL3d3dy53My5vcmcvMTk5OS8wMi8yMi1yZGYtc3ludGF4LW5zIyIKICAgeG1sbnM6c3ZnPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIKICAgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIgogICB4bWxuczpzb2RpcG9kaT0iaHR0cDovL3NvZGlwb2RpLnNvdXJjZWZvcmdlLm5ldC9EVEQvc29kaXBvZGktMC5kdGQiCiAgIHhtbG5zOmlua3NjYXBlPSJodHRwOi8vd3d3Lmlua3NjYXBlLm9yZy9uYW1lc3BhY2VzL2lua3NjYXBlIgogICB3aWR0aD0iNTMzLjkyMjc5bW0iCiAgIGhlaWdodD0iMzgzLjE1MDE4bW0iCiAgIHZpZXdCb3g9IjAgMCA1MzMuOTIyNzkgMzgzLjE1MDE5IgogICB2ZXJzaW9uPSIxLjEiCiAgIGlkPSJzdmc4IgogICBzb2RpcG9kaTpkb2NuYW1lPSJzcG90bGlnaHR0aHJlZS5zdmciCiAgIGlua3NjYXBlOnZlcnNpb249IjAuOTIuNCAoNWRhNjg5YzMxMywgMjAxOS0wMS0xNCkiPgogIDxkZWZzCiAgICAgaWQ9ImRlZnMyIiAvPgogIDxzb2RpcG9kaTpuYW1lZHZpZXcKICAgICBpZD0iYmFzZSIKICAgICBwYWdlY29sb3I9IiNmZmZmZmYiCiAgICAgYm9yZGVyY29sb3I9IiM2NjY2NjYiCiAgICAgYm9yZGVyb3BhY2l0eT0iMS4wIgogICAgIGlua3NjYXBlOnBhZ2VvcGFjaXR5PSIwLjAiCiAgICAgaW5rc2NhcGU6cGFnZXNoYWRvdz0iMiIKICAgICBpbmtzY2FwZTp6b29tPSIwLjEyNSIKICAgICBpbmtzY2FwZTpjeD0iLTY5Mi4zMDE5MSIKICAgICBpbmtzY2FwZTpjeT0iNDc4LjE4OTAxIgogICAgIGlua3NjYXBlOmRvY3VtZW50LXVuaXRzPSJtbSIKICAgICBpbmtzY2FwZTpjdXJyZW50LWxheWVyPSJsYXllcjEiCiAgICAgc2hvd2dyaWQ9ImZhbHNlIgogICAgIGlua3NjYXBlOndpbmRvdy13aWR0aD0iMTM2NiIKICAgICBpbmtzY2FwZTp3aW5kb3ctaGVpZ2h0PSI3MDUiCiAgICAgaW5rc2NhcGU6d2luZG93LXg9Ii04IgogICAgIGlua3NjYXBlOndpbmRvdy15PSItOCIKICAgICBpbmtzY2FwZTp3aW5kb3ctbWF4aW1pemVkPSIxIgogICAgIGlua3NjYXBlOnBhZ2VjaGVja2VyYm9hcmQ9InRydWUiCiAgICAgc2hvd2d1aWRlcz0idHJ1ZSIKICAgICBpbmtzY2FwZTpndWlkZS1iYm94PSJ0cnVlIj4KICAgIDxzb2RpcG9kaTpndWlkZQogICAgICAgcG9zaXRpb249IjU5Mi42NjY2NiwzNjguMjk5OTkiCiAgICAgICBvcmllbnRhdGlvbj0iMSwwIgogICAgICAgaW5rc2NhcGU6bG9ja2VkPSJmYWxzZSIKICAgICAgIGlkPSJndWlkZTQ1MjYiIC8+CiAgICA8c29kaXBvZGk6Z3VpZGUKICAgICAgIHBvc2l0aW9uPSItMTE0LjMsMTcxLjQ1IgogICAgICAgb3JpZW50YXRpb249IjEsMCIKICAgICAgIGlua3NjYXBlOmxvY2tlZD0iZmFsc2UiCiAgICAgICBpZD0iZ3VpZGU0NTI4IiAvPgogICAgPHNvZGlwb2RpOmd1aWRlCiAgICAgICBwb3NpdGlvbj0iMjI0LjIyMjQ3LC0xMTEuMTI3MDYiCiAgICAgICBvcmllbnRhdGlvbj0iMCwxIgogICAgICAgaWQ9Imd1aWRlNDUzOCIKICAgICAgIGlua3NjYXBlOmxvY2tlZD0iZmFsc2UiIC8+CiAgICA8c29kaXBvZGk6Z3VpZGUKICAgICAgIHBvc2l0aW9uPSIzMjguOTk3NDcsNTYzLjAzMTI2IgogICAgICAgb3JpZW50YXRpb249IjAsMSIKICAgICAgIGlkPSJndWlkZTQ1NDAiCiAgICAgICBpbmtzY2FwZTpsb2NrZWQ9ImZhbHNlIiAvPgogIDwvc29kaXBvZGk6bmFtZWR2aWV3PgogIDxtZXRhZGF0YQogICAgIGlkPSJtZXRhZGF0YTUiPgogICAgPHJkZjpSREY+CiAgICAgIDxjYzpXb3JrCiAgICAgICAgIHJkZjphYm91dD0iIj4KICAgICAgICA8ZGM6Zm9ybWF0PmltYWdlL3N2Zyt4bWw8L2RjOmZvcm1hdD4KICAgICAgICA8ZGM6dHlwZQogICAgICAgICAgIHJkZjpyZXNvdXJjZT0iaHR0cDovL3B1cmwub3JnL2RjL2RjbWl0eXBlL1N0aWxsSW1hZ2UiIC8+CiAgICAgICAgPGRjOnRpdGxlIC8+CiAgICAgIDwvY2M6V29yaz4KICAgIDwvcmRmOlJERj4KICA8L21ldGFkYXRhPgogIDxnCiAgICAgaW5rc2NhcGU6bGFiZWw9IkxheWVyIDEiCiAgICAgaW5rc2NhcGU6Z3JvdXBtb2RlPSJsYXllciIKICAgICBpZD0ibGF5ZXIxIgogICAgIHRyYW5zZm9ybT0idHJhbnNsYXRlKDE3OS42NTU2OSwzMy45MzY1NDQpIj4KICAgIDxwYXRoCiAgICAgICBzdHlsZT0ib3BhY2l0eTowLjM7ZmlsbDojZmZmNWQ1O2ZpbGwtb3BhY2l0eToxO3N0cm9rZTojZmZmNmQ1O3N0cm9rZS13aWR0aDoxLjQxMTtzdHJva2Utb3BhY2l0eTowO3N0cm9rZS1taXRlcmxpbWl0OjQ7c3Ryb2tlLWRhc2hhcnJheTpub25lIgogICAgICAgZD0iTSA1OC4xMjQ1MDcsLTIzNS4zNDA0MSAzMDIuOTQ0MzIsNDYwLjM0MDcxIHYgMCBMIC01NS42NjY4NDYsLTEzMy41NTE1NCBaIgogICAgICAgaWQ9InBhdGgzNzEzIgogICAgICAgaW5rc2NhcGU6Y29ubmVjdG9yLWN1cnZhdHVyZT0iMCIKICAgICAgIHNvZGlwb2RpOm5vZGV0eXBlcz0iY2NjY2MiCiAgICAgICBpbmtzY2FwZTpleHBvcnQtZmlsZW5hbWU9IkM6XFVzZXJzXE1hZGRpZVxwYXRoMzcxMy5wbmciCiAgICAgICBpbmtzY2FwZTpleHBvcnQteGRwaT0iOTYiCiAgICAgICBpbmtzY2FwZTpleHBvcnQteWRwaT0iOTYiIC8+CiAgPC9nPgo8L3N2Zz4K</tw-passagedata><tw-passagedata pid="11" name="spotlighttwo" tags="Twine.image" position="100,225">data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiIHN0YW5kYWxvbmU9Im5vIj8+CjwhLS0gQ3JlYXRlZCB3aXRoIElua3NjYXBlIChodHRwOi8vd3d3Lmlua3NjYXBlLm9yZy8pIC0tPgoKPHN2ZwogICB4bWxuczpkYz0iaHR0cDovL3B1cmwub3JnL2RjL2VsZW1lbnRzLzEuMS8iCiAgIHhtbG5zOmNjPSJodHRwOi8vY3JlYXRpdmVjb21tb25zLm9yZy9ucyMiCiAgIHhtbG5zOnJkZj0iaHR0cDovL3d3dy53My5vcmcvMTk5OS8wMi8yMi1yZGYtc3ludGF4LW5zIyIKICAgeG1sbnM6c3ZnPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIKICAgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIgogICB4bWxuczpzb2RpcG9kaT0iaHR0cDovL3NvZGlwb2RpLnNvdXJjZWZvcmdlLm5ldC9EVEQvc29kaXBvZGktMC5kdGQiCiAgIHhtbG5zOmlua3NjYXBlPSJodHRwOi8vd3d3Lmlua3NjYXBlLm9yZy9uYW1lc3BhY2VzL2lua3NjYXBlIgogICB3aWR0aD0iMTMzMi4wOTA3IgogICBoZWlnaHQ9IjE3MzUuMzE0IgogICB2aWV3Qm94PSIwIDAgMzUyLjQ0OTAxIDQ1OS4xMzUxMSIKICAgdmVyc2lvbj0iMS4xIgogICBpZD0ic3ZnOCIKICAgc29kaXBvZGk6ZG9jbmFtZT0ic3BvdGxpZ2h0dHdvLnN2ZyIKICAgaW5rc2NhcGU6dmVyc2lvbj0iMC45Mi40ICg1ZGE2ODljMzEzLCAyMDE5LTAxLTE0KSI+CiAgPGRlZnMKICAgICBpZD0iZGVmczIiIC8+CiAgPHNvZGlwb2RpOm5hbWVkdmlldwogICAgIGlkPSJiYXNlIgogICAgIHBhZ2Vjb2xvcj0iI2ZmZmZmZiIKICAgICBib3JkZXJjb2xvcj0iIzY2NjY2NiIKICAgICBib3JkZXJvcGFjaXR5PSIxLjAiCiAgICAgaW5rc2NhcGU6cGFnZW9wYWNpdHk9IjAuMCIKICAgICBpbmtzY2FwZTpwYWdlc2hhZG93PSIyIgogICAgIGlua3NjYXBlOnpvb209IjAuMTQ3MjY2NTEiCiAgICAgaW5rc2NhcGU6Y3g9Ii0xMDQ0Ljg4NjEiCiAgICAgaW5rc2NhcGU6Y3k9IjkyOS41MTI0MyIKICAgICBpbmtzY2FwZTpkb2N1bWVudC11bml0cz0ibW0iCiAgICAgaW5rc2NhcGU6Y3VycmVudC1sYXllcj0ibGF5ZXIyIgogICAgIHNob3dncmlkPSJmYWxzZSIKICAgICBpbmtzY2FwZTp3aW5kb3ctd2lkdGg9IjEzNjYiCiAgICAgaW5rc2NhcGU6d2luZG93LWhlaWdodD0iNzA1IgogICAgIGlua3NjYXBlOndpbmRvdy14PSItOCIKICAgICBpbmtzY2FwZTp3aW5kb3cteT0iLTgiCiAgICAgaW5rc2NhcGU6d2luZG93LW1heGltaXplZD0iMSIKICAgICBpbmtzY2FwZTpwYWdlY2hlY2tlcmJvYXJkPSJ0cnVlIgogICAgIHNob3dndWlkZXM9InRydWUiCiAgICAgaW5rc2NhcGU6Z3VpZGUtYmJveD0idHJ1ZSIKICAgICB1bml0cz0icHgiPgogICAgPHNvZGlwb2RpOmd1aWRlCiAgICAgICBwb3NpdGlvbj0iLTE5MS4zMzMzMiw0OTUuNDU4OTgiCiAgICAgICBvcmllbnRhdGlvbj0iMSwwIgogICAgICAgaW5rc2NhcGU6bG9ja2VkPSJmYWxzZSIKICAgICAgIGlkPSJndWlkZTQ1MjYiIC8+CiAgICA8c29kaXBvZGk6Z3VpZGUKICAgICAgIHBvc2l0aW9uPSItNzY5LjUyNDc3LDUzOS4zOTQ4MyIKICAgICAgIG9yaWVudGF0aW9uPSIxLDAiCiAgICAgICBpbmtzY2FwZTpsb2NrZWQ9ImZhbHNlIgogICAgICAgaWQ9Imd1aWRlNDUyOCIgLz4KICAgIDxzb2RpcG9kaTpndWlkZQogICAgICAgcG9zaXRpb249Ii01MDMuNjM4MzcsMzY1Ljk5ODk3IgogICAgICAgb3JpZW50YXRpb249IjAsMSIKICAgICAgIGlkPSJndWlkZTQ1MzgiCiAgICAgICBpbmtzY2FwZTpsb2NrZWQ9ImZhbHNlIiAvPgogICAgPHNvZGlwb2RpOmd1aWRlCiAgICAgICBwb3NpdGlvbj0iLTU5MS40NzkwNyw4ODguNDM4NjciCiAgICAgICBvcmllbnRhdGlvbj0iMCwxIgogICAgICAgaWQ9Imd1aWRlNDU0MCIKICAgICAgIGlua3NjYXBlOmxvY2tlZD0iZmFsc2UiIC8+CiAgICA8c29kaXBvZGk6Z3VpZGUKICAgICAgIHBvc2l0aW9uPSItNjA5Ljg1ODA5LDM2NS42MjkyOSIKICAgICAgIG9yaWVudGF0aW9uPSIwLDE3NjEuNzMxMiIKICAgICAgIGlkPSJndWlkZTQ1OTciCiAgICAgICBpbmtzY2FwZTpsb2NrZWQ9ImZhbHNlIiAvPgogICAgPHNvZGlwb2RpOmd1aWRlCiAgICAgICBwb3NpdGlvbj0iLTc3Ljg2NzczMSwxNjYuMDA2NjIiCiAgICAgICBvcmllbnRhdGlvbj0iLTY4NC4wODQ5LDAiCiAgICAgICBpZD0iZ3VpZGU0NTk5IgogICAgICAgaW5rc2NhcGU6bG9ja2VkPSJmYWxzZSIgLz4KICAgIDxzb2RpcG9kaTpndWlkZQogICAgICAgcG9zaXRpb249IjEwMC45OTMxOSw1MjAuMDIzODgiCiAgICAgICBvcmllbnRhdGlvbj0iMCwtMTc2MS43MzEyIgogICAgICAgaWQ9Imd1aWRlNDYwMSIKICAgICAgIGlua3NjYXBlOmxvY2tlZD0iZmFsc2UiIC8+CiAgICA8c29kaXBvZGk6Z3VpZGUKICAgICAgIHBvc2l0aW9uPSItNjA5Ljg1ODA5LDU0Ni42MjY3NSIKICAgICAgIG9yaWVudGF0aW9uPSI2ODQuMDg0OSwwIgogICAgICAgaWQ9Imd1aWRlNDYwMyIKICAgICAgIGlua3NjYXBlOmxvY2tlZD0iZmFsc2UiIC8+CiAgICA8c29kaXBvZGk6Z3VpZGUKICAgICAgIHBvc2l0aW9uPSIxOTQuNTA2MjksMzAxLjMyOSIKICAgICAgIG9yaWVudGF0aW9uPSIwLDE0NjAuMDE4NiIKICAgICAgIGlkPSJndWlkZTQ2MDUiCiAgICAgICBpbmtzY2FwZTpsb2NrZWQ9ImZhbHNlIiAvPgogICAgPHNvZGlwb2RpOmd1aWRlCiAgICAgICBwb3NpdGlvbj0iMzQ4LjM1NDQsMTU3Ljc0ODk2IgogICAgICAgb3JpZW50YXRpb249Ii0xMTQyLjkxNzIsMCIKICAgICAgIGlkPSJndWlkZTQ2MDciCiAgICAgICBpbmtzY2FwZTpsb2NrZWQ9ImZhbHNlIiAvPgogICAgPHNvZGlwb2RpOmd1aWRlCiAgICAgICBwb3NpdGlvbj0iLTE0Mi43Mzk5OSw2NjguMDY2NTciCiAgICAgICBvcmllbnRhdGlvbj0iMCwtMTQ2MC4wMTg2IgogICAgICAgaWQ9Imd1aWRlNDYwOSIKICAgICAgIGlua3NjYXBlOmxvY2tlZD0iZmFsc2UiIC8+CiAgICA8c29kaXBvZGk6Z3VpZGUKICAgICAgIHBvc2l0aW9uPSItNTI5LjAzNjU1LDY2OC4wNjY1NyIKICAgICAgIG9yaWVudGF0aW9uPSIxMTQyLjkxNzIsMCIKICAgICAgIGlkPSJndWlkZTQ2MTEiCiAgICAgICBpbmtzY2FwZTpsb2NrZWQ9ImZhbHNlIiAvPgogIDwvc29kaXBvZGk6bmFtZWR2aWV3PgogIDxtZXRhZGF0YQogICAgIGlkPSJtZXRhZGF0YTUiPgogICAgPHJkZjpSREY+CiAgICAgIDxjYzpXb3JrCiAgICAgICAgIHJkZjphYm91dD0iIj4KICAgICAgICA8ZGM6Zm9ybWF0PmltYWdlL3N2Zyt4bWw8L2RjOmZvcm1hdD4KICAgICAgICA8ZGM6dHlwZQogICAgICAgICAgIHJkZjpyZXNvdXJjZT0iaHR0cDovL3B1cmwub3JnL2RjL2RjbWl0eXBlL1N0aWxsSW1hZ2UiIC8+CiAgICAgICAgPGRjOnRpdGxlIC8+CiAgICAgIDwvY2M6V29yaz4KICAgIDwvcmRmOlJERj4KICA8L21ldGFkYXRhPgogIDxnCiAgICAgaW5rc2NhcGU6bGFiZWw9IkxheWVyIDEiCiAgICAgaW5rc2NhcGU6Z3JvdXBtb2RlPSJsYXllciIKICAgICBpZD0ibGF5ZXIxIgogICAgIHRyYW5zZm9ybT0idHJhbnNsYXRlKC03NDAuODIwODYsLTIxNS40ODYwNikiIC8+CiAgPGcKICAgICBpbmtzY2FwZTpncm91cG1vZGU9ImxheWVyIgogICAgIGlkPSJsYXllcjIiCiAgICAgaW5rc2NhcGU6bGFiZWw9IkxheWVyIDIiCiAgICAgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoLTU5Ni4wNTg4LC0xMDkuNjM5NjgpIj4KICAgIDxwYXRoCiAgICAgICBzdHlsZT0ib3BhY2l0eTowLjM7ZmlsbDojZmZmNWQ1O2ZpbGwtb3BhY2l0eToxO3N0cm9rZTojZmZmNmQ1O3N0cm9rZS13aWR0aDoxLjQwMDY5NTQ0O3N0cm9rZS1vcGFjaXR5OjAiCiAgICAgICBkPSJNIDg1NS42MjkyNSw0OC43NTA5MzggNTY3LjcxODI2LDU2Ny45MDE2OCB2IDAgTCA5ODAuMzQ1OCw0OC43NTA5MzggWiIKICAgICAgIGlkPSJwYXRoMzcxMyIKICAgICAgIGlua3NjYXBlOmNvbm5lY3Rvci1jdXJ2YXR1cmU9IjAiCiAgICAgICBzb2RpcG9kaTpub2RldHlwZXM9ImNjY2NjIgogICAgICAgaW5rc2NhcGU6ZXhwb3J0LWZpbGVuYW1lPSJDOlxVc2Vyc1xNYWRkaWVccGF0aDM3MTMucG5nIgogICAgICAgaW5rc2NhcGU6ZXhwb3J0LXhkcGk9Ijk2IgogICAgICAgaW5rc2NhcGU6ZXhwb3J0LXlkcGk9Ijk2IiAvPgogIDwvZz4KPC9zdmc+Cg==</tw-passagedata><tw-passagedata pid="12" name="Display Badman" tags="" position="225,225">&lt;&lt;if _badman.length &gt; 0&gt;&gt;
     _badman[0]
     &lt;&lt;if _badman.length &gt; 1&gt;&gt;
         //_badman[1]//
@@ -597,17 +716,17 @@ What a sweet lady. Sing lady, sing! Of course, she wakes the dragon.&lt;br&gt;
     &lt;&lt;/if&gt;&gt;
 &lt;&lt;else&gt;&gt;
     &lt;br&gt;
-&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="8" name="Display Caskets" tags="" position="975,100">&lt;&lt;if _caskets.length &gt; 0&gt;&gt;
+&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="13" name="Display Caskets" tags="" position="350,225">&lt;&lt;if _caskets.length &gt; 0&gt;&gt;
     _caskets[0]
 &lt;&lt;else&gt;&gt;
     &lt;br&gt;
-&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="9" name="Display Lover" tags="" position="1100,100">&lt;&lt;if _lover.length &gt; 0&gt;&gt;
+&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="14" name="Display Lover" tags="" position="475,225">&lt;&lt;if _lover.length &gt; 0&gt;&gt;
     _lover[0]
 &lt;&lt;else&gt;&gt;
     &lt;br&gt;
-&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="10" name="Display Hands" tags="" position="1225,100">&lt;&lt;if _hands.length &gt; 0&gt;&gt;
+&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="15" name="Display Hands" tags="" position="600,225">&lt;&lt;if _hands.length &gt; 0&gt;&gt;
     _hands[0]&lt;br&gt;
-&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="11" name="Display Floorboards" tags="" position="100,225">&lt;&lt;if _floorboards.length &gt; 0&gt;&gt;
+&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="16" name="Display Floorboards" tags="" position="725,225">&lt;&lt;if _floorboards.length &gt; 0&gt;&gt;
     _floorboards[0]
     &lt;br&gt;
     &lt;&lt;if _floorboards.length &gt; 1&gt;&gt;
@@ -615,7 +734,7 @@ What a sweet lady. Sing lady, sing! Of course, she wakes the dragon.&lt;br&gt;
     &lt;&lt;/if&gt;&gt;
 &lt;&lt;else&gt;&gt;
     &lt;br&gt;
-&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="12" name="Display NoPartyBack" tags="" position="225,225">I&#39;m sorry I c&lt;&lt;if _nopartyback.length &gt; 0&gt;&gt;_nopartyback[0]&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="13" name="Widgets" tags="widget silently" position="350,225">&lt;&lt;widget &quot;indent&quot;&gt;&gt;&lt;&lt;nobr&gt;&gt;
+&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="17" name="Display NoPartyBack" tags="" position="850,225">I&#39;m sorry I c&lt;&lt;if _nopartyback.length &gt; 0&gt;&gt;_nopartyback[0]&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="18" name="Widgets" tags="widget silently" position="975,225">&lt;&lt;widget &quot;indent&quot;&gt;&gt;&lt;&lt;nobr&gt;&gt;
     &lt;&lt;set _style to &quot;display:inline-block;text-indent:&quot; + $args[0] + &quot;em&quot;&gt;&gt;
     &lt;span @style=&quot;_style&quot;&gt;$args[1]&lt;/span&gt;
 &lt;&lt;/nobr&gt;&gt;&lt;&lt;/widget&gt;&gt;
@@ -669,107 +788,7 @@ What a sweet lady. Sing lady, sing! Of course, she wakes the dragon.&lt;br&gt;
 &lt;&lt;widget &quot;timer&quot;&gt;&gt;
     &lt;&lt;set `$args[0] + &#39;time&#39;` to $args[0].length * $args[1] + &#39;ms&#39;&gt;&gt;
     &lt;&lt;print `$args[0] + time`&gt;&gt;
-&lt;&lt;/widget&gt;&gt;</tw-passagedata><tw-passagedata pid="14" name="test" tags="" position="475,225">&lt;&lt;silently&gt;&gt;&lt;&lt;set _badman to [&quot;you are&quot;, &quot;not&quot;, &quot;feeding yourself to a bad man&quot;, &quot;against a black sky prickled with small lights.&quot;]&gt;&gt;
-&lt;&lt;set _caskets to [&quot;The wooden halls like caskets. These terms from the lower depths.&quot;]&gt;&gt;
-&lt;&lt;set _lover to [&quot;Here is the repeated image of the lover destroyed.&quot;]&gt;&gt;
-&lt;&lt;set _hands to [&quot;Clumsy hands in a dark room.&quot;]&gt;&gt;
-&lt;&lt;set _floorboards to [&quot;There is something&quot;, &quot;underneath the floorboards.&quot;]&gt;&gt;
-&lt;&lt;set _badmantime to (_badman[0].length + _badman[1].length + _badman[2].length + _badman[3].length) * 50 + &#39;ms&#39;&gt;&gt;
-&lt;&lt;set _casketstime to _caskets[0].length * 50 + &#39;ms&#39;&gt;&gt;
-&lt;&lt;set _lovertime to _lover[0].length * 50 + &#39;ms&#39;&gt;&gt;
-&lt;&lt;set _handstime to _hands[0].length * 50 + &#39;ms&#39;&gt;&gt;
-&lt;&lt;set _floorboardstime to (_floorboards[0].length + _floorboards[1].length) * 50 + &#39;ms&#39;&gt;&gt;
-&lt;&lt;/silently&gt;&gt;
-&lt;&lt;indent 5 &quot;I’m not really sure why I do it, but in this version&quot;&gt;&gt;
-@@#badman;&lt;&lt;include &quot;Display Badman&quot;&gt;&gt;@@&lt;br&gt;
-&lt;&lt;indent 3 &quot;I take it&quot;&gt;&gt;
-    &lt;&lt;linkreplace &quot;back.&lt;br&gt;&quot;&gt;&gt;back.&lt;br&gt;
-        &lt;&lt;backspace _badman &quot;#badman&quot; &quot;Display Badman&quot;&gt;&gt;
-        &lt;&lt;timed _badmantime&gt;&gt;
-            &lt;&lt;replace &quot;#backtwo&quot; t8n&gt;&gt;
-                &lt;&lt;linkreplace &quot;back.&quot;&gt;&gt;back.
-                    &lt;&lt;backspace _caskets &quot;#caskets&quot; &quot;Display Caskets&quot;&gt;&gt;
-                    &lt;&lt;timed _casketstime&gt;&gt;
-                        &lt;&lt;replace #outone t8n&gt;&gt;
-                            &lt;&lt;linkreplace &quot;out.&quot;&gt;&gt;out.
-                                &lt;&lt;backspace _lover &quot;#lover&quot; &quot;Display Lover&quot;&gt;&gt;
-                                &lt;&lt;timed _lovertime t8n&gt;&gt;
-                                    &lt;&lt;replace &quot;#outtwo&quot; t8n&gt;&gt;
-                                        &lt;&lt;linkreplace &quot;out.&quot;&gt;&gt;out.
-                                            &lt;&lt;backspace _hands &quot;#hands&quot; &quot;Display Hands&quot; &quot;#crossed&quot;&gt;&gt;
-                                            &lt;&lt;timed _handstime t8n&gt;&gt;
-                                                &lt;&lt;replace &quot;#outthree&quot; t8n&gt;&gt;
-                                                    &lt;&lt;linkreplace &quot;out.&quot;&gt;&gt;out.
-                                                        &lt;&lt;backspace _floorboards &quot;#floorboards&quot; &quot;Display Floorboards&quot;&gt;&gt;
-                                                        &lt;&lt;timed _floorboardstime t8n&gt;&gt;
-                                                            And here is the tabernacle&lt;br&gt;
-                                                        &lt;&lt;next 1350ms&gt;&gt;
-                                                            @@#reconstructed;display:inline-block;text-indent:24em;@@
-                                                            &lt;&lt;typewriter &quot;reconstructed.&quot; &quot;#reconstructed&quot;&gt;&gt;
-                                                        &lt;&lt;next 1350ms&gt;&gt;
-                                                            &lt;br&gt;&lt;br&gt;[[Next | Jerusalem]]
-                                                        &lt;&lt;/timed&gt;&gt;
-                                                    &lt;&lt;/linkreplace&gt;&gt;
-                                                &lt;&lt;/replace&gt;&gt;
-                                            &lt;&lt;/timed&gt;&gt;
-                                        &lt;&lt;/linkreplace&gt;&gt;
-                                    &lt;&lt;/replace&gt;&gt;
-                                &lt;&lt;/timed&gt;&gt;
-                            &lt;&lt;/linkreplace&gt;&gt;
-                        &lt;&lt;/replace&gt;&gt;
-                    &lt;&lt;/timed&gt;&gt;       
-                &lt;&lt;/linkreplace&gt;&gt;
-            &lt;&lt;/replace&gt;&gt;
-        &lt;&lt;/timed&gt;&gt;      
-    &lt;&lt;/linkreplace&gt;&gt;
-@@#caskets;&lt;&lt;include &quot;Display Caskets&quot;&gt;&gt;@@&lt;br&gt;
-&lt;&lt;indent 12 &quot;I take them &quot;&gt;&gt;@@#backtwo;back.@@&lt;br&gt;
-@@#lover;&lt;&lt;include &quot;Display Lover&quot;&gt;&gt;@@&lt;br&gt;
-&lt;&lt;indent 24 &quot;Crossed &quot;&gt;&gt;@@#outone;out.@@&lt;br&gt;
-@@#hands;display:inline-block;text-indent:2em;&lt;&lt;include &quot;Display Hands&quot;&gt;&gt;@@
-@@#crossed;Crossed@@ @@#outtwo;out.@@
-@@#floorboards;&lt;&lt;include &quot;Display Floorboards&quot;&gt;&gt;@@&lt;br&gt;
-&lt;&lt;indent 5 &quot;Crossed&quot;&gt;&gt; @@#outthree;out.@@
-/*&lt;&lt;indent 3 &quot;I take it&quot;&gt;&gt;
-    &lt;&lt;linkreplace &quot;back.&quot;&gt;&gt;back.&lt;br&gt;
-            &lt;&lt;backspace _badman &quot;#badman&quot; &quot;Display Badman&quot;&gt;&gt;
-            &lt;&lt;timed _badmantime t8n&gt;&gt;
-            @@#caskets;&lt;&lt;include &quot;Display Caskets&quot;&gt;&gt;@@&lt;br&gt;
-            &lt;&lt;indent 12 &quot;I take them&quot;&gt;&gt;
-            &lt;&lt;linkreplace &quot;back.&quot;&gt;&gt;back.&lt;br&gt;
-                &lt;&lt;backspace _caskets &quot;#caskets&quot; &quot;Display Caskets&quot;&gt;&gt;
-                &lt;&lt;timed _casketstime t8n&gt;&gt;
-                @@#lover;&lt;&lt;include &quot;Display Lover&quot;&gt;&gt;@@&lt;br&gt;
-                &lt;&lt;indent 24 &quot;Crossed&quot;&gt;&gt;
-                    &lt;&lt;linkreplace &quot;out.&quot;&gt;&gt;out.&lt;br&gt;
-                        &lt;&lt;backspace _lover &quot;#lover&quot; &quot;Display Lover&quot;&gt;&gt;
-                        &lt;&lt;timed _lovertime t8n&gt;&gt;
-                            @@#hands;display:inline-block;text-indent:2em;&lt;&lt;include &quot;Display Hands&quot;&gt;&gt;@@
-                            @@#crossed;Crossed @@
-                            &lt;&lt;linkreplace &quot;out.&quot;&gt;&gt;out.
-                                &lt;&lt;backspace _hands &quot;#hands&quot; &quot;Display Hands&quot; &quot;#crossed&quot;&gt;&gt;
-                                &lt;&lt;timed _handstime t8n&gt;&gt;
-                                    @@#floorboards;&lt;&lt;include &quot;Display Floorboards&quot;&gt;&gt;@@&lt;br&gt;
-                                    &lt;&lt;indent 5 &quot;Crossed&quot;&gt;&gt;
-                                    &lt;&lt;linkreplace &quot;out.&quot;&gt;&gt;out.
-                                            &lt;&lt;backspace _floorboards &quot;#floorboards&quot; &quot;Display Floorboards&quot;&gt;&gt;
-                                            &lt;&lt;timed _floorboardstime t8n&gt;&gt;
-                                                And here is the tabernacle&lt;br&gt;
-                                            &lt;&lt;next 1350ms&gt;&gt;
-                                                @@#reconstructed;display:inline-block;text-indent:24em;@@
-                                                &lt;&lt;typewriter &quot;reconstructed.&quot; &quot;#reconstructed&quot;&gt;&gt;
-                                            &lt;&lt;next 1350ms&gt;&gt;
-                                                &lt;br&gt;&lt;br&gt;[[Next | Jerusalem]]
-                                            &lt;&lt;/timed&gt;&gt;
-                                    &lt;&lt;/linkreplace&gt;&gt;
-                                &lt;&lt;/timed&gt;&gt;
-                            &lt;&lt;/linkreplace&gt;&gt;
-                        &lt;&lt;/timed&gt;&gt;
-                    &lt;&lt;/linkreplace&gt;&gt;
-                &lt;&lt;/timed&gt;&gt;
-            &lt;&lt;/linkreplace&gt;&gt;
-        &lt;&lt;/timed&gt;&gt;
-    &lt;&lt;/linkreplace&gt;&gt;*/</tw-passagedata></tw-storydata></div>
+&lt;&lt;/widget&gt;&gt;</tw-passagedata></tw-storydata></div>
 	<script id="script-sugarcube" type="text/javascript">
 	/*! SugarCube JS */
 	if(document.documentElement.getAttribute("data-init")==="loading"){!function(window,document,jQuery,undefined){"use strict";function _classCallCheck(e,t){if(!(e instanceof t))throw new TypeError("Cannot call a class as a function")}function _toConsumableArray(e){if(Array.isArray(e)){for(var t=0,r=Array(e.length);t<e.length;t++)r[t]=e[t];return r}return Array.from(e)}var _createClass=function(){function e(e,t){for(var r=0;r<t.length;r++){var a=t[r];a.enumerable=a.enumerable||!1,a.configurable=!0,"value"in a&&(a.writable=!0),Object.defineProperty(e,a.key,a)}}return function(t,r,a){return r&&e(t.prototype,r),a&&e(t,a),t}}(),_slicedToArray=function(){function e(e,t){var r=[],a=!0,n=!1,i=undefined;try{for(var o,s=e[Symbol.iterator]();!(a=(o=s.next()).done)&&(r.push(o.value),!t||r.length!==t);a=!0);}catch(e){n=!0,i=e}finally{try{!a&&s.return&&s.return()}finally{if(n)throw i}}return r}return function(t,r){if(Array.isArray(t))return t;if(Symbol.iterator in Object(t))return e(t,r);throw new TypeError("Invalid attempt to destructure non-iterable instance")}}(),_typeof="function"==typeof Symbol&&"symbol"==typeof Symbol.iterator?function(e){return typeof e}:function(e){return e&&"function"==typeof Symbol&&e.constructor===Symbol&&e!==Symbol.prototype?"symbol":typeof e},errorPrologRegExp=/^(?:(?:uncaught\s+(?:exception:\s+)?)?error:\s+)+/i,Alert=function(){function e(e,t,r,a){var n="fatal"===e,i="Apologies! "+(n?"A fatal":"An")+" error has occurred.";i+=n?" Aborting.":" You may be able to continue, but some parts may not work properly.",null==t&&null==r||(i+="\n\nError",null!=t&&(i+=" ["+t+"]"),i+=null!=r?": "+r.replace(errorPrologRegExp,"")+".":": unknown error."),"object"===(void 0===a?"undefined":_typeof(a))&&a.stack&&(i+="\n\nStack Trace:\n"+a.stack),window.alert(i)}function t(t,r,a){e(null,t,r,a)}function r(t,r,a){e("fatal",t,r,a)}return function(e){window.onerror=function(a,n,i,o,s){"complete"===document.readyState?t(null,a,s):(r(null,a,s),window.onerror=e,"function"==typeof window.onerror&&window.onerror.apply(this,arguments))}}(window.onerror),Object.freeze(Object.defineProperties({},{error:{value:t},fatal:{value:r}}))}(),Patterns=function(){var e=function(){var e=new Map([[" ","\\u0020"],["\f","\\f"],["\n","\\n"],["\r","\\r"],["\t","\\t"],["\v","\\v"],[" ","\\u00a0"],[" ","\\u1680"],["᠎","\\u180e"],[" ","\\u2000"],[" ","\\u2001"],[" ","\\u2002"],[" ","\\u2003"],[" ","\\u2004"],[" ","\\u2005"],[" ","\\u2006"],[" ","\\u2007"],[" ","\\u2008"],[" ","\\u2009"],[" ","\\u200a"],["\u2028","\\u2028"],["\u2029","\\u2029"],[" ","\\u202f"],[" ","\\u205f"],["　","\\u3000"],["\ufeff","\\ufeff"]]),t=/^\s$/,r="";return e.forEach(function(e,a){t.test(a)||(r+=e)}),r?"[\\s"+r+"]":"\\s"}(),t="[0-9A-Z_a-z\\-\\u00c0-\\u00d6\\u00d8-\\u00f6\\u00f8-\\u00ff\\u0150\\u0170\\u0151\\u0171]",r=t.replace("\\-",""),a=function(){return"("+t+"+)\\(([^\\)\\|\\n]+)\\):|("+t+"+):([^;\\|\\n]+);|((?:\\."+t+"+)+);|((?:#"+t+"+)+);"}();return Object.freeze({space:e,spaceNoTerminator:"[\\u0020\\f\\t\\v\\u00a0\\u1680\\u180e\\u2000-\\u200a\\u202f\\u205f\\u3000\\ufeff]",lineTerminator:"[\\n\\r\\u2028\\u2029]",anyLetter:t,anyLetterStrict:r,identifierFirstChar:"[$A-Z_a-z]",identifier:"[$A-Z_a-z][$0-9A-Z_a-z]*",variableSigil:"[$_]",variable:"[$_][$A-Z_a-z][$0-9A-Z_a-z]*",macroName:"[A-Za-z][\\w-]*|[=-]",cssImage:"\\[[<>]?[Ii][Mm][Gg]\\[(?:\\s|\\S)*?\\]\\]+",inlineCss:a,url:"(?:file|https?|mailto|ftp|javascript|irc|news|data):[^\\s'\"]+"})}();!function(){function e(e,t){var r=Number.parseInt(e,10)||0;if(r<1)return"";var a=void 0===t?"":String(t);for(""===a&&(a=" ");a.length<r;){var n=a.length,i=r-n;a+=n>i?a.slice(0,i):a}return a.length>r&&(a=a.slice(0,r)),a}var t=function(){function e(e,a){var n=String(e);if(!n)return n;switch(a){case"start":return t.test(n)?n.replace(t,""):n;case"end":return r.test(n)?n.replace(r,""):n;default:throw new Error('_trimString called with incorrect where parameter value: "'+a+'"')}}var t=new RegExp("^"+Patterns.space+Patterns.space+"*"),r=new RegExp(""+Patterns.space+Patterns.space+"*$");return e}();Array.prototype.includes||Object.defineProperty(Array.prototype,"includes",{configurable:!0,writable:!0,value:function(){if(null==this)throw new TypeError("Array.prototype.includes called on null or undefined");if(0===arguments.length)return!1;var e=this.length>>>0;if(0===e)return!1;var t=arguments[0],r=Number(arguments[1])||0;for(r<0&&(r=Math.max(0,e+r));r<e;++r){var a=this[r];if(a===t||a!==a&&t!==t)return!0}return!1}}),String.prototype.padStart||Object.defineProperty(String.prototype,"padStart",{configurable:!0,writable:!0,value:function(t,r){if(null==this)throw new TypeError("String.prototype.padStart called on null or undefined");var a=String(this),n=a.length,i=Number.parseInt(t,10);return i<=n?a:e(i-n,r)+a}}),String.prototype.padEnd||Object.defineProperty(String.prototype,"padEnd",{configurable:!0,writable:!0,value:function(t,r){if(null==this)throw new TypeError("String.prototype.padEnd called on null or undefined");var a=String(this),n=a.length,i=Number.parseInt(t,10);return i<=n?a:a+e(i-n,r)}}),String.prototype.trimStart||Object.defineProperty(String.prototype,"trimStart",{configurable:!0,writable:!0,value:function(){if(null==this)throw new TypeError("String.prototype.trimStart called on null or undefined");return t(this,"start")}}),String.prototype.trimLeft||Object.defineProperty(String.prototype,"trimLeft",{configurable:!0,writable:!0,value:function(){if(null==this)throw new TypeError("String.prototype.trimLeft called on null or undefined");return t(this,"start")}}),String.prototype.trimEnd||Object.defineProperty(String.prototype,"trimEnd",{configurable:!0,writable:!0,value:function(){if(null==this)throw new TypeError("String.prototype.trimEnd called on null or undefined");return t(this,"end")}}),String.prototype.trimRight||Object.defineProperty(String.prototype,"trimRight",{configurable:!0,writable:!0,value:function(){if(null==this)throw new TypeError("String.prototype.trimRight called on null or undefined");return t(this,"end")}})}(),function(){function _random(){var e=void 0,t=void 0;switch(arguments.length){case 0:throw new Error("_random called with insufficient parameters");case 1:e=0,t=arguments[0];break;default:e=arguments[0],t=arguments[1]}if(e>t){var r=[t,e];e=r[0],t=r[1]}return Math.floor(_nativeMathRandom()*(t-e+1))+e}function _randomIndex(e,t){var r=void 0,a=void 0;switch(t.length){case 1:r=0,a=e-1;break;case 2:r=0,a=Math.trunc(t[1]);break;default:r=Math.trunc(t[1]),a=Math.trunc(t[2])}return Number.isNaN(r)?r=0:!Number.isFinite(r)||r>=e?r=e-1:r<0&&(r=e+r)<0&&(r=0),Number.isNaN(a)?a=0:!Number.isFinite(a)||a>=e?a=e-1:a<0&&(a=e+a)<0&&(a=e-1),_random(r,a)}function _getCodePointStartAndEnd(e,t){var r=e.charCodeAt(t);if(Number.isNaN(r))return{char:"",start:-1,end:-1};if(r<55296||r>57343)return{char:e.charAt(t),start:t,end:t};if(r>=55296&&r<=56319){var a=t+1;if(a>=e.length)throw new Error("high surrogate without trailing low surrogate");var n=e.charCodeAt(a);if(n<56320||n>57343)throw new Error("high surrogate without trailing low surrogate");return{char:e.charAt(t)+e.charAt(a),start:t,end:a}}if(0===t)throw new Error("low surrogate without leading high surrogate");var i=t-1,o=e.charCodeAt(i);if(o<55296||o>56319)throw new Error("low surrogate without leading high surrogate");return{char:e.charAt(i)+e.charAt(t),start:i,end:t}}var _nativeMathRandom=Math.random;Object.defineProperty(Array,"random",{configurable:!0,writable:!0,value:function(e){if(null==e||"object"!==(void 0===e?"undefined":_typeof(e))||!Object.prototype.hasOwnProperty.call(e,"length"))throw new TypeError("Array.random array parameter must be an array or array-lke object");var t=e.length>>>0;if(0!==t){return e[0===arguments.length?_random(0,t-1):_randomIndex(t,Array.prototype.slice.call(arguments,1))]}}}),Object.defineProperty(Array.prototype,"concatUnique",{configurable:!0,writable:!0,value:function(){if(null==this)throw new TypeError("Array.prototype.concatUnique called on null or undefined");var e=Array.from(this);if(0===arguments.length)return e;var t=Array.prototype.reduce.call(arguments,function(e,t){return e.concat(t)},[]),r=t.length;if(0===r)return e;for(var a=Array.prototype.indexOf,n=Array.prototype.push,i=0;i<r;++i){var o=t[i];-1===a.call(e,o)&&n.call(e,o)}return e}}),Object.defineProperty(Array.prototype,"count",{configurable:!0,writable:!0,value:function(){if(null==this)throw new TypeError("Array.prototype.count called on null or undefined");for(var e=Array.prototype.indexOf,t=arguments[0],r=Number(arguments[1])||0,a=0;-1!==(r=e.call(this,t,r));)++a,++r;return a}}),Object.defineProperty(Array.prototype,"delete",{configurable:!0,writable:!0,value:function(){if(null==this)throw new TypeError("Array.prototype.delete called on null or undefined");if(0===arguments.length)return[];var e=this.length>>>0;if(0===e)return[];for(var t=Array.prototype.concat.apply([],arguments),r=t.length,a=[],n=0;n<e;++n)for(var i=this[n],o=0;o<r;++o){var s=t[o];if(i===s||i!==i&&s!==s){a.push(n);break}}for(var u=[],l=0,c=a.length;l<c;++l)u[l]=this[a[l]];for(var d=Array.prototype.splice,h=a.length-1;h>=0;--h)d.call(this,a[h],1);return u}}),Object.defineProperty(Array.prototype,"deleteAt",{configurable:!0,writable:!0,value:function(){if(null==this)throw new TypeError("Array.prototype.deleteAt called on null or undefined");if(0===arguments.length)return[];var e=this.length>>>0;if(0===e)return[];for(var t=Array.prototype.splice,r=[].concat(_toConsumableArray(new Set(Array.prototype.concat.apply([],arguments).map(function(t){return t<0?Math.max(0,e+t):t})).values())),a=[].concat(_toConsumableArray(r)).sort(function(e,t){return t-e}),n=[],i=0,o=r.length;i<o;++i)n[i]=this[r[i]];for(var s=0,u=a.length;s<u;++s)t.call(this,a[s],1);return n}}),Object.defineProperty(Array.prototype,"deleteWith",{configurable:!0,writable:!0,value:function(e,t){if(null==this)throw new TypeError("Array.prototype.deleteWith called on null or undefined");if("function"!=typeof e)throw new Error("Array.prototype.deleteWith predicate parameter must be a function");var r=this.length>>>0;if(0===r)return[];for(var a=Array.prototype.splice,n=[],i=[],o=0;o<r;++o)e.call(t,this[o],o,this)&&(i.push(this[o]),n.push(o));for(var s=n.length-1;s>=0;--s)a.call(this,n[s],1);return i}}),Object.defineProperty(Array.prototype,"first",{configurable:!0,writable:!0,value:function(){if(null==this)throw new TypeError("Array.prototype.first called on null or undefined");if(0!=this.length>>>0)return this[0]}}),Object.defineProperty(Array.prototype,"flatten",{configurable:!0,writable:!0,value:function(){if(null==this)throw new TypeError("Array.prototype.flatten called on null or undefined");return Array.prototype.reduce.call(this,function(e,t){return e.concat(Array.isArray(t)?t.flatten():t)},[])}}),Object.defineProperty(Array.prototype,"includesAll",{configurable:!0,writable:!0,value:function(){if(null==this)throw new TypeError("Array.prototype.includesAll called on null or undefined");if(1===arguments.length)return Array.isArray(arguments[0])?Array.prototype.includesAll.apply(this,arguments[0]):Array.prototype.includes.apply(this,arguments);for(var e=0,t=arguments.length;e<t;++e)if(!Array.prototype.some.call(this,function(e){return e===this.val||e!==e&&this.val!==this.val},{val:arguments[e]}))return!1;return!0}}),Object.defineProperty(Array.prototype,"includesAny",{configurable:!0,writable:!0,value:function(){if(null==this)throw new TypeError("Array.prototype.includesAny called on null or undefined");if(1===arguments.length)return Array.isArray(arguments[0])?Array.prototype.includesAny.apply(this,arguments[0]):Array.prototype.includes.apply(this,arguments);for(var e=0,t=arguments.length;e<t;++e)if(Array.prototype.some.call(this,function(e){return e===this.val||e!==e&&this.val!==this.val},{val:arguments[e]}))return!0;return!1}}),Object.defineProperty(Array.prototype,"last",{configurable:!0,writable:!0,value:function(){if(null==this)throw new TypeError("Array.prototype.last called on null or undefined");var e=this.length>>>0;if(0!==e)return this[e-1]}}),Object.defineProperty(Array.prototype,"pluck",{configurable:!0,writable:!0,value:function(){if(null==this)throw new TypeError("Array.prototype.pluck called on null or undefined");var e=this.length>>>0;if(0!==e){var t=0===arguments.length?_random(0,e-1):_randomIndex(e,[].concat(Array.prototype.slice.call(arguments)));return Array.prototype.splice.call(this,t,1)[0]}}}),Object.defineProperty(Array.prototype,"pluckMany",{configurable:!0,writable:!0,value:function(e){if(null==this)throw new TypeError("Array.prototype.pluckMany called on null or undefined");var t=this.length>>>0;if(0===t)return[];var r=Math.trunc(e);if(!Number.isInteger(r))throw new Error("Array.prototype.pluckMany want parameter must be an integer");if(r<1)return[];r>t&&(r=t);var a=Array.prototype.splice,n=[],i=t-1;do{n.push(a.call(this,_random(0,i--),1)[0])}while(n.length<r);return n}}),Object.defineProperty(Array.prototype,"pushUnique",{configurable:!0,writable:!0,value:function(){if(null==this)throw new TypeError("Array.prototype.pushUnique called on null or undefined");var e=arguments.length;if(0===e)return this.length>>>0;for(var t=Array.prototype.indexOf,r=Array.prototype.push,a=0;a<e;++a){var n=arguments[a];-1===t.call(this,n)&&r.call(this,n)}return this.length>>>0}}),Object.defineProperty(Array.prototype,"random",{configurable:!0,writable:!0,value:function(){if(null==this)throw new TypeError("Array.prototype.random called on null or undefined");var e=this.length>>>0;if(0!==e){return this[0===arguments.length?_random(0,e-1):_randomIndex(e,[].concat(Array.prototype.slice.call(arguments)))]}}}),Object.defineProperty(Array.prototype,"randomMany",{configurable:!0,writable:!0,value:function(e){if(null==this)throw new TypeError("Array.prototype.randomMany called on null or undefined");var t=this.length>>>0;if(0===t)return[];var r=Math.trunc(e);if(!Number.isInteger(r))throw new Error("Array.prototype.randomMany want parameter must be an integer");if(r<1)return[];r>t&&(r=t);var a=new Map,n=[],i=t-1;do{var o=void 0;do{o=_random(0,i)}while(a.has(o));a.set(o,!0),n.push(this[o])}while(n.length<r);return n}}),Object.defineProperty(Array.prototype,"shuffle",{configurable:!0,writable:!0,value:function(){if(null==this)throw new TypeError("Array.prototype.shuffle called on null or undefined");var e=this.length>>>0;if(0===e)return this;for(var t=e-1;t>0;--t){var r=Math.floor(_nativeMathRandom()*(t+1));if(t!==r){var a=this[t];this[t]=this[r],this[r]=a}}return this}}),Object.defineProperty(Array.prototype,"unshiftUnique",{configurable:!0,writable:!0,value:function(){if(null==this)throw new TypeError("Array.prototype.unshiftUnique called on null or undefined");var e=arguments.length;if(0===e)return this.length>>>0;for(var t=Array.prototype.indexOf,r=Array.prototype.unshift,a=0;a<e;++a){var n=arguments[a];-1===t.call(this,n)&&r.call(this,n)}return this.length>>>0}}),Object.defineProperty(Function.prototype,"partial",{configurable:!0,writable:!0,value:function(){if(null==this)throw new TypeError("Function.prototype.partial called on null or undefined");var e=Array.prototype.slice,t=this,r=e.call(arguments,0);return function(){for(var a=[],n=0,i=0;i<r.length;++i)a.push(r[i]===undefined?arguments[n++]:r[i]);return t.apply(this,a.concat(e.call(arguments,n)))}}}),Object.defineProperty(Math,"clamp",{configurable:!0,writable:!0,value:function(e,t,r){var a=Number(e);return Number.isNaN(a)?NaN:a.clamp(t,r)}}),Object.defineProperty(Math,"easeInOut",{configurable:!0,writable:!0,value:function(e){return 1-(Math.cos(Number(e)*Math.PI)+1)/2}}),Object.defineProperty(Number.prototype,"clamp",{configurable:!0,writable:!0,value:function(){if(null==this)throw new TypeError("Number.prototype.clamp called on null or undefined");if(2!==arguments.length)throw new Error("Number.prototype.clamp called with an incorrect number of parameters");var e=Number(arguments[0]),t=Number(arguments[1]);if(e>t){var r=[t,e];e=r[0],t=r[1]}return Math.min(Math.max(this,e),t)}}),RegExp.escape||function(){var e=/[\\^$*+?.()|[\]{}]/g,t=new RegExp(e.source);Object.defineProperty(RegExp,"escape",{configurable:!0,writable:!0,value:function(r){var a=String(r);return a&&t.test(a)?a.replace(e,"\\$&"):a}})}(),function(){var e=/{(\d+)(?:,([+-]?\d+))?}/g,t=new RegExp(e.source);Object.defineProperty(String,"format",{configurable:!0,writable:!0,value:function(r){function a(e,t,r){if(!t)return e;var a=Math.abs(t)-e.length;if(a<1)return e;var n=String(r).repeat(a);return t<0?e+n:n+e}if(arguments.length<2)return 0===arguments.length?"":r;var n=2===arguments.length&&Array.isArray(arguments[1])?[].concat(_toConsumableArray(arguments[1])):Array.prototype.slice.call(arguments,1);return 0===n.length?r:t.test(r)?(e.lastIndex=0,r.replace(e,function(e,t,r){var i=n[t];if(null==i)return"";for(;"function"==typeof i;)i=i();switch(void 0===i?"undefined":_typeof(i)){case"string":break;case"object":i=JSON.stringify(i);break;default:i=String(i)}return a(i,r?Number.parseInt(r,10):0," ")})):r}})}(),Object.defineProperty(String.prototype,"contains",{configurable:!0,writable:!0,value:function(){if(null==this)throw new TypeError("String.prototype.contains called on null or undefined");return-1!==String.prototype.indexOf.apply(this,arguments)}}),Object.defineProperty(String.prototype,"count",{configurable:!0,writable:!0,value:function(){if(null==this)throw new TypeError("String.prototype.count called on null or undefined");var e=String(arguments[0]||"");if(""===e)return 0;for(var t=String.prototype.indexOf,r=e.length,a=Number(arguments[1])||0,n=0;-1!==(a=t.call(this,e,a));)++n,a+=r;return n}}),Object.defineProperty(String.prototype,"first",{configurable:!0,writable:!0,value:function(){if(null==this)throw new TypeError("String.prototype.first called on null or undefined");return _getCodePointStartAndEnd(String(this),0).char}}),Object.defineProperty(String.prototype,"last",{configurable:!0,writable:!0,value:function(){if(null==this)throw new TypeError("String.prototype.last called on null or undefined");var e=String(this);return _getCodePointStartAndEnd(e,e.length-1).char}}),Object.defineProperty(String.prototype,"splice",{configurable:!0,writable:!0,value:function(e,t,r){if(null==this)throw new TypeError("String.prototype.splice called on null or undefined");var a=this.length>>>0;if(0===a)return"";var n=Number(e);Number.isSafeInteger(n)?n<0&&(n+=a)<0&&(n=0):n=0,n>a&&(n=a);var i=Number(t);(!Number.isSafeInteger(i)||i<0)&&(i=0);var o=this.slice(0,n);return void 0!==r&&(o+=r),n+i<a&&(o+=this.slice(n+i)),o}}),Object.defineProperty(String.prototype,"splitOrEmpty",{configurable:!0,writable:!0,value:function(){if(null==this)throw new TypeError("String.prototype.splitOrEmpty called on null or undefined");return""===String(this)?[]:String.prototype.split.apply(this,arguments)}}),Object.defineProperty(String.prototype,"toLocaleUpperFirst",{configurable:!0,writable:!0,value:function(){if(null==this)throw new TypeError("String.prototype.toLocaleUpperFirst called on null or undefined");var e=String(this),t=_getCodePointStartAndEnd(e,0),r=t.char,a=t.end;return-1===a?"":r.toLocaleUpperCase()+e.slice(a+1)}}),Object.defineProperty(String.prototype,"toUpperFirst",{configurable:!0,writable:!0,value:function(){if(null==this)throw new TypeError("String.prototype.toUpperFirst called on null or undefined");var e=String(this),t=_getCodePointStartAndEnd(e,0),r=t.char,a=t.end;return-1===a?"":r.toUpperCase()+e.slice(a+1)}}),Object.defineProperty(Date.prototype,"toJSON",{configurable:!0,writable:!0,value:function(){return["(revive:date)",this.toISOString()]}}),Object.defineProperty(Function.prototype,"toJSON",{configurable:!0,writable:!0,value:function(){return["(revive:eval)","("+this.toString()+")"]}}),Object.defineProperty(Map.prototype,"toJSON",{configurable:!0,writable:!0,value:function(){return["(revive:map)",[].concat(_toConsumableArray(this))]}}),Object.defineProperty(RegExp.prototype,"toJSON",{configurable:!0,writable:!0,value:function(){return["(revive:eval)",this.toString()]}}),Object.defineProperty(Set.prototype,"toJSON",{configurable:!0,writable:!0,value:function(){return["(revive:set)",[].concat(_toConsumableArray(this))]}}),Object.defineProperty(JSON,"reviveWrapper",{configurable:!0,writable:!0,value:function(e,t){if("string"!=typeof e)throw new TypeError("JSON.reviveWrapper code parameter must be a string");return["(revive:eval)",[e,t]]}}),Object.defineProperty(JSON,"_real_parse",{value:JSON.parse}),Object.defineProperty(JSON,"parse",{configurable:!0,writable:!0,value:function value(text,reviver){return JSON._real_parse(text,function(key,val){var value=val;if(Array.isArray(value)&&2===value.length)switch(value[0]){case"(revive:set)":value=new Set(value[1]);break;case"(revive:map)":value=new Map(value[1]);break;case"(revive:date)":value=new Date(value[1]);break;case"(revive:eval)":try{if(Array.isArray(value[1])){var $ReviveData$=value[1][1];value=eval(value[1][0])}else value=eval(value[1])}catch(e){}}else if("string"==typeof value&&"@@revive@@"===value.slice(0,10))try{value=eval(value.slice(10))}catch(e){}if("function"==typeof reviver)try{value=reviver(key,value)}catch(e){}return value})}}),Object.defineProperty(Array.prototype,"contains",{configurable:!0,writable:!0,value:function(){if(null==this)throw new TypeError("Array.prototype.contains called on null or undefined");return Array.prototype.includes.apply(this,arguments)}}),Object.defineProperty(Array.prototype,"containsAll",{configurable:!0,writable:!0,value:function(){if(null==this)throw new TypeError("Array.prototype.containsAll called on null or undefined");return Array.prototype.includesAll.apply(this,arguments)}}),Object.defineProperty(Array.prototype,"containsAny",{configurable:!0,writable:!0,value:function(){if(null==this)throw new TypeError("Array.prototype.containsAny called on null or undefined");return Array.prototype.includesAny.apply(this,arguments)}}),Object.defineProperty(String.prototype,"readBracketedList",{configurable:!0,writable:!0,value:function(){if(null==this)throw new TypeError("String.prototype.readBracketedList called on null or undefined");for(var e=new RegExp("(?:\\[\\[((?:\\s|\\S)*?)\\]\\])|([^\"'\\s]\\S*)","gm"),t=[],r=void 0;null!==(r=e.exec(this));)r[1]?t.push(r[1]):r[2]&&t.push(r[2]);return t}})}();var Browser=function(){var e=navigator.userAgent.toLowerCase(),t=e.includes("windows phone"),r=Object.freeze({Android:!t&&e.includes("android"),BlackBerry:/blackberry|bb10/.test(e),iOS:!t&&/ip(?:hone|ad|od)/.test(e),Windows:t||e.includes("iemobile"),any:function(){return r.Android||r.BlackBerry||r.iOS||r.Windows}}),a=!r.Windows&&!/khtml|trident|edge/.test(e)&&e.includes("gecko"),n=!e.includes("opera")&&/msie|trident/.test(e),i=n?function(){var t=/(?:msie\s+|rv:)(\d+\.\d)/.exec(e);return t?Number(t[1]):0}():null,o=e.includes("opera")||e.includes(" opr/"),s=o?function(){var t=new RegExp((/khtml|chrome/.test(e)?"opr":"version")+"\\/(\\d+\\.\\d+)"),r=t.exec(e);return r?Number(r[1]):0}():null,u=e.includes("vivaldi");return Object.freeze({userAgent:e,isMobile:r,isGecko:a,isIE:n,ieVersion:i,isOpera:o,operaVersion:s,isVivaldi:u})}(),Has=function(){var e=function(){try{return"function"==typeof document.createElement("audio").canPlayType}catch(e){}return!1}(),t=function(){try{return"Blob"in window&&"File"in window&&"FileList"in window&&"FileReader"in window&&!Browser.isMobile.any()&&(!Browser.isOpera||Browser.operaVersion>=15)}catch(e){}return!1}(),r=function(){try{return"geolocation"in navigator&&"function"==typeof navigator.geolocation.getCurrentPosition&&"function"==typeof navigator.geolocation.watchPosition}catch(e){}return!1}(),a=function(){try{return"MutationObserver"in window&&"function"==typeof window.MutationObserver}catch(e){}return!1}(),n=function(){try{return"performance"in window&&"function"==typeof window.performance.now}catch(e){}return!1}();return Object.freeze({audio:e,fileAPI:t,geolocation:r,mutationObserver:a,performance:n})}(),_ref3=function(){function e(t){if("object"!==(void 0===t?"undefined":_typeof(t))||null===t)return t;if(t instanceof String)return String(t);if(t instanceof Number)return Number(t);if(t instanceof Boolean)return Boolean(t);if("function"==typeof t.clone)return t.clone(!0);if(t.nodeType&&"function"==typeof t.cloneNode)return t.cloneNode(!0);var r=void 0;return t instanceof Array?r=new Array(t.length):t instanceof Date?r=new Date(t.getTime()):t instanceof Map?(r=new Map,t.forEach(function(t,a){return r.set(a,e(t))})):t instanceof RegExp?r=new RegExp(t):t instanceof Set?(r=new Set,t.forEach(function(t){return r.add(e(t))})):r=Object.create(Object.getPrototypeOf(t)),Object.keys(t).forEach(function(a){return r[a]=e(t[a])}),r}function t(e){for(var t=document.createDocumentFragment(),r=document.createElement("p"),a=void 0;null!==(a=e.firstChild);){if(a.nodeType===Node.ELEMENT_NODE){switch(a.nodeName.toUpperCase()){case"BR":if(null!==a.nextSibling&&a.nextSibling.nodeType===Node.ELEMENT_NODE&&"BR"===a.nextSibling.nodeName.toUpperCase()){e.removeChild(a.nextSibling),e.removeChild(a),t.appendChild(r),r=document.createElement("p");continue}if(!r.hasChildNodes()){e.removeChild(a);continue}break;case"ADDRESS":case"ARTICLE":case"ASIDE":case"BLOCKQUOTE":case"CENTER":case"DIV":case"DL":case"FIGURE":case"FOOTER":case"FORM":case"H1":case"H2":case"H3":case"H4":case"H5":case"H6":case"HEADER":case"HR":case"MAIN":case"NAV":case"OL":case"P":case"PRE":case"SECTION":case"TABLE":case"UL":r.hasChildNodes()&&(t.appendChild(r),r=document.createElement("p")),t.appendChild(a);continue}}r.appendChild(a)}r.hasChildNodes()&&t.appendChild(r),e.appendChild(t)}function r(){try{return document.activeElement||null}catch(e){return null}}function a(e,t,r){var a="object"===(void 0===e?"undefined":_typeof(e))?e:document.getElementById(e);if(null==a)return null;var n=Array.isArray(t)?t:[t];jQuery(a).empty();for(var i=0,o=n.length;i<o;++i)if(Story.has(n[i]))return new Wikifier(a,Story.get(n[i]).processText().trim()),a;if(null!=r){var s=String(r).trim();""!==s&&new Wikifier(a,s)}return a}function n(e,t,r){var a=jQuery(document.createElement("div")),n=jQuery(document.createElement("button")),i=jQuery(document.createElement("pre")),o=L10n.get("errorTitle")+": "+(t||"unknown error");return n.addClass("error-toggle").ariaClick({label:L10n.get("errorToggle")},function(){n.hasClass("enabled")?(n.removeClass("enabled"),i.attr({"aria-hidden":!0,hidden:"hidden"})):(n.addClass("enabled"),i.removeAttr("aria-hidden hidden"))}).appendTo(a),jQuery(document.createElement("span")).addClass("error").text(o).appendTo(a),jQuery(document.createElement("code")).text(r).appendTo(i),i.addClass("error-source").attr({"aria-hidden":!0,hidden:"hidden"}).appendTo(a),a.addClass("error-view").appendTo(e),console.warn(o+"\n\t"+r.replace(/\n/g,"\n\t")),!1}function i(e,t){var r=i;switch(void 0===e?"undefined":_typeof(e)){case"number":if(Number.isNaN(e))return t;break;case"object":if(null===e)return t;if(Array.isArray(e))return e.map(function(e){return r(e,t)}).join(", ");if(e instanceof Set)return[].concat(_toConsumableArray(e)).map(function(e){return r(e,t)}).join(", ");if(e instanceof Map){return"{ "+[].concat(_toConsumableArray(e)).map(function(e){var a=_slicedToArray(e,2),n=a[0],i=a[1];return r(n,t)+" → "+r(i,t)}).join(", ")+" }"}return e instanceof Date?e.toLocaleString():"function"==typeof e.toString?e.toString():Object.prototype.toString.call(e);case"function":case"undefined":return t}return String(e)}return Object.freeze(Object.defineProperties({},{clone:{value:e},convertBreaks:{value:t},safeActiveElement:{value:r},setPageElement:{value:a},throwError:{value:n},toStringOrDefault:{value:i}}))}(),clone=_ref3.clone,convertBreaks=_ref3.convertBreaks,safeActiveElement=_ref3.safeActiveElement,setPageElement=_ref3.setPageElement,throwError=_ref3.throwError,toStringOrDefault=_ref3.toStringOrDefault;!function(){function e(e){13!==e.which&&32!==e.which||(e.preventDefault(),jQuery(safeActiveElement()||this).trigger("click"))}function t(e){return function(){var t=jQuery(this);t.ariaIsDisabled()||(t.is("[aria-pressed]")&&t.attr("aria-pressed","true"===t.attr("aria-pressed")?"false":"true"),e.apply(this,arguments))}}function r(e){return t(function(){jQuery(this).off(".aria-clickable").removeAttr("tabindex aria-controls aria-pressed").not("a,button").removeAttr("role").end().filter("button").prop("disabled",!0),e.apply(this,arguments)})}jQuery.fn.extend({ariaClick:function(a,n){if(0===this.length||0===arguments.length)return this;var i=a,o=n;return null==o&&(o=i,i=undefined),i=jQuery.extend({namespace:undefined,one:!1,selector:undefined,data:undefined,controls:undefined,pressed:undefined,label:undefined},i),"string"!=typeof i.namespace?i.namespace="":"."!==i.namespace[0]&&(i.namespace="."+i.namespace),"boolean"==typeof i.pressed&&(i.pressed=i.pressed?"true":"false"),this.filter("button").prop("type","button"),this.not("a,button").attr("role","button"),this.attr("tabindex",0),null!=i.controls&&this.attr("aria-controls",i.controls),null!=i.pressed&&this.attr("aria-pressed",i.pressed),null!=i.label&&this.attr({"aria-label":i.label,title:i.label}),this.not("button").on("keypress.aria-clickable"+i.namespace,i.selector,e),this.on("click.aria-clickable"+i.namespace,i.selector,i.data,i.one?r(o):t(o)),this},ariaDisabled:function(e){if(0===this.length||0===arguments.length)return this;var t=this.not("button,fieldset,input,menuitem,optgroup,option,select,textarea"),r=this.filter("button,fieldset,input,menuitem,optgroup,option,select,textarea");return e?(t.each(function(){this.setAttribute("disabled",""),this.setAttribute("aria-disabled","")}),r.each(function(){this.disabled=!0,this.setAttribute("aria-disabled","")})):(t.each(function(){this.removeAttribute("disabled"),this.removeAttribute("aria-disabled")}),r.each(function(){this.disabled=!1,this.removeAttribute("aria-disabled")})),this},ariaIsDisabled:function(){return this.is("[disabled]")}})}(),function(){jQuery.extend({wikiWithOptions:function(e){for(var t=arguments.length,r=Array(t>1?t-1:0),a=1;a<t;a++)r[a-1]=arguments[a];if(0!==r.length){var n=document.createDocumentFragment();r.forEach(function(t){return new Wikifier(n,t,e)});var i=[].concat(_toConsumableArray(n.querySelectorAll(".error"))).map(function(e){return e.textContent.replace(errorPrologRegExp,"")});if(i.length>0)throw new Error(i.join("; "))}},wiki:function(){for(var e=arguments.length,t=Array(e),r=0;r<e;r++)t[r]=arguments[r];this.wikiWithOptions.apply(this,[undefined].concat(t))}}),jQuery.fn.extend({wikiWithOptions:function(e){for(var t=arguments.length,r=Array(t>1?t-1:0),a=1;a<t;a++)r[a-1]=arguments[a];if(0===this.length||0===r.length)return this;var n=document.createDocumentFragment();return r.forEach(function(t){return new Wikifier(n,t,e)}),this.append(n),this},wiki:function(){for(var e=arguments.length,t=Array(e),r=0;r<e;r++)t[r]=arguments[r];return this.wikiWithOptions.apply(this,[undefined].concat(t))}})}();var Util=function(){function e(e){return Object.freeze(Object.assign(Object.create(null),e))}function t(e){return Object.prototype.toString.call(e).slice(8,-1)}function r(e){var t=void 0;switch(void 0===e?"undefined":_typeof(e)){case"number":t=e;break;case"string":t=Number(e);break;default:return!1}return!Number.isNaN(t)&&Number.isFinite(t)}function a(e){return"boolean"==typeof e||"string"==typeof e&&("true"===e||"false"===e)}function n(e,t){return e===t||e!==e&&t!==t}function i(e){return String(e).trim().replace(/[^\w\s\u2013\u2014-]+/g,"").replace(/[_\s\u2013\u2014-]+/g,"-").toLocaleLowerCase()}function o(e){if(null==e)return"";var t=String(e);return t&&g.test(t)?t.replace(p,function(e){return m[e]}):t}function s(e){if(null==e)return"";var t=String(e);return t&&y.test(t)?t.replace(v,function(e){return b[e.toLowerCase()]}):t}function u(e,t){var r=String(e),a=Math.trunc(t),n=r.charCodeAt(a);if(Number.isNaN(n))return{char:"",start:-1,end:-1};var i={char:r.charAt(a),start:a,end:a};if(n<55296||n>57343)return i;if(n>=55296&&n<=56319){var o=a+1;if(o>=r.length)return i;var s=r.charCodeAt(o)

@@ -1,22 +1,31 @@
 :: Start
 An adaption of [[Litany In Which Certain Things Are Crossed Out | https://www.poetryfoundation.org/poems/48158/litany-in-which-certain-things-are-crossed-out]] by Richard Siken.<br>
 <br>
+This current version is incomplete.<br><br>
+<<script>>
+    if ($(window).width() <= 720) {
+        $(output).wiki("//Note: This works much better on a computer than on a phone or tablet.\n If you want to view it anyway, I recommend you read it in landscape mode.//\n");
+    }
+<</script>>
 [[Begin]].
-/*<br>[[Crossed out]]
+/*<br>[[Dragon]]
+<br>[[Crossed out]]
 <br>[[Jerusalem]]
-<br>[[test]]*/
+<br>[[test]]
+<br>[[Want]]
+*/
 
 :: Begin
 <<silently>>
-<<set _noparty to ["I'm sorry I couldn't come to your party."]>>
-<<set _nopartyback to ["ouldn't come to your party."]>>
-<<set _yesparty to ["ame to your party ", "and seduced you ", "\nand left you bruised and ruined, you poor sad thing."]>>
-<<set _die to "You will be alone always and then you will die.">>
-<<set _dietime to _die.length * 70 + 'ms'>>
-<<set _yespartytime to _yesparty[0].length * 50 + 'ms'>>
-<<set _yespartytime1 to _yesparty[1].length * 50 + 'ms'>>
-<<set _nopartytime to _noparty[0].length * 50 + 'ms'>>
-<<set _nopartybacktime to _nopartyback[0].length * 50 + 'ms'>>
+    <<set _noparty to ["I'm sorry I couldn't come to your party."]>>
+    <<set _nopartyback to ["ouldn't come to your party."]>>
+    <<set _yesparty to ["ame to your party ", "and seduced you ", "\nand left you bruised and ruined, you poor sad thing."]>>
+    <<set _die to "You will be alone always and then you will die.">>
+    <<set _dietime to _die.length * 70 + 'ms'>>
+    <<set _yespartytime to _yesparty[0].length * 50 + 'ms'>>
+    <<set _yespartytime1 to _yesparty[1].length * 50 + 'ms'>>
+    <<set _nopartytime to _noparty[0].length * 50 + 'ms'>>
+    <<set _nopartybacktime to _nopartyback[0].length * 50 + 'ms'>>
 <</silently>>
 @@#begin;Every morning the <<linkreplace "maple leaves." t8n>>maple leaves.<br>
 <<indent 8 "Every morning another chapter where the hero shifts">><br>
@@ -55,7 +64,7 @@ and little words
                                                     <</append>>
                                                 <<next 1s>>
                                                     <<append "#better" t8n>>
-                                                        Who <<linkreplace "@@color:rgb(27, 95, 27);wouldn't?@@">>wouldn't?
+                                                        Who <<linkreplace "@@color:rgb(17, 107, 17);wouldn't?@@">>wouldn't?
                                                                 <<addclass "#begin" "lighter">>
                                                                 <<append "#forest">><br>
                                                                 <<include "Forest">>

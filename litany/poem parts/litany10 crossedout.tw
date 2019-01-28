@@ -1,14 +1,15 @@
 :: Crossed out
-<<silently>><<set _badman to ["you are", "not", "feeding yourself to a bad man", "against a black sky prickled with small lights."]>>
-<<set _caskets to ["The wooden halls like caskets. These terms from the lower depths."]>>
-<<set _lover to ["Here is the repeated image of the lover destroyed."]>>
-<<set _hands to ["Clumsy hands in a dark room."]>>
-<<set _floorboards to ["There is something", "underneath the floorboards."]>>
-<<set _badmantime to (_badman[0].length + _badman[1].length + _badman[2].length + _badman[3].length) * 50 + 'ms'>>
-<<set _casketstime to _caskets[0].length * 50 + 'ms'>>
-<<set _lovertime to _lover[0].length * 50 + 'ms'>>
-<<set _handstime to _hands[0].length * 50 + 'ms'>>
-<<set _floorboardstime to (_floorboards[0].length + _floorboards[1].length) * 50 + 'ms'>>
+<<silently>>
+    <<set _badman to ["you are", "not", "feeding yourself to a bad man", "against a black sky prickled with small lights."]>>
+    <<set _caskets to ["The wooden halls like caskets. These terms from the lower depths."]>>
+    <<set _lover to ["Here is the repeated image of the lover destroyed."]>>
+    <<set _hands to ["Clumsy hands in a dark room."]>>
+    <<set _floorboards to ["There is something", "underneath the floorboards."]>>
+    <<set _badmantime to (_badman[0].length + _badman[1].length + _badman[2].length + _badman[3].length) * 50 + 'ms'>>
+    <<set _casketstime to _caskets[0].length * 50 + 'ms'>>
+    <<set _lovertime to _lover[0].length * 50 + 'ms'>>
+    <<set _handstime to _hands[0].length * 50 + 'ms'>>
+    <<set _floorboardstime to (_floorboards[0].length + _floorboards[1].length) * 50 + 'ms'>>
 <</silently>>
 <<indent 5 "I’m not really sure why I do it, but in this version">>
 @@#badman;<<include "Display Badman">>@@<br>

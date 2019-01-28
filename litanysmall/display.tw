@@ -1,4 +1,0 @@
-:: Display Hands
-<<if _hands.length > 0>>
-    _hands[0]<br>
-<</if>>

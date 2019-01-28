@@ -44,7 +44,7 @@ body {
 }
 @media screen and (min-width: 720px) {
     #story {
-		padding-left: 10em;
+		padding-left: 20%;
 	}
 }
 
@@ -64,6 +64,67 @@ body {
 	-webkit-transition: background-color 1000ms ease-in, color 1000ms ease-in;
     -ms-transition: background-color 1000ms ease-in, color 1000ms ease-in;
     transition: background-color 1000ms ease-in, color 1000ms ease-in;
+}
+
+body[data-tags~="want"] {
+	background-color: rgb(27, 21, 31);
+	color: rgb(255, 252, 213);
+}
+
+
+body[data-tags~="want"] a {
+	color: rgb(255, 246, 122);
+}
+
+body[data-tags~="want"] a:hover {
+	color: rgb(255, 250, 177);
+}
+
+
+body.spotlightone {
+	background-image: [img[spotlightone]];
+	height: 120%; /* You must set a specified height */
+	background-position: center; /* Center the image */
+	  background-repeat: no-repeat; /* Do not repeat the image */
+	  background-size: 120%;
+	  background-attachment: fixed;
+	position: relative;
+	background-color: #2b1e28;
+	color: rgb(255, 252, 213);
+  }
+
+body.spotlighttwo {
+	background-image: [img[spotlightone]], [img[spotlighttwo]];
+	height: 120%; /* You must set a specified height */
+	background-position: center; /* Center the image */
+	  background-repeat: no-repeat; /* Do not repeat the image */
+	  background-size: 120%;
+	  background-attachment: fixed;
+	position: relative;
+	background-color: #42313b;
+	color: rgb(255, 252, 213);
+  }
+
+body.spotlightthree {
+/*spotlight one*/
+	background-image: [img[spotlightone]], [img[spotlighttwo]], [img[spotlightthree]];
+	height: 120%; /* You must set a specified height */
+	background-position: center; /* Center the image */
+	  background-repeat: no-repeat; /* Do not repeat the image */
+	  background-size: 120%;
+	  background-attachment: fixed;
+	position: relative;
+	background-color: #584449;
+	color: rgb(255, 252, 213);
+  }
+
+body.dark {
+	background-color: black;
+	color: rgb(255, 252, 213);
+}
+
+.wantfont {
+	color: rgb(18, 13, 20);
 }
 
 .lighter {
@@ -86,14 +147,10 @@ body {
 
 .flames {
 	background-color:#fc9621;
-	color: rgb(148, 21, 4);
+	color: rgb(223, 26, 0);
     -webkit-transition: background-color 1000ms ease-in, color 1000ms ease-in;
     -ms-transition: background-color 1000ms ease-in, color 1000ms ease-in;
     transition: background-color 1000ms ease-in, color 1000ms ease-in;
-}
-
-.flames a {
-	color: rgb(223, 26, 0);
 }
 
 .flames a:hover {
@@ -101,7 +158,7 @@ body {
 }
 
 .dragon {
-	color: rgb(148, 21, 4);
+	color: rgb(117, 16, 3);
 	font-weight: bold;
 }
 
@@ -127,6 +184,6 @@ body {
     transition: visibility 1000ms ease-in;
 }*/
 
-.bricks {
+.gone {
 	visibility:hidden;
 }
