@@ -9,9 +9,9 @@
    xmlns="http://www.w3.org/2000/svg"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
-   width="533.92279mm"
-   height="383.15018mm"
-   viewBox="0 0 533.92279 383.15019"
+   width="705.21393mm"
+   height="400.58069mm"
+   viewBox="0 0 705.21391 400.58071"
    version="1.1"
    id="svg8"
    sodipodi:docname="spotlightthree.svg"
@@ -26,8 +26,8 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="0.125"
-     inkscape:cx="-692.30191"
-     inkscape:cy="478.18901"
+     inkscape:cx="-1764.1463"
+     inkscape:cy="-138.67824"
      inkscape:document-units="mm"
      inkscape:current-layer="layer1"
      showgrid="false"
@@ -40,22 +40,22 @@
      showguides="true"
      inkscape:guide-bbox="true">
     <sodipodi:guide
-       position="592.66666,368.29999"
+       position="553.93176,492.81108"
        orientation="1,0"
        inkscape:locked="false"
        id="guide4526" />
     <sodipodi:guide
-       position="-114.3,171.45"
+       position="-164.09092,8.2372214"
        orientation="1,0"
        inkscape:locked="false"
        id="guide4528" />
     <sodipodi:guide
-       position="224.22247,-111.12706"
+       position="174.43157,-274.33985"
        orientation="0,1"
        id="guide4538"
        inkscape:locked="false" />
     <sodipodi:guide
-       position="328.99747,563.03126"
+       position="279.20659,399.81849"
        orientation="0,1"
        id="guide4540"
        inkscape:locked="false" />
@@ -76,10 +76,10 @@
      inkscape:label="Layer 1"
      inkscape:groupmode="layer"
      id="layer1"
-     transform="translate(179.65569,33.936544)">
+     transform="translate(129.86479,214.57985)">
     <path
-       style="opacity:0.3;fill:#fff5d5;fill-opacity:1;stroke:#fff6d5;stroke-width:1.411;stroke-opacity:0;stroke-miterlimit:4;stroke-dasharray:none"
-       d="M 58.124507,-235.34041 302.94432,460.34071 v 0 L -55.666846,-133.55154 Z"
+       style="opacity:0.25;fill:#fff5d5;fill-opacity:1;stroke:#fff6d5;stroke-width:1.52440846;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:0"
+       d="m 572.46711,-213.81765 -701.85173,399.15594 v 0 l 492.06825,-399.15594 z"
        id="path3713"
        inkscape:connector-curvature="0"
        sodipodi:nodetypes="ccccc"

@@ -1,0 +1,35 @@
+:: Princess [section]
+<<indent 9 "For a while I thought I was the">>@@.dragon;dragon.@@<br>
+I guess I can tell you that 
+<<linkreplace "now." t8n>> now.
+    <<addclass "body" "princess">>
+    And, for a while, I thought I was<br>
+    <<indent 24 "the princess,">><br>
+    cotton candy pink, sitting there in my room, in the tower of the castle,<br>
+    <<indent 2 "young and beautiful and in love and waiting for you with">><br>
+    <<linkreplace "confidence<br>" t8n>>confidence<br>
+        <<indent 3 "but the princess">> @@#mirror;looks into her
+        <<linkreplace "mirror">>mirror
+            <<addclass "#mirror" "hide">>
+            <<addclass "#sees" "show">>
+        <</linkreplace>> and
+        @@ @@#sees;.hide; only sees the 
+        <<linkreplace "princess," t8n>>princess,
+            <<append "#stabbed">>
+            while I’m out here
+                <<addclass "body" "mud">> slogging through the mud, breathing fire,<br>
+                <<timed 1200ms t8n>>
+                    <<indent 16 "and">> getting
+                    <<linkreplace "stabbed">>stabbed
+                        <<addclass "#stabbed" "strike">>
+                        <<replace "#death">>
+                            [[death.|Want]]
+                        <</replace>>              
+                    <</linkreplace>>
+                    to @@#death;death.@@
+                <</timed>>
+            <</append>>
+        <</linkreplace>>@@<br>
+        @@#stabbed;@@
+    <</linkreplace>>
+<</linkreplace>>

@@ -15,6 +15,8 @@ textarea.macro-typesim {
 	margin:0px;
 	color: rgb(20, 20, 19);
 }
+
+/*The typewriter macro*/
 div.macro-typesim {
 	display: none;
 }
@@ -58,14 +60,7 @@ body {
 	font-weight: bold;
 }
 
-.forest {
-	background-color: #618856;
-	color: rgb(9, 49, 9);
-	-webkit-transition: background-color 1000ms ease-in, color 1000ms ease-in;
-    -ms-transition: background-color 1000ms ease-in, color 1000ms ease-in;
-    transition: background-color 1000ms ease-in, color 1000ms ease-in;
-}
-
+/*CSS for the Want passage*/
 body[data-tags~="want"] {
 	background-color: rgb(27, 21, 31);
 	color: rgb(255, 252, 213);
@@ -83,10 +78,10 @@ body[data-tags~="want"] a:hover {
 
 body.spotlightone {
 	background-image: [img[spotlightone]];
-	height: 120%; /* You must set a specified height */
+	height: inherit; /* You must set a specified height */
 	background-position: center; /* Center the image */
 	  background-repeat: no-repeat; /* Do not repeat the image */
-	  background-size: 120%;
+	  background-size: cover cover;
 	  background-attachment: fixed;
 	position: relative;
 	background-color: #2b1e28;
@@ -95,26 +90,25 @@ body.spotlightone {
 
 body.spotlighttwo {
 	background-image: [img[spotlightone]], [img[spotlighttwo]];
-	height: 120%; /* You must set a specified height */
+	height: inherit; /* You must set a specified height */
 	background-position: center; /* Center the image */
 	  background-repeat: no-repeat; /* Do not repeat the image */
-	  background-size: 120%;
+	  background-size: cover cover;
 	  background-attachment: fixed;
 	position: relative;
-	background-color: #42313b;
+	background-color: #35262e;
 	color: rgb(255, 252, 213);
   }
 
 body.spotlightthree {
-/*spotlight one*/
 	background-image: [img[spotlightone]], [img[spotlighttwo]], [img[spotlightthree]];
-	height: 120%; /* You must set a specified height */
+	height: inherit; /* You must set a specified height */
 	background-position: center; /* Center the image */
 	  background-repeat: no-repeat; /* Do not repeat the image */
-	  background-size: 120%;
+	  background-size: cover cover;
 	  background-attachment: fixed;
 	position: relative;
-	background-color: #584449;
+	background-color: #47353a;
 	color: rgb(255, 252, 213);
   }
 
@@ -126,7 +120,7 @@ body.dark {
 .wantfont {
 	color: rgb(18, 13, 20);
 }
-
+/*CSS for beginning passage, making beginning text more transparent*/
 .lighter {
 	opacity: 0.4;
 	-webkit-transition: opacity 1000ms ease-in;
@@ -134,6 +128,7 @@ body.dark {
     transition: opacity 1000ms ease-in;
 }
 
+/*Hides and shows text when appropriate*/
 .hide {
 	opacity: 0;
 	-webkit-transition: opacity 400ms ease-in;
@@ -145,10 +140,19 @@ body.dark {
 	opacity: 1;
 }
 
+/*Flames for Forest passage 'flames everywhere' and forest color*/
 .flames {
 	background-color:#fc9621;
 	color: rgb(223, 26, 0);
     -webkit-transition: background-color 1000ms ease-in, color 1000ms ease-in;
+    -ms-transition: background-color 1000ms ease-in, color 1000ms ease-in;
+	transition: background-color 1000ms ease-in, color 1000ms ease-in;
+}
+
+.forest {
+	background-color: #618856;
+	color: rgb(9, 49, 9);
+	-webkit-transition: background-color 1000ms ease-in, color 1000ms ease-in;
     -ms-transition: background-color 1000ms ease-in, color 1000ms ease-in;
     transition: background-color 1000ms ease-in, color 1000ms ease-in;
 }
@@ -157,8 +161,9 @@ body.dark {
 	color: rgb(255, 90, 68);
 }
 
+/*Dragon text (makes it black, and red on link*/
 .dragon {
-	color: rgb(117, 16, 3);
+	color: rgb(0, 0, 0);
 	font-weight: bold;
 }
 
@@ -170,20 +175,59 @@ body.dark {
 	color: rgb(255, 90, 68);
 }
 
-/*.hide {
-	visibility:hidden;
-	-webkit-transition: visibility 1000ms ease-in;
-    -ms-transition: visibility 1000ms ease-in;
-    transition: visibility 1000ms ease-in;
+/*CSS for the Princess passage*/
+.princess {
+	background-color: rgb(255, 218, 224);
+	color: rgb(180, 21, 95);
+	-webkit-transition: background-color 4000ms ease-in, color 4000ms ease-in;
+    -ms-transition: background-color 4000ms ease-in, color 4000ms ease-in;
+    transition: background-color 4000ms ease-in, color 4000ms ease-in;
 }
 
-.show {
-	visibility: visible;
-	-webkit-transition: visibility 1000ms ease-in;
-    -ms-transition: visibility 1000ms ease-in;
-    transition: visibility 1000ms ease-in;
-}*/
+.mud {
+	background-color: rgb(65, 48, 36);
+	color: rgb(216, 188, 152);
+	-webkit-transition: background-color 1000ms ease-in, color 1000ms ease-in;
+    -ms-transition: background-color 1000ms ease-in, color 1000ms ease-in;
+    transition: background-color 1000ms ease-in, color 1000ms ease-in;
+}
+
+.mud a {
+	color: rgb(223, 48, 48);
+}
 
 .gone {
 	visibility:hidden;
 }
+
+.mirror {
+	unicode-bidi:bidi-override;
+	direction:rtl;
+	-webkit-transition: unicode-bidi 100ms ease-in, direction 1000ms ease-in;
+    -ms-transition: unicode-bidi 100ms ease-in, direction 1000ms ease-in;
+    transition: unicode-bidi 100ms ease-in, direction 1000ms ease-in;
+}
+
+.strike {
+  left: -2.5px;
+}
+.strike:after {
+  right: 2.5px;
+  background: #fff;
+  transition: width 0.8s cubic-bezier(0.22, 0.61, 0.36, 1);
+}
+
+/*CSS for the Heaven passage*/
+.heaven {
+	color: rgb(38, 91, 235);
+}
+
+
+.heaven:hover {
+    color: rgb(255, 255, 255);
+    text-shadow: rgb(33, 226, 233) 0px 0px 4px;
+	-webkit-font-smoothing: antialiased;
+	-webkit-transition: text-shadow 1000ms, color 1000ms;
+	-ms-transition: text-shadow 1000ms, color 1000ms;
+	transition: text-shadow 1000ms, color 1000ms;
+	}

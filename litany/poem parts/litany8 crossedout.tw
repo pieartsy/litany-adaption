@@ -1,4 +1,4 @@
-:: Crossed out
+:: Crossed out [section]
 <<silently>>
     <<set _badman to ["you are", "not", "feeding yourself to a bad man", "against a black sky prickled with small lights."]>>
     <<set _caskets to ["The wooden halls like caskets. These terms from the lower depths."]>>
@@ -37,12 +37,13 @@
                                     <<linkreplace "out.">>out.
                                             <<backspace _floorboards "#floorboards" "Display Floorboards">>
                                             <<timed _floorboardstime t8n>>
-                                                And here is the tabernacle<br>
+                                                And @@#heretabernacle;here@@ is the tabernacle<br>
                                             <<next 1350ms>>
                                                 @@#reconstructed;display:inline-block;text-indent:24em;@@
                                                 <<typewriter "reconstructed." "#reconstructed">>
-                                            <<next 1350ms>>
-                                                <br><br>[[Next | Jerusalem]]
+                                                <<replace "#heretabernacle" t8n>>
+                                                    [[here|Happy]]
+                                                <</replace>>
                                             <</timed>>
                                     <</linkreplace>>
                                 <</timed>>

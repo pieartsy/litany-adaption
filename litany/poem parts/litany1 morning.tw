@@ -7,15 +7,15 @@ This current version is incomplete.<br><br>
         $(output).wiki("//Note: This works much better on a computer than on a phone or tablet.\n If you want to view it anyway, I recommend you read it in landscape mode.//\n");
     }
 <</script>>
-[[Begin]].
-/*<br>[[Dragon]]
-<br>[[Crossed out]]
-<br>[[Jerusalem]]
-<br>[[test]]
-<br>[[Want]]
-*/
+<<silently>>
+<<set _sectionList = Story.lookup("tags", "section").map(function (p) { return p.title; })>>
+<</silently>>
+/*<<for _section range _sectionList>>
+    [[_section]]<br>
+<</for>>*/
+[[Begin]]
 
-:: Begin
+:: Begin [section]
 <<silently>>
     <<set _noparty to ["I'm sorry I couldn't come to your party."]>>
     <<set _nopartyback to ["ouldn't come to your party."]>>

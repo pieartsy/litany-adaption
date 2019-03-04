@@ -1,45 +1,52 @@
-:: Want [want]
-@@#hero;You still get to be the 
-<<linkreplace "hero.">>hero.
-<<silently>>
-    <<addclass "body" "spotlightone">>
-    <<append "#gloves">>
-        You get magic 
-        <<linkreplace "gloves!">>gloves!
-            <<addclass "body" "spotlighttwo">>
-            <<append "#fish">>A 
-                <<linkreplace "fish">>fish
-                    <<addclass "body" "spotlightthree">>
-                    <<append "#flashlights">>
-                        You get eyes like <<linkreplace "flashlights!<br>">>flashlights!<br>
-                        <<indent 4 "What more do you want?">><br>
-                            <<timed 1350ms t8n>>
-                                I make you pancakes, I take you hunting, I talk to you as if you’re<br>
-                                <<indent 3 "really">>
-                                <<linkreplace "there.<br>" t8n>>there.<br>
-                                    Are you there, sweetheart? Do you know 
-                                    <<linkreplace "me?">>me?
-                                        <<addclass "#hero" "gone">>
-                                        <<addclass "#gloves" "gone">>
-                                        <<addclass "#fish" "gone">>
-                                        <<addclass "#flashlights" "gone">>
-                                        <<append "#microphone">>
-                                            Is this microphone live?
-                                            <<removeclass "body">>
-                                            <<addclass "body" "dark">>
-                                            <br>[[Next | Crossed out]]
-                                        <</append>>
-                                    <</linkreplace>>
+:: Want [want section]
+@@#hero;
+<<timed 3s>>
+    <<indent 9 "Okay, so I’m the dragon.">>
+<<next 1500ms>>
+    Big <<linkappend "deal." t8n>><br>
+        <<indent 2 "You still get to be the ">>
+        <<linkreplace "hero.">>hero.
+        <<silently>>
+            <<addclass "body" "spotlightone">>
+            <<append "#gloves">>
+                You get magic 
+                <<linkreplace "gloves!">>gloves!
+                    <<addclass "body" "spotlighttwo">>
+                    <<append "#fish">>A 
+                        <<linkreplace "fish">>fish
+                            <<addclass "body" "spotlightthree">>
+                            <<append "#flashlights">>
+                                You get eyes like <<linkreplace "flashlights!<br>" t8n>>flashlights!<br>
+                                <<indent 4 "What more do you want?">><br>
+                                    <<timed 1350ms t8n>>
+                                        I make you pancakes, I take you hunting, I talk to you as if you’re<br>
+                                        <<indent 3 "really">>
+                                        <<linkreplace "there.<br>" t8n>>there.<br>
+                                            Are you there, sweetheart? Do you know 
+                                            <<linkreplace "me?">>me?
+                                                <<addclass "#hero" "gone">>
+                                                <<addclass "#gloves" "gone">>
+                                                <<addclass "#fish" "gone">>
+                                                <<addclass "#flashlights" "gone">>
+                                                <<append "#microphone">>
+                                                    Is this microphone [[live? | Heaven]]
+                                                    <<removeclass "body">>
+                                                    <<addclass "body" "dark">>
+                                                <</append>>
+                                            <</linkreplace>>
+                                        <</linkreplace>>
+                                    <</timed>>
                                 <</linkreplace>>
-                            <</timed>>
+                            <</append>>
                         <</linkreplace>>
+                    that talks!
                     <</append>>
                 <</linkreplace>>
-            that talks!
             <</append>>
-        <</linkreplace>>
-    <</append>>
-<</silently>>
-<</linkreplace>><br>@@
+        <</silently>>
+        <</linkreplace>><br>
+    <</linkappend>>
+<</timed>>
+@@
 @@#gloves;@@ @@#fish;@@ @@#flashlights;@@
 @@#microphone;@@

@@ -1,4 +1,4 @@
-::Dragon
+::Dragon [section]
 I can tell already you think I’m the
 @@.dragon;<<linkreplace "dragon," t8n>>@@.dragon;dragon,@@
     <<silently>><<addclass "#that" "show">>
@@ -31,8 +31,14 @@ I can tell already you think I’m the
                                 <</append>>
                             <<next 1s>>
                                 <<append "#toit" t8n>>
-                                    <br>I’m getting to it.
-                                    <br>[[Next | Dragon 2]]
+                                    <br>I’m getting to 
+                                    <<linkreplace "it.">>it.<br>
+                                        <<timed 1s t8n>>
+                                            <<append "#princess" t8n>>
+                                                <<include "Princess">>
+                                            <</append>>
+                                        <</timed>>
+                                    <</linkreplace>>
                                 <</append>>
                             <</timed>>
                         <</linkreplace>>
@@ -51,3 +57,4 @@ I can tell already you think I’m the
 <br>@@#that;.hide;display:inline-block;text-indent:4em;that would be so like me,@@ but I’m not.
 @@#notprincess;@@
 @@#toit;@@
+@@#princess;@@

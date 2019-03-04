@@ -1,0 +1,82 @@
+:: Heaven [section]
+<span id="right" span style="display:inline-block;text-indent:14em">Let me do it right for once,<br>
+<<indent 3 "for the record, let me make a thing of">>
+    <<linkreplace "cream">>
+        @@.heaven;cream@@
+    <</linkreplace>>
+    and
+    <<linkreplace "stars">>
+        @@.heaven;stars@@
+    <</linkreplace>>
+    that becomes,<br>
+you know the story, simply
+    <<linkreplace "heaven.">>
+        @@.heaven;heaven.@@
+        <<silently>>
+            <<addclass "#right" "heaven">>
+            <<replace "#head">>
+                <<indent 5 "Inside your head you hear a phone ringing">><br>
+                <<indent 16 "and when you open your">>
+                <<linkreplace "eyes">>eyes<br>
+                    <<append "#deer">>
+                        only a clearing with deer in it. Hello
+                        <<linkreplace "deer.">>deer.<br>
+                            <<replace "#head">><br>
+                               <<indent 7 "Inside your head">>
+                                    <<linkreplace " the sound of glass,">><br>
+                                        <<removeclass "body" "forest">>
+                                        <<addclass "body" "flames">>
+                                        <<timed 300ms>>
+                                            <<addclass "#a" "show">>
+                                        <<next>>
+                                            <<addclass "#car" "show">>
+                                        <<next>>
+                                            <<addclass "#crash" "show">>
+                                        <<next>>
+                                            <<addclass "#sound" "show">>
+                                        <<next>>
+                                            <<addclass "#as" "show">>
+                                        <<next>>
+                                            <<addclass "#the" "show">>
+                                        <<next>>
+                                            <<addclass "#trucks" "show">>
+                                        <<next>>
+                                            <<addclass "#roll" "show">>
+                                        <<next>>
+                                            <<addclass "#over" "show">>
+                                        <<next>>
+                                            <<addclass "#and" "show">>
+                                        <<next>>
+                                            <<addclass "#explode" "show">>
+                                        <<next>>
+                                            <<addclass "#in" "show">>
+                                        <<next>>
+                                            <<addclass "#slow" "show">>
+                                        <<next>>
+                                            <<addclass "#motion" "show">>
+                                        <</timed>>
+                                        @@#a;.hide;a@@ @@#car;.hide;car@@ @@#crash;.hide;crash@@ @@#sound;.hide;sound@@ @@#as;.hide;as@@ @@#the;.hide;the@@ @@#trucks;.hide;trucks@@ @@#roll;.hide;roll@@ @@#over;.hide;over@@ @@#and;.hide;and@@ @@#explode;.hide;explode@@ @@#in;.hide;in@@ @@#slow;.hide;slow@@
+                                        @@#motion;.hide;
+                                        <<linkreplace "motion.">>
+                                            <<removeclass "body" "flames">>
+                                            <<addclass "#head" "gone">>
+                                            <<append "#sorry">>
+                                                <<include "Sorry">>
+                                            <</append>>
+                                        <</linkreplace>><br>@@
+                                    <</linkreplace>>
+                            <</replace>>
+                            <<replace "#deer">>
+                            <</replace>>
+                        <</linkreplace>>
+                    <</append>>
+                    <<addclass "#right" "hide">>
+                    <<addclass "body" "forest">>
+                <</linkreplace>>
+            <</replace>>
+        <</silently>>
+    <</linkreplace>>
+</span>
+@@#head;@@
+@@#deer;@@
+@@#sorry;@@

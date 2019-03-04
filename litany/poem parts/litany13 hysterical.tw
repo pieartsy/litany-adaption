@@ -1,0 +1,27 @@
+:: Hysterical [section]
+<<silently>>
+<<set _love to ["Love, for you,\n" ,"is larger than the usual romantic love. It’s like a religion. It’s\n", "terrifying. No one\n", "will ever want to sleep with you."]>>
+<<set _lovetime to _love[0].length * 43 + 'ms'>>
+<<set _loveonetime to _love[1].length * 43 + 'ms'>>
+<<set _lovetwotime to _love[2].length * 43 + 'ms'>>
+<</silently>>
+We were inside the train car when I started to cry. You were crying too,<br>
+<<indent 3 "smiling and crying in a way that made me">><br>
+even more hysterical. You said @@#actually;I could have anything I wanted, but I<br>
+<<indent 21 "just couldn’t say it out loud.">><br>@@
+<<linkreplace "Actually," t8n>>
+    <<replace "#actually" t8n>>
+    <</replace>>
+    <<typewriter _love[0] "#love">>
+        <<timed _lovetime>>
+            <<typewriter _love[1] "#loveone">>
+        <<next _loveonetime>>
+             <<typewriter _love[2] "#lovetwo">>
+        <<next _lovetwotime>>
+             <<typewriter _love[3] "#lovethree">>
+        <</timed>>
+<</linkreplace>>
+@@#love;font-family:courier new, courier, monospace;font-style:italic;@@
+@@#loveone;display:inline-block;text-indent:8em;font-family:courier new, courier, monospace;font-style:italic;@@
+@@#lovetwo;display:inline-block;text-indent:24em;font-family:courier new, courier, monospace;font-style:italic;@@
+@@#lovethree;display:inline-block;text-indent:20em;font-family:courier new, courier, monospace;font-style:italic;@@

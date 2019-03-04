@@ -1,4 +1,4 @@
-:: Jerusalem
+:: Jerusalem [section]
 Okay, if you’re so great, you do it—<br>
 <<indent 6 "here’s the">>
 <<linkreplace "pencil">>
@@ -13,9 +13,9 @@ Okay, if you’re so great, you do it—<br>
         <<linkreplace "pencil">>pencil
             <<append "#jerusalem" t8n>>
                 <<indent 3 "Build me a city and call it">>
-                @@font-family:courier new;<<typesim "Jerusalem.">>
+                @@font-family:courier new, courier, monospace;<<typesim "Jerusalem.">>
                     <<append "#jerusalemtwo" t8n>>Build me another and call it<br>
-                        <<fadein 500ms 1350ms>><<indent 30 "@@border-radius:3px;border-bottom:1px solid rgb(20, 20, 19);padding:4px;font-family:courier new;Jerusalem.@@">><</fadein>>
+                        <<fadein 500ms 1350ms>><<indent 30 "@@border-radius:3px;border-bottom:1px solid rgb(20, 20, 19);padding:4px;font-family:courier new, courier, monospace;Jerusalem.@@">><</fadein>>
                         <<fadein 500ms 2350ms>><br><br>[[Start]]<</fadein>>
                     <</append>>
                 <</typesim>>@@

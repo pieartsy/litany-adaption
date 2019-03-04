@@ -1,0 +1,55 @@
+::Sorry [section]
+@@.darling;<<indent 3 "Hello darling,">>@@
+<<linkreplace "sorry">>sorry
+    <<append "#sorryelbows" t8n>><br>
+        <span id="right" span style="display:inline-block;text-indent:14em">
+            <<linkreplace "Sorry">>Sorry
+                <<append "#sorryhere" t8n>>
+                    <<linkreplace "sorry">>sorry
+                        <<append "#sorryscene" t8n>>
+                            sorry
+                        <</append>>
+                        <<append "#scene" t8n>>
+                            about the scene at the bottom of the stairwell<br>
+                        <</append>>
+                        <<append "#ruined" t8n>>
+                            @@.darling;<<indent 9 "and">> how@@ I ruined everything by saying it out loud.<br>
+                            <<indent 3 "Especially">>
+                            <<linkreplace "that," t8n>>that,
+                                <<addclass ".darling" "hide">>
+                                <<replace "#known" t8n>>
+                                    <<linkreplace "known." t8n>>known.<br>
+                                    You see, I take the parts that I remember and stitch them back together<br>
+                                        <<indent 3 "to make a creature that will">> @@#say;do what I say@@<br>
+                                        <<linkreplace "or" t8n>>
+                                            <<replace "#say" t8n>>
+                                                love me
+                                                <<linkreplace "back." t8n>>
+                                                    back.<br>
+                                                    <<include "Crossed out" t8n>>
+                                                <</linkreplace>>
+                                            <</replace>>
+                                        <</linkreplace>>
+                                    <</linkreplace>>
+                                <</replace>>
+                            <</linkreplace>>
+                            but I should have @@#known;known.@@
+                        <</append>>
+                    <</linkreplace>>
+                <</append>>
+                <<append "#here" t8n>>
+                    we<br>lived here,
+                <</append>>
+            <</linkreplace>>
+        </span>
+    <<append "#elbows" t8n>>
+        about the bony elbows,
+    <</append>>
+    <</append>>
+<</linkreplace>>
+@@.darling;about that.@@
+
+@@#sorryelbows;@@ @@#elbows;.darling;@@
+@@#sorryhere;@@ @@#here;.darling;@@
+@@#sorryscene;@@ @@#scene;.darling;@@
+@@#ruined;@@

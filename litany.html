@@ -120,6 +120,8 @@ textarea.macro-typesim {
 	margin:0px;
 	color: rgb(20, 20, 19);
 }
+
+/*The typewriter macro*/
 div.macro-typesim {
 	display: none;
 }
@@ -163,14 +165,7 @@ body {
 	font-weight: bold;
 }
 
-.forest {
-	background-color: #618856;
-	color: rgb(9, 49, 9);
-	-webkit-transition: background-color 1000ms ease-in, color 1000ms ease-in;
-    -ms-transition: background-color 1000ms ease-in, color 1000ms ease-in;
-    transition: background-color 1000ms ease-in, color 1000ms ease-in;
-}
-
+/*CSS for the Want passage*/
 body[data-tags~="want"] {
 	background-color: rgb(27, 21, 31);
 	color: rgb(255, 252, 213);
@@ -188,10 +183,10 @@ body[data-tags~="want"] a:hover {
 
 body.spotlightone {
 	background-image: [img[spotlightone]];
-	height: 120%; /* You must set a specified height */
+	height: inherit; /* You must set a specified height */
 	background-position: center; /* Center the image */
 	  background-repeat: no-repeat; /* Do not repeat the image */
-	  background-size: 120%;
+	  background-size: cover cover;
 	  background-attachment: fixed;
 	position: relative;
 	background-color: #2b1e28;
@@ -200,26 +195,25 @@ body.spotlightone {
 
 body.spotlighttwo {
 	background-image: [img[spotlightone]], [img[spotlighttwo]];
-	height: 120%; /* You must set a specified height */
+	height: inherit; /* You must set a specified height */
 	background-position: center; /* Center the image */
 	  background-repeat: no-repeat; /* Do not repeat the image */
-	  background-size: 120%;
+	  background-size: cover cover;
 	  background-attachment: fixed;
 	position: relative;
-	background-color: #42313b;
+	background-color: #35262e;
 	color: rgb(255, 252, 213);
   }
 
 body.spotlightthree {
-/*spotlight one*/
 	background-image: [img[spotlightone]], [img[spotlighttwo]], [img[spotlightthree]];
-	height: 120%; /* You must set a specified height */
+	height: inherit; /* You must set a specified height */
 	background-position: center; /* Center the image */
 	  background-repeat: no-repeat; /* Do not repeat the image */
-	  background-size: 120%;
+	  background-size: cover cover;
 	  background-attachment: fixed;
 	position: relative;
-	background-color: #584449;
+	background-color: #47353a;
 	color: rgb(255, 252, 213);
   }
 
@@ -231,7 +225,7 @@ body.dark {
 .wantfont {
 	color: rgb(18, 13, 20);
 }
-
+/*CSS for beginning passage, making beginning text more transparent*/
 .lighter {
 	opacity: 0.4;
 	-webkit-transition: opacity 1000ms ease-in;
@@ -239,6 +233,7 @@ body.dark {
     transition: opacity 1000ms ease-in;
 }
 
+/*Hides and shows text when appropriate*/
 .hide {
 	opacity: 0;
 	-webkit-transition: opacity 400ms ease-in;
@@ -250,10 +245,19 @@ body.dark {
 	opacity: 1;
 }
 
+/*Flames for Forest passage 'flames everywhere' and forest color*/
 .flames {
 	background-color:#fc9621;
 	color: rgb(223, 26, 0);
     -webkit-transition: background-color 1000ms ease-in, color 1000ms ease-in;
+    -ms-transition: background-color 1000ms ease-in, color 1000ms ease-in;
+	transition: background-color 1000ms ease-in, color 1000ms ease-in;
+}
+
+.forest {
+	background-color: #618856;
+	color: rgb(9, 49, 9);
+	-webkit-transition: background-color 1000ms ease-in, color 1000ms ease-in;
     -ms-transition: background-color 1000ms ease-in, color 1000ms ease-in;
     transition: background-color 1000ms ease-in, color 1000ms ease-in;
 }
@@ -262,8 +266,9 @@ body.dark {
 	color: rgb(255, 90, 68);
 }
 
+/*Dragon text (makes it black, and red on link*/
 .dragon {
-	color: rgb(117, 16, 3);
+	color: rgb(0, 0, 0);
 	font-weight: bold;
 }
 
@@ -275,23 +280,62 @@ body.dark {
 	color: rgb(255, 90, 68);
 }
 
-/*.hide {
-	visibility:hidden;
-	-webkit-transition: visibility 1000ms ease-in;
-    -ms-transition: visibility 1000ms ease-in;
-    transition: visibility 1000ms ease-in;
+/*CSS for the Princess passage*/
+.princess {
+	background-color: rgb(255, 218, 224);
+	color: rgb(180, 21, 95);
+	-webkit-transition: background-color 4000ms ease-in, color 4000ms ease-in;
+    -ms-transition: background-color 4000ms ease-in, color 4000ms ease-in;
+    transition: background-color 4000ms ease-in, color 4000ms ease-in;
 }
 
-.show {
-	visibility: visible;
-	-webkit-transition: visibility 1000ms ease-in;
-    -ms-transition: visibility 1000ms ease-in;
-    transition: visibility 1000ms ease-in;
-}*/
+.mud {
+	background-color: rgb(65, 48, 36);
+	color: rgb(216, 188, 152);
+	-webkit-transition: background-color 1000ms ease-in, color 1000ms ease-in;
+    -ms-transition: background-color 1000ms ease-in, color 1000ms ease-in;
+    transition: background-color 1000ms ease-in, color 1000ms ease-in;
+}
+
+.mud a {
+	color: rgb(223, 48, 48);
+}
 
 .gone {
 	visibility:hidden;
-}</style><script role="script" id="twine-user-script" type="text/twine-javascript">/* twine-user-script #1: "Config" */
+}
+
+.mirror {
+	unicode-bidi:bidi-override;
+	direction:rtl;
+	-webkit-transition: unicode-bidi 100ms ease-in, direction 1000ms ease-in;
+    -ms-transition: unicode-bidi 100ms ease-in, direction 1000ms ease-in;
+    transition: unicode-bidi 100ms ease-in, direction 1000ms ease-in;
+}
+
+.strike {
+  left: -2.5px;
+}
+.strike:after {
+  right: 2.5px;
+  background: #fff;
+  transition: width 0.8s cubic-bezier(0.22, 0.61, 0.36, 1);
+}
+
+/*CSS for the Heaven passage*/
+.heaven {
+	color: rgb(38, 91, 235);
+}
+
+
+.heaven:hover {
+    color: rgb(255, 255, 255);
+    text-shadow: rgb(33, 226, 233) 0px 0px 4px;
+	-webkit-font-smoothing: antialiased;
+	-webkit-transition: text-shadow 1000ms, color 1000ms;
+	-ms-transition: text-shadow 1000ms, color 1000ms;
+	transition: text-shadow 1000ms, color 1000ms;
+	}</style><script role="script" id="twine-user-script" type="text/twine-javascript">/* twine-user-script #1: "Config" */
 Config.passages.nobr = true;
 UIBar.destroy();
 /* twine-user-script #2: "Fadein" */
@@ -428,13 +472,13 @@ This current version is incomplete.&lt;br&gt;&lt;br&gt;
         $(output).wiki(&quot;//Note: This works much better on a computer than on a phone or tablet.\n If you want to view it anyway, I recommend you read it in landscape mode.//\n&quot;);
     }
 &lt;&lt;/script&gt;&gt;
-[[Begin]].
-/*&lt;br&gt;[[Dragon]]
-&lt;br&gt;[[Crossed out]]
-&lt;br&gt;[[Jerusalem]]
-&lt;br&gt;[[test]]
-&lt;br&gt;[[Want]]
-*/</tw-passagedata><tw-passagedata pid="2" name="Begin" tags="" position="225,100">&lt;&lt;silently&gt;&gt;
+&lt;&lt;silently&gt;&gt;
+&lt;&lt;set _sectionList = Story.lookup(&quot;tags&quot;, &quot;section&quot;).map(function (p) { return p.title; })&gt;&gt;
+&lt;&lt;/silently&gt;&gt;
+/*&lt;&lt;for _section range _sectionList&gt;&gt;
+    [[_section]]&lt;br&gt;
+&lt;&lt;/for&gt;&gt;*/
+[[Begin]]</tw-passagedata><tw-passagedata pid="2" name="Begin" tags="section" position="225,100">&lt;&lt;silently&gt;&gt;
     &lt;&lt;set _noparty to [&quot;I&#39;m sorry I couldn&#39;t come to your party.&quot;]&gt;&gt;
     &lt;&lt;set _nopartyback to [&quot;ouldn&#39;t come to your party.&quot;]&gt;&gt;
     &lt;&lt;set _yesparty to [&quot;ame to your party &quot;, &quot;and seduced you &quot;, &quot;\nand left you bruised and ruined, you poor sad thing.&quot;]&gt;&gt;
@@ -505,7 +549,342 @@ and little words
 &lt;&lt;/linkreplace&gt;&gt;
 @@
 @@#forest;@@
-@@#everywhere;@@</tw-passagedata><tw-passagedata pid="3" name="Crossed out" tags="" position="350,100">&lt;&lt;silently&gt;&gt;
+@@#everywhere;@@</tw-passagedata><tw-passagedata pid="3" name="Hysterical" tags="section" position="350,100">&lt;&lt;silently&gt;&gt;
+&lt;&lt;set _love to [&quot;Love, for you,\n&quot; ,&quot;is larger than the usual romantic love. It’s like a religion. It’s\n&quot;, &quot;terrifying. No one\n&quot;, &quot;will ever want to sleep with you.&quot;]&gt;&gt;
+&lt;&lt;set _lovetime to _love[0].length * 43 + &#39;ms&#39;&gt;&gt;
+&lt;&lt;set _loveonetime to _love[1].length * 43 + &#39;ms&#39;&gt;&gt;
+&lt;&lt;set _lovetwotime to _love[2].length * 43 + &#39;ms&#39;&gt;&gt;
+&lt;&lt;/silently&gt;&gt;
+We were inside the train car when I started to cry. You were crying too,&lt;br&gt;
+&lt;&lt;indent 3 &quot;smiling and crying in a way that made me&quot;&gt;&gt;&lt;br&gt;
+even more hysterical. You said @@#actually;I could have anything I wanted, but I&lt;br&gt;
+&lt;&lt;indent 21 &quot;just couldn’t say it out loud.&quot;&gt;&gt;&lt;br&gt;@@
+&lt;&lt;linkreplace &quot;Actually,&quot; t8n&gt;&gt;
+    &lt;&lt;replace &quot;#actually&quot; t8n&gt;&gt;
+    &lt;&lt;/replace&gt;&gt;
+    &lt;&lt;typewriter _love[0] &quot;#love&quot;&gt;&gt;
+        &lt;&lt;timed _lovetime&gt;&gt;
+            &lt;&lt;typewriter _love[1] &quot;#loveone&quot;&gt;&gt;
+        &lt;&lt;next _loveonetime&gt;&gt;
+             &lt;&lt;typewriter _love[2] &quot;#lovetwo&quot;&gt;&gt;
+        &lt;&lt;next _lovetwotime&gt;&gt;
+             &lt;&lt;typewriter _love[3] &quot;#lovethree&quot;&gt;&gt;
+        &lt;&lt;/timed&gt;&gt;
+&lt;&lt;/linkreplace&gt;&gt;
+@@#love;font-family:courier new, courier, monospace;font-style:italic;@@
+@@#loveone;display:inline-block;text-indent:8em;font-family:courier new, courier, monospace;font-style:italic;@@
+@@#lovetwo;display:inline-block;text-indent:24em;font-family:courier new, courier, monospace;font-style:italic;@@
+@@#lovethree;display:inline-block;text-indent:20em;font-family:courier new, courier, monospace;font-style:italic;@@</tw-passagedata><tw-passagedata pid="4" name="Jerusalem" tags="section" position="475,100">Okay, if you’re so great, you do it—&lt;br&gt;
+&lt;&lt;indent 6 &quot;here’s the&quot;&gt;&gt;
+&lt;&lt;linkreplace &quot;pencil&quot;&gt;&gt;
+    &lt;&lt;append &quot;#bedwindow&quot; t8n&gt;&gt;
+        &lt;br&gt;If the window is on your right, you are in your own bed.
+    &lt;&lt;/append&gt;&gt;
+    &lt;&lt;linkreplace &quot;pencil&quot;&gt;&gt;
+        &lt;&lt;append &quot;#heartwindow&quot; t8n&gt;&gt;If the window&lt;br&gt;
+            &lt;&lt;indent 3 &quot;is over your heart, and it is painted shut, then we are breathing&quot;&gt;&gt;&lt;br&gt;
+            river water.
+        &lt;&lt;/append&gt;&gt;
+        &lt;&lt;linkreplace &quot;pencil&quot;&gt;&gt;pencil
+            &lt;&lt;append &quot;#jerusalem&quot; t8n&gt;&gt;
+                &lt;&lt;indent 3 &quot;Build me a city and call it&quot;&gt;&gt;
+                @@font-family:courier new, courier, monospace;&lt;&lt;typesim &quot;Jerusalem.&quot;&gt;&gt;
+                    &lt;&lt;append &quot;#jerusalemtwo&quot; t8n&gt;&gt;Build me another and call it&lt;br&gt;
+                        &lt;&lt;fadein 500ms 1350ms&gt;&gt;&lt;&lt;indent 30 &quot;@@border-radius:3px;border-bottom:1px solid rgb(20, 20, 19);padding:4px;font-family:courier new, courier, monospace;Jerusalem.@@&quot;&gt;&gt;&lt;&lt;/fadein&gt;&gt;
+                        &lt;&lt;fadein 500ms 2350ms&gt;&gt;&lt;br&gt;&lt;br&gt;[[Start]]&lt;&lt;/fadein&gt;&gt;
+                    &lt;&lt;/append&gt;&gt;
+                &lt;&lt;/typesim&gt;&gt;@@
+            &lt;&lt;/append&gt;&gt;
+        &lt;&lt;/linkreplace&gt;&gt;
+    &lt;&lt;/linkreplace&gt;&gt;
+&lt;&lt;/linkreplace&gt;&gt;
+, make it work . . .
+@@#bedwindow;@@ @@#heartwindow;@@&lt;br&gt;
+@@#jerusalem;@@ @@#jerusalemtwo;@@</tw-passagedata><tw-passagedata pid="5" name="Forest" tags="section" position="600,100">A forest, then. Beautiful trees. And a lady singing.&lt;br&gt;
+//&lt;&lt;indent 4 &quot;Love on the water, love underwater, love, love&quot;&gt;&gt;// and so on.&lt;br&gt;
+What a sweet lady. Sing lady, sing! Of course, she wakes the @@.dragon;dragon.@@&lt;br&gt;
+&lt;&lt;indent 3 &quot;Love always wakes the&quot;&gt;&gt; @@.dragon;dragon@@ and &lt;&lt;linkreplace &quot;@@color:rgb(148, 21, 4);suddenly@@&quot; t8n&gt;&gt;&lt;br&gt;
+        &lt;&lt;removeclass &quot;body&quot; &quot;forest&quot;&gt;&gt;
+        &lt;&lt;addclass &quot;body&quot; &quot;flames&quot;&gt;&gt;
+        &lt;&lt;addclass &quot;#begin&quot; &quot;gone&quot;&gt;&gt;
+        &lt;&lt;addclass &quot;#forest&quot; &quot;gone&quot;&gt;&gt;
+        &lt;&lt;replace &quot;#everywhere&quot; t8n&gt;&gt;
+            &lt;&lt;indent 24 &quot;[[flames everywhere. | Dragon]]&quot;&gt;&gt;&lt;&lt;/replace&gt;&gt;
+&lt;&lt;/linkreplace&gt;&gt;</tw-passagedata><tw-passagedata pid="6" name="Dragon" tags="section" position="725,100">I can tell already you think I’m the
+@@.dragon;&lt;&lt;linkreplace &quot;dragon,&quot; t8n&gt;&gt;@@.dragon;dragon,@@
+    &lt;&lt;silently&gt;&gt;&lt;&lt;addclass &quot;#that&quot; &quot;show&quot;&gt;&gt;
+    &lt;&lt;replace #notprincess&gt;&gt;
+        &lt;&lt;timed 1350ms t8n&gt;&gt;
+            I&#39;m not the
+            @@.dragon;&lt;&lt;linkreplace &quot;dragon.&quot; t8n&gt;&gt;@@.dragon;dragon.@@&lt;br&gt;
+                &lt;&lt;append &quot;#notprincess&quot; t8n&gt;&gt;
+                    I’m not the princess either.&lt;br&gt;
+                    &lt;&lt;indent 7 &quot;Who am&quot;&gt;&gt;
+                    &lt;&lt;linkreplace &quot;I?&quot; t8n&gt;&gt;
+                        I? I&#39;m just a writer. I write things down.&lt;br&gt;
+                        I walk through your dreams and invent the future.
+                        &lt;&lt;linkreplace &quot;Sure,&quot;&gt;&gt;Sure,
+                            &lt;&lt;addclass &quot;#boat&quot; &quot;hide&quot;&gt;&gt;
+                            &lt;&lt;addclass &quot;#laterone&quot; &quot;show&quot;&gt;&gt;
+                        &lt;&lt;replace &quot;#yes&quot;&gt;&gt;
+                        &lt;&lt;linkreplace &quot;yes,&quot;&gt;&gt;yes,
+                            &lt;&lt;addclass &quot;#swallow&quot; &quot;hide&quot;&gt;&gt;
+                            &lt;&lt;addclass &quot;#latertwo&quot; &quot;show&quot;&gt;&gt;
+                            &lt;&lt;timed 1s&gt;&gt;
+                                &lt;&lt;append &quot;#bricks&quot; t8n&gt;&gt;
+                                    &lt;&lt;indent 15 &quot;And the part where I push you&lt;br&gt;
+                                    flush against the wall and every part of your body rubs against the bricks,&quot;&gt;&gt;
+                                &lt;&lt;/append&gt;&gt;
+                            &lt;&lt;next 2s&gt;&gt;
+                                &lt;&lt;append &quot;#toit&quot;&gt;&gt;
+                                    &lt;&lt;indent 3 &quot;shut up&quot;&gt;&gt;
+                                    &lt;&lt;addclass &quot;#bricks&quot; &quot;gone&quot;&gt;&gt;
+                                &lt;&lt;/append&gt;&gt;
+                            &lt;&lt;next 1s&gt;&gt;
+                                &lt;&lt;append &quot;#toit&quot; t8n&gt;&gt;
+                                    &lt;br&gt;I’m getting to 
+                                    &lt;&lt;linkreplace &quot;it.&quot;&gt;&gt;it.&lt;br&gt;
+                                        &lt;&lt;timed 1s t8n&gt;&gt;
+                                            &lt;&lt;append &quot;#princess&quot; t8n&gt;&gt;
+                                                &lt;&lt;include &quot;Princess&quot;&gt;&gt;
+                                            &lt;&lt;/append&gt;&gt;
+                                        &lt;&lt;/timed&gt;&gt;
+                                    &lt;&lt;/linkreplace&gt;&gt;
+                                &lt;&lt;/append&gt;&gt;
+                            &lt;&lt;/timed&gt;&gt;
+                        &lt;&lt;/linkreplace&gt;&gt;
+                        &lt;&lt;/replace&gt;&gt;
+                        &lt;&lt;/linkreplace&gt;&gt;&lt;br&gt;
+                        @@#boat;display:inline-block;text-indent:4em;I sink the boat of love,@@ @@#laterone;.hide;but that comes later.@@ And @@#yes;yes,@@
+                        @@#swallow;I swallow&lt;br&gt;
+                        glass,@@ @@#latertwo;.hide;but that comes later.@@&lt;br&gt;
+                        @@#bricks;@@&lt;br&gt;
+                    &lt;&lt;/linkreplace&gt;&gt;
+                &lt;&lt;/append&gt;&gt;
+            &lt;&lt;/linkreplace&gt;&gt;@@
+        &lt;&lt;/timed&gt;&gt;
+    &lt;&lt;/replace&gt;&gt;&lt;&lt;/silently&gt;&gt;
+&lt;&lt;/linkreplace&gt;&gt;@@
+&lt;br&gt;@@#that;.hide;display:inline-block;text-indent:4em;that would be so like me,@@ but I’m not.
+@@#notprincess;@@
+@@#toit;@@
+@@#princess;@@</tw-passagedata><tw-passagedata pid="7" name="Princess" tags="section" position="850,100">&lt;&lt;indent 9 &quot;For a while I thought I was the&quot;&gt;&gt;@@.dragon;dragon.@@&lt;br&gt;
+I guess I can tell you that 
+&lt;&lt;linkreplace &quot;now.&quot; t8n&gt;&gt; now.
+    &lt;&lt;addclass &quot;body&quot; &quot;princess&quot;&gt;&gt;
+    And, for a while, I thought I was&lt;br&gt;
+    &lt;&lt;indent 24 &quot;the princess,&quot;&gt;&gt;&lt;br&gt;
+    cotton candy pink, sitting there in my room, in the tower of the castle,&lt;br&gt;
+    &lt;&lt;indent 2 &quot;young and beautiful and in love and waiting for you with&quot;&gt;&gt;&lt;br&gt;
+    &lt;&lt;linkreplace &quot;confidence&lt;br&gt;&quot; t8n&gt;&gt;confidence&lt;br&gt;
+        &lt;&lt;indent 3 &quot;but the princess&quot;&gt;&gt; @@#mirror;looks into her
+        &lt;&lt;linkreplace &quot;mirror&quot;&gt;&gt;mirror
+            &lt;&lt;addclass &quot;#mirror&quot; &quot;hide&quot;&gt;&gt;
+            &lt;&lt;addclass &quot;#sees&quot; &quot;show&quot;&gt;&gt;
+        &lt;&lt;/linkreplace&gt;&gt; and
+        @@ @@#sees;.hide; only sees the 
+        &lt;&lt;linkreplace &quot;princess,&quot; t8n&gt;&gt;princess,
+            &lt;&lt;append &quot;#stabbed&quot;&gt;&gt;
+            while I’m out here
+                &lt;&lt;addclass &quot;body&quot; &quot;mud&quot;&gt;&gt; slogging through the mud, breathing fire,&lt;br&gt;
+                &lt;&lt;timed 1200ms t8n&gt;&gt;
+                    &lt;&lt;indent 16 &quot;and&quot;&gt;&gt; getting
+                    &lt;&lt;linkreplace &quot;stabbed&quot;&gt;&gt;stabbed
+                        &lt;&lt;addclass &quot;#stabbed&quot; &quot;strike&quot;&gt;&gt;
+                        &lt;&lt;replace &quot;#death&quot;&gt;&gt;
+                            [[death.|Want]]
+                        &lt;&lt;/replace&gt;&gt;              
+                    &lt;&lt;/linkreplace&gt;&gt;
+                    to @@#death;death.@@
+                &lt;&lt;/timed&gt;&gt;
+            &lt;&lt;/append&gt;&gt;
+        &lt;&lt;/linkreplace&gt;&gt;@@&lt;br&gt;
+        @@#stabbed;@@
+    &lt;&lt;/linkreplace&gt;&gt;
+&lt;&lt;/linkreplace&gt;&gt;</tw-passagedata><tw-passagedata pid="8" name="Want" tags="want section" position="975,100">@@#hero;
+&lt;&lt;timed 3s&gt;&gt;
+    &lt;&lt;indent 9 &quot;Okay, so I’m the dragon.&quot;&gt;&gt;
+&lt;&lt;next 1500ms&gt;&gt;
+    Big &lt;&lt;linkappend &quot;deal.&quot; t8n&gt;&gt;&lt;br&gt;
+        &lt;&lt;indent 2 &quot;You still get to be the &quot;&gt;&gt;
+        &lt;&lt;linkreplace &quot;hero.&quot;&gt;&gt;hero.
+        &lt;&lt;silently&gt;&gt;
+            &lt;&lt;addclass &quot;body&quot; &quot;spotlightone&quot;&gt;&gt;
+            &lt;&lt;append &quot;#gloves&quot;&gt;&gt;
+                You get magic 
+                &lt;&lt;linkreplace &quot;gloves!&quot;&gt;&gt;gloves!
+                    &lt;&lt;addclass &quot;body&quot; &quot;spotlighttwo&quot;&gt;&gt;
+                    &lt;&lt;append &quot;#fish&quot;&gt;&gt;A 
+                        &lt;&lt;linkreplace &quot;fish&quot;&gt;&gt;fish
+                            &lt;&lt;addclass &quot;body&quot; &quot;spotlightthree&quot;&gt;&gt;
+                            &lt;&lt;append &quot;#flashlights&quot;&gt;&gt;
+                                You get eyes like &lt;&lt;linkreplace &quot;flashlights!&lt;br&gt;&quot; t8n&gt;&gt;flashlights!&lt;br&gt;
+                                &lt;&lt;indent 4 &quot;What more do you want?&quot;&gt;&gt;&lt;br&gt;
+                                    &lt;&lt;timed 1350ms t8n&gt;&gt;
+                                        I make you pancakes, I take you hunting, I talk to you as if you’re&lt;br&gt;
+                                        &lt;&lt;indent 3 &quot;really&quot;&gt;&gt;
+                                        &lt;&lt;linkreplace &quot;there.&lt;br&gt;&quot; t8n&gt;&gt;there.&lt;br&gt;
+                                            Are you there, sweetheart? Do you know 
+                                            &lt;&lt;linkreplace &quot;me?&quot;&gt;&gt;me?
+                                                &lt;&lt;addclass &quot;#hero&quot; &quot;gone&quot;&gt;&gt;
+                                                &lt;&lt;addclass &quot;#gloves&quot; &quot;gone&quot;&gt;&gt;
+                                                &lt;&lt;addclass &quot;#fish&quot; &quot;gone&quot;&gt;&gt;
+                                                &lt;&lt;addclass &quot;#flashlights&quot; &quot;gone&quot;&gt;&gt;
+                                                &lt;&lt;append &quot;#microphone&quot;&gt;&gt;
+                                                    Is this microphone [[live? | Heaven]]
+                                                    &lt;&lt;removeclass &quot;body&quot;&gt;&gt;
+                                                    &lt;&lt;addclass &quot;body&quot; &quot;dark&quot;&gt;&gt;
+                                                &lt;&lt;/append&gt;&gt;
+                                            &lt;&lt;/linkreplace&gt;&gt;
+                                        &lt;&lt;/linkreplace&gt;&gt;
+                                    &lt;&lt;/timed&gt;&gt;
+                                &lt;&lt;/linkreplace&gt;&gt;
+                            &lt;&lt;/append&gt;&gt;
+                        &lt;&lt;/linkreplace&gt;&gt;
+                    that talks!
+                    &lt;&lt;/append&gt;&gt;
+                &lt;&lt;/linkreplace&gt;&gt;
+            &lt;&lt;/append&gt;&gt;
+        &lt;&lt;/silently&gt;&gt;
+        &lt;&lt;/linkreplace&gt;&gt;&lt;br&gt;
+    &lt;&lt;/linkappend&gt;&gt;
+&lt;&lt;/timed&gt;&gt;
+@@
+@@#gloves;@@ @@#fish;@@ @@#flashlights;@@
+@@#microphone;@@</tw-passagedata><tw-passagedata pid="9" name="Heaven" tags="section" position="1100,100">&lt;span id=&quot;right&quot; span style=&quot;display:inline-block;text-indent:14em&quot;&gt;Let me do it right for once,&lt;br&gt;
+&lt;&lt;indent 3 &quot;for the record, let me make a thing of&quot;&gt;&gt;
+    &lt;&lt;linkreplace &quot;cream&quot;&gt;&gt;
+        @@.heaven;cream@@
+    &lt;&lt;/linkreplace&gt;&gt;
+    and
+    &lt;&lt;linkreplace &quot;stars&quot;&gt;&gt;
+        @@.heaven;stars@@
+    &lt;&lt;/linkreplace&gt;&gt;
+    that becomes,&lt;br&gt;
+you know the story, simply
+    &lt;&lt;linkreplace &quot;heaven.&quot;&gt;&gt;
+        @@.heaven;heaven.@@
+        &lt;&lt;silently&gt;&gt;
+            &lt;&lt;addclass &quot;#right&quot; &quot;heaven&quot;&gt;&gt;
+            &lt;&lt;replace &quot;#head&quot;&gt;&gt;
+                &lt;&lt;indent 5 &quot;Inside your head you hear a phone ringing&quot;&gt;&gt;&lt;br&gt;
+                &lt;&lt;indent 16 &quot;and when you open your&quot;&gt;&gt;
+                &lt;&lt;linkreplace &quot;eyes&quot;&gt;&gt;eyes&lt;br&gt;
+                    &lt;&lt;append &quot;#deer&quot;&gt;&gt;
+                        only a clearing with deer in it. Hello
+                        &lt;&lt;linkreplace &quot;deer.&quot;&gt;&gt;deer.&lt;br&gt;
+                            &lt;&lt;replace &quot;#head&quot;&gt;&gt;&lt;br&gt;
+                               &lt;&lt;indent 7 &quot;Inside your head&quot;&gt;&gt;
+                                    &lt;&lt;linkreplace &quot; the sound of glass,&quot;&gt;&gt;&lt;br&gt;
+                                        &lt;&lt;removeclass &quot;body&quot; &quot;forest&quot;&gt;&gt;
+                                        &lt;&lt;addclass &quot;body&quot; &quot;flames&quot;&gt;&gt;
+                                        &lt;&lt;timed 300ms&gt;&gt;
+                                            &lt;&lt;addclass &quot;#a&quot; &quot;show&quot;&gt;&gt;
+                                        &lt;&lt;next&gt;&gt;
+                                            &lt;&lt;addclass &quot;#car&quot; &quot;show&quot;&gt;&gt;
+                                        &lt;&lt;next&gt;&gt;
+                                            &lt;&lt;addclass &quot;#crash&quot; &quot;show&quot;&gt;&gt;
+                                        &lt;&lt;next&gt;&gt;
+                                            &lt;&lt;addclass &quot;#sound&quot; &quot;show&quot;&gt;&gt;
+                                        &lt;&lt;next&gt;&gt;
+                                            &lt;&lt;addclass &quot;#as&quot; &quot;show&quot;&gt;&gt;
+                                        &lt;&lt;next&gt;&gt;
+                                            &lt;&lt;addclass &quot;#the&quot; &quot;show&quot;&gt;&gt;
+                                        &lt;&lt;next&gt;&gt;
+                                            &lt;&lt;addclass &quot;#trucks&quot; &quot;show&quot;&gt;&gt;
+                                        &lt;&lt;next&gt;&gt;
+                                            &lt;&lt;addclass &quot;#roll&quot; &quot;show&quot;&gt;&gt;
+                                        &lt;&lt;next&gt;&gt;
+                                            &lt;&lt;addclass &quot;#over&quot; &quot;show&quot;&gt;&gt;
+                                        &lt;&lt;next&gt;&gt;
+                                            &lt;&lt;addclass &quot;#and&quot; &quot;show&quot;&gt;&gt;
+                                        &lt;&lt;next&gt;&gt;
+                                            &lt;&lt;addclass &quot;#explode&quot; &quot;show&quot;&gt;&gt;
+                                        &lt;&lt;next&gt;&gt;
+                                            &lt;&lt;addclass &quot;#in&quot; &quot;show&quot;&gt;&gt;
+                                        &lt;&lt;next&gt;&gt;
+                                            &lt;&lt;addclass &quot;#slow&quot; &quot;show&quot;&gt;&gt;
+                                        &lt;&lt;next&gt;&gt;
+                                            &lt;&lt;addclass &quot;#motion&quot; &quot;show&quot;&gt;&gt;
+                                        &lt;&lt;/timed&gt;&gt;
+                                        @@#a;.hide;a@@ @@#car;.hide;car@@ @@#crash;.hide;crash@@ @@#sound;.hide;sound@@ @@#as;.hide;as@@ @@#the;.hide;the@@ @@#trucks;.hide;trucks@@ @@#roll;.hide;roll@@ @@#over;.hide;over@@ @@#and;.hide;and@@ @@#explode;.hide;explode@@ @@#in;.hide;in@@ @@#slow;.hide;slow@@
+                                        @@#motion;.hide;
+                                        &lt;&lt;linkreplace &quot;motion.&quot;&gt;&gt;
+                                            &lt;&lt;removeclass &quot;body&quot; &quot;flames&quot;&gt;&gt;
+                                            &lt;&lt;addclass &quot;#head&quot; &quot;gone&quot;&gt;&gt;
+                                            &lt;&lt;append &quot;#sorry&quot;&gt;&gt;
+                                                &lt;&lt;include &quot;Sorry&quot;&gt;&gt;
+                                            &lt;&lt;/append&gt;&gt;
+                                        &lt;&lt;/linkreplace&gt;&gt;&lt;br&gt;@@
+                                    &lt;&lt;/linkreplace&gt;&gt;
+                            &lt;&lt;/replace&gt;&gt;
+                            &lt;&lt;replace &quot;#deer&quot;&gt;&gt;
+                            &lt;&lt;/replace&gt;&gt;
+                        &lt;&lt;/linkreplace&gt;&gt;
+                    &lt;&lt;/append&gt;&gt;
+                    &lt;&lt;addclass &quot;#right&quot; &quot;hide&quot;&gt;&gt;
+                    &lt;&lt;addclass &quot;body&quot; &quot;forest&quot;&gt;&gt;
+                &lt;&lt;/linkreplace&gt;&gt;
+            &lt;&lt;/replace&gt;&gt;
+        &lt;&lt;/silently&gt;&gt;
+    &lt;&lt;/linkreplace&gt;&gt;
+&lt;/span&gt;
+@@#head;@@
+@@#deer;@@
+@@#sorry;@@</tw-passagedata><tw-passagedata pid="10" name="Sorry" tags="section" position="1225,100">@@.darling;&lt;&lt;indent 3 &quot;Hello darling,&quot;&gt;&gt;@@
+&lt;&lt;linkreplace &quot;sorry&quot;&gt;&gt;sorry
+    &lt;&lt;append &quot;#sorryelbows&quot; t8n&gt;&gt;&lt;br&gt;
+        &lt;span id=&quot;right&quot; span style=&quot;display:inline-block;text-indent:14em&quot;&gt;
+            &lt;&lt;linkreplace &quot;Sorry&quot;&gt;&gt;Sorry
+                &lt;&lt;append &quot;#sorryhere&quot; t8n&gt;&gt;
+                    &lt;&lt;linkreplace &quot;sorry&quot;&gt;&gt;sorry
+                        &lt;&lt;append &quot;#sorryscene&quot; t8n&gt;&gt;
+                            sorry
+                        &lt;&lt;/append&gt;&gt;
+                        &lt;&lt;append &quot;#scene&quot; t8n&gt;&gt;
+                            about the scene at the bottom of the stairwell&lt;br&gt;
+                        &lt;&lt;/append&gt;&gt;
+                        &lt;&lt;append &quot;#ruined&quot; t8n&gt;&gt;
+                            @@.darling;&lt;&lt;indent 9 &quot;and&quot;&gt;&gt; how@@ I ruined everything by saying it out loud.&lt;br&gt;
+                            &lt;&lt;indent 3 &quot;Especially&quot;&gt;&gt;
+                            &lt;&lt;linkreplace &quot;that,&quot; t8n&gt;&gt;that,
+                                &lt;&lt;addclass &quot;.darling&quot; &quot;hide&quot;&gt;&gt;
+                                &lt;&lt;replace &quot;#known&quot; t8n&gt;&gt;
+                                    &lt;&lt;linkreplace &quot;known.&quot; t8n&gt;&gt;known.&lt;br&gt;
+                                    You see, I take the parts that I remember and stitch them back together&lt;br&gt;
+                                        &lt;&lt;indent 3 &quot;to make a creature that will&quot;&gt;&gt; @@#say;do what I say@@&lt;br&gt;
+                                        &lt;&lt;linkreplace &quot;or&quot; t8n&gt;&gt;
+                                            &lt;&lt;replace &quot;#say&quot; t8n&gt;&gt;
+                                                love me
+                                                &lt;&lt;linkreplace &quot;back.&quot; t8n&gt;&gt;
+                                                    back.&lt;br&gt;
+                                                    &lt;&lt;include &quot;Crossed out&quot; t8n&gt;&gt;
+                                                &lt;&lt;/linkreplace&gt;&gt;
+                                            &lt;&lt;/replace&gt;&gt;
+                                        &lt;&lt;/linkreplace&gt;&gt;
+                                    &lt;&lt;/linkreplace&gt;&gt;
+                                &lt;&lt;/replace&gt;&gt;
+                            &lt;&lt;/linkreplace&gt;&gt;
+                            but I should have @@#known;known.@@
+                        &lt;&lt;/append&gt;&gt;
+                    &lt;&lt;/linkreplace&gt;&gt;
+                &lt;&lt;/append&gt;&gt;
+                &lt;&lt;append &quot;#here&quot; t8n&gt;&gt;
+                    we&lt;br&gt;lived here,
+                &lt;&lt;/append&gt;&gt;
+            &lt;&lt;/linkreplace&gt;&gt;
+        &lt;/span&gt;
+    &lt;&lt;append &quot;#elbows&quot; t8n&gt;&gt;
+        about the bony elbows,
+    &lt;&lt;/append&gt;&gt;
+    &lt;&lt;/append&gt;&gt;
+&lt;&lt;/linkreplace&gt;&gt;
+@@.darling;about that.@@
+
+@@#sorryelbows;@@ @@#elbows;.darling;@@
+@@#sorryhere;@@ @@#here;.darling;@@
+@@#sorryscene;@@ @@#scene;.darling;@@
+@@#ruined;@@</tw-passagedata><tw-passagedata pid="11" name="Crossed out" tags="section" position="100,225">&lt;&lt;silently&gt;&gt;
     &lt;&lt;set _badman to [&quot;you are&quot;, &quot;not&quot;, &quot;feeding yourself to a bad man&quot;, &quot;against a black sky prickled with small lights.&quot;]&gt;&gt;
     &lt;&lt;set _caskets to [&quot;The wooden halls like caskets. These terms from the lower depths.&quot;]&gt;&gt;
     &lt;&lt;set _lover to [&quot;Here is the repeated image of the lover destroyed.&quot;]&gt;&gt;
@@ -543,12 +922,13 @@ and little words
                                     &lt;&lt;linkreplace &quot;out.&quot;&gt;&gt;out.
                                             &lt;&lt;backspace _floorboards &quot;#floorboards&quot; &quot;Display Floorboards&quot;&gt;&gt;
                                             &lt;&lt;timed _floorboardstime t8n&gt;&gt;
-                                                And here is the tabernacle&lt;br&gt;
+                                                And @@#heretabernacle;here@@ is the tabernacle&lt;br&gt;
                                             &lt;&lt;next 1350ms&gt;&gt;
                                                 @@#reconstructed;display:inline-block;text-indent:24em;@@
                                                 &lt;&lt;typewriter &quot;reconstructed.&quot; &quot;#reconstructed&quot;&gt;&gt;
-                                            &lt;&lt;next 1350ms&gt;&gt;
-                                                &lt;br&gt;&lt;br&gt;[[Next | Jerusalem]]
+                                                &lt;&lt;replace &quot;#heretabernacle&quot; t8n&gt;&gt;
+                                                    [[here|Happy]]
+                                                &lt;&lt;/replace&gt;&gt;
                                             &lt;&lt;/timed&gt;&gt;
                                     &lt;&lt;/linkreplace&gt;&gt;
                                 &lt;&lt;/timed&gt;&gt;
@@ -558,145 +938,11 @@ and little words
                 &lt;&lt;/timed&gt;&gt;
             &lt;&lt;/linkreplace&gt;&gt;
         &lt;&lt;/timed&gt;&gt;
-    &lt;&lt;/linkreplace&gt;&gt;</tw-passagedata><tw-passagedata pid="4" name="Jerusalem" tags="" position="475,100">Okay, if you’re so great, you do it—&lt;br&gt;
-&lt;&lt;indent 6 &quot;here’s the&quot;&gt;&gt;
-&lt;&lt;linkreplace &quot;pencil&quot;&gt;&gt;
-    &lt;&lt;append &quot;#bedwindow&quot; t8n&gt;&gt;
-        &lt;br&gt;If the window is on your right, you are in your own bed.
-    &lt;&lt;/append&gt;&gt;
-    &lt;&lt;linkreplace &quot;pencil&quot;&gt;&gt;
-        &lt;&lt;append &quot;#heartwindow&quot; t8n&gt;&gt;If the window&lt;br&gt;
-            &lt;&lt;indent 3 &quot;is over your heart, and it is painted shut, then we are breathing&quot;&gt;&gt;&lt;br&gt;
-            river water.
-        &lt;&lt;/append&gt;&gt;
-        &lt;&lt;linkreplace &quot;pencil&quot;&gt;&gt;pencil
-            &lt;&lt;append &quot;#jerusalem&quot; t8n&gt;&gt;
-                &lt;&lt;indent 3 &quot;Build me a city and call it&quot;&gt;&gt;
-                @@font-family:courier new;&lt;&lt;typesim &quot;Jerusalem.&quot;&gt;&gt;
-                    &lt;&lt;append &quot;#jerusalemtwo&quot; t8n&gt;&gt;Build me another and call it&lt;br&gt;
-                        &lt;&lt;fadein 500ms 1350ms&gt;&gt;&lt;&lt;indent 30 &quot;@@border-radius:3px;border-bottom:1px solid rgb(20, 20, 19);padding:4px;font-family:courier new;Jerusalem.@@&quot;&gt;&gt;&lt;&lt;/fadein&gt;&gt;
-                        &lt;&lt;fadein 500ms 2350ms&gt;&gt;&lt;br&gt;&lt;br&gt;[[Start]]&lt;&lt;/fadein&gt;&gt;
-                    &lt;&lt;/append&gt;&gt;
-                &lt;&lt;/typesim&gt;&gt;@@
-            &lt;&lt;/append&gt;&gt;
-        &lt;&lt;/linkreplace&gt;&gt;
-    &lt;&lt;/linkreplace&gt;&gt;
-&lt;&lt;/linkreplace&gt;&gt;
-, make it work . . .
-@@#bedwindow;@@ @@#heartwindow;@@&lt;br&gt;
-@@#jerusalem;@@ @@#jerusalemtwo;@@</tw-passagedata><tw-passagedata pid="5" name="Forest" tags="" position="600,100">A forest, then. Beautiful trees. And a lady singing.&lt;br&gt;
-//&lt;&lt;indent 4 &quot;Love on the water, love underwater, love, love&quot;&gt;&gt;// and so on.&lt;br&gt;
-What a sweet lady. Sing lady, sing! Of course, she wakes the dragon.&lt;br&gt;
-&lt;&lt;indent 3 &quot;Love always wakes the dragon and&quot;&gt;&gt;&lt;&lt;linkreplace &quot;@@color:rgb(148, 21, 4);suddenly@@&quot; t8n&gt;&gt;&lt;br&gt;
-        &lt;&lt;addclass &quot;body&quot; &quot;flames&quot;&gt;&gt;
-        &lt;&lt;addclass &quot;#begin&quot; &quot;gone&quot;&gt;&gt;
-        &lt;&lt;addclass &quot;#forest&quot; &quot;gone&quot;&gt;&gt;
-        &lt;&lt;replace &quot;#everywhere&quot; t8n&gt;&gt;
-            &lt;&lt;indent 24 &quot;[[flames everywhere. | Dragon]]&quot;&gt;&gt;&lt;&lt;/replace&gt;&gt;
-&lt;&lt;/linkreplace&gt;&gt;</tw-passagedata><tw-passagedata pid="6" name="Dragon" tags="" position="725,100">I can tell already you think I’m the
-@@.dragon;&lt;&lt;linkreplace &quot;dragon,&quot; t8n&gt;&gt;@@.dragon;dragon,@@
-    &lt;&lt;silently&gt;&gt;&lt;&lt;addclass &quot;#that&quot; &quot;show&quot;&gt;&gt;
-    &lt;&lt;replace #notprincess&gt;&gt;
-        &lt;&lt;timed 1350ms t8n&gt;&gt;
-            I&#39;m not the
-            @@.dragon;&lt;&lt;linkreplace &quot;dragon.&quot; t8n&gt;&gt;@@.dragon;dragon.@@&lt;br&gt;
-                &lt;&lt;append &quot;#notprincess&quot; t8n&gt;&gt;
-                    I’m not the princess either.&lt;br&gt;
-                    &lt;&lt;indent 7 &quot;Who am&quot;&gt;&gt;
-                    &lt;&lt;linkreplace &quot;I?&quot; t8n&gt;&gt;
-                        I? I&#39;m just a writer. I write things down.&lt;br&gt;
-                        I walk through your dreams and invent the future.
-                        &lt;&lt;linkreplace &quot;Sure,&quot;&gt;&gt;Sure,
-                            &lt;&lt;addclass &quot;#boat&quot; &quot;hide&quot;&gt;&gt;
-                            &lt;&lt;addclass &quot;#laterone&quot; &quot;show&quot;&gt;&gt;
-                        &lt;&lt;replace &quot;#yes&quot;&gt;&gt;
-                        &lt;&lt;linkreplace &quot;yes,&quot;&gt;&gt;yes,
-                            &lt;&lt;addclass &quot;#swallow&quot; &quot;hide&quot;&gt;&gt;
-                            &lt;&lt;addclass &quot;#latertwo&quot; &quot;show&quot;&gt;&gt;
-                            &lt;&lt;timed 1s&gt;&gt;
-                                &lt;&lt;append &quot;#bricks&quot; t8n&gt;&gt;
-                                    &lt;&lt;indent 15 &quot;And the part where I push you&lt;br&gt;
-                                    flush against the wall and every part of your body rubs against the bricks,&quot;&gt;&gt;
-                                &lt;&lt;/append&gt;&gt;
-                            &lt;&lt;next 2s&gt;&gt;
-                                &lt;&lt;append &quot;#toit&quot;&gt;&gt;
-                                    &lt;&lt;indent 3 &quot;shut up&quot;&gt;&gt;
-                                    &lt;&lt;addclass &quot;#bricks&quot; &quot;gone&quot;&gt;&gt;
-                                &lt;&lt;/append&gt;&gt;
-                            &lt;&lt;next 1s&gt;&gt;
-                                &lt;&lt;append &quot;#toit&quot; t8n&gt;&gt;
-                                    &lt;br&gt;I’m getting to it.
-                                    &lt;br&gt;[[Next | Dragon 2]]
-                                &lt;&lt;/append&gt;&gt;
-                            &lt;&lt;/timed&gt;&gt;
-                        &lt;&lt;/linkreplace&gt;&gt;
-                        &lt;&lt;/replace&gt;&gt;
-                        &lt;&lt;/linkreplace&gt;&gt;&lt;br&gt;
-                        @@#boat;display:inline-block;text-indent:4em;I sink the boat of love,@@ @@#laterone;.hide;but that comes later.@@ And @@#yes;yes,@@
-                        @@#swallow;I swallow&lt;br&gt;
-                        glass,@@ @@#latertwo;.hide;but that comes later.@@&lt;br&gt;
-                        @@#bricks;@@&lt;br&gt;
-                    &lt;&lt;/linkreplace&gt;&gt;
-                &lt;&lt;/append&gt;&gt;
-            &lt;&lt;/linkreplace&gt;&gt;@@
-        &lt;&lt;/timed&gt;&gt;
-    &lt;&lt;/replace&gt;&gt;&lt;&lt;/silently&gt;&gt;
-&lt;&lt;/linkreplace&gt;&gt;@@
-&lt;br&gt;@@#that;.hide;display:inline-block;text-indent:4em;that would be so like me,@@ but I’m not.
-@@#notprincess;@@
-@@#toit;@@</tw-passagedata><tw-passagedata pid="7" name="Dragon 2" tags="" position="850,100">For a while I thought I was the dragon.&lt;br&gt;
-I guess I can tell you that now. And, for a while, I thought I was&lt;br&gt;
-                                                                                                the princess,&lt;br&gt;
-cotton candy pink, sitting there in my room, in the tower of the castle,&lt;br&gt;
-          young and beautiful and in love and waiting for you with&lt;br&gt;
-confidence&lt;br&gt;
-            but the princess looks into her mirror and only sees the princess,&lt;br&gt;
-while I’m out here, slogging through the mud, breathing fire,&lt;br&gt;
-                                                               and getting stabbed to death.&lt;br&gt;
-                                    Okay, so I’m the dragon. [[Big deal. | Want]]</tw-passagedata><tw-passagedata pid="8" name="Want" tags="want" position="975,100">@@#hero;You still get to be the 
-&lt;&lt;linkreplace &quot;hero.&quot;&gt;&gt;hero.
-&lt;&lt;silently&gt;&gt;
-    &lt;&lt;addclass &quot;body&quot; &quot;spotlightone&quot;&gt;&gt;
-    &lt;&lt;append &quot;#gloves&quot;&gt;&gt;
-        You get magic 
-        &lt;&lt;linkreplace &quot;gloves!&quot;&gt;&gt;gloves!
-            &lt;&lt;addclass &quot;body&quot; &quot;spotlighttwo&quot;&gt;&gt;
-            &lt;&lt;append &quot;#fish&quot;&gt;&gt;A 
-                &lt;&lt;linkreplace &quot;fish&quot;&gt;&gt;fish
-                    &lt;&lt;addclass &quot;body&quot; &quot;spotlightthree&quot;&gt;&gt;
-                    &lt;&lt;append &quot;#flashlights&quot;&gt;&gt;
-                        You get eyes like &lt;&lt;linkreplace &quot;flashlights!&lt;br&gt;&quot;&gt;&gt;flashlights!&lt;br&gt;
-                        &lt;&lt;indent 4 &quot;What more do you want?&quot;&gt;&gt;&lt;br&gt;
-                            &lt;&lt;timed 1350ms t8n&gt;&gt;
-                                I make you pancakes, I take you hunting, I talk to you as if you’re&lt;br&gt;
-                                &lt;&lt;indent 3 &quot;really&quot;&gt;&gt;
-                                &lt;&lt;linkreplace &quot;there.&lt;br&gt;&quot; t8n&gt;&gt;there.&lt;br&gt;
-                                    Are you there, sweetheart? Do you know 
-                                    &lt;&lt;linkreplace &quot;me?&quot;&gt;&gt;me?
-                                        &lt;&lt;addclass &quot;#hero&quot; &quot;gone&quot;&gt;&gt;
-                                        &lt;&lt;addclass &quot;#gloves&quot; &quot;gone&quot;&gt;&gt;
-                                        &lt;&lt;addclass &quot;#fish&quot; &quot;gone&quot;&gt;&gt;
-                                        &lt;&lt;addclass &quot;#flashlights&quot; &quot;gone&quot;&gt;&gt;
-                                        &lt;&lt;append &quot;#microphone&quot;&gt;&gt;
-                                            Is this microphone live?
-                                            &lt;&lt;removeclass &quot;body&quot;&gt;&gt;
-                                            &lt;&lt;addclass &quot;body&quot; &quot;dark&quot;&gt;&gt;
-                                            &lt;br&gt;[[Next | Crossed out]]
-                                        &lt;&lt;/append&gt;&gt;
-                                    &lt;&lt;/linkreplace&gt;&gt;
-                                &lt;&lt;/linkreplace&gt;&gt;
-                            &lt;&lt;/timed&gt;&gt;
-                        &lt;&lt;/linkreplace&gt;&gt;
-                    &lt;&lt;/append&gt;&gt;
-                &lt;&lt;/linkreplace&gt;&gt;
-            that talks!
-            &lt;&lt;/append&gt;&gt;
-        &lt;&lt;/linkreplace&gt;&gt;
-    &lt;&lt;/append&gt;&gt;
-&lt;&lt;/silently&gt;&gt;
-&lt;&lt;/linkreplace&gt;&gt;&lt;br&gt;@@
-@@#gloves;@@ @@#fish;@@ @@#flashlights;@@
-@@#microphone;@@</tw-passagedata><tw-passagedata pid="9" name="spotlightone" tags="Twine.image" position="1100,100">data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiIHN0YW5kYWxvbmU9Im5vIj8+CjwhLS0gQ3JlYXRlZCB3aXRoIElua3NjYXBlIChodHRwOi8vd3d3Lmlua3NjYXBlLm9yZy8pIC0tPgoKPHN2ZwogICB4bWxuczpkYz0iaHR0cDovL3B1cmwub3JnL2RjL2VsZW1lbnRzLzEuMS8iCiAgIHhtbG5zOmNjPSJodHRwOi8vY3JlYXRpdmVjb21tb25zLm9yZy9ucyMiCiAgIHhtbG5zOnJkZj0iaHR0cDovL3d3dy53My5vcmcvMTk5OS8wMi8yMi1yZGYtc3ludGF4LW5zIyIKICAgeG1sbnM6c3ZnPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIKICAgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIgogICB4bWxuczpzb2RpcG9kaT0iaHR0cDovL3NvZGlwb2RpLnNvdXJjZWZvcmdlLm5ldC9EVEQvc29kaXBvZGktMC5kdGQiCiAgIHhtbG5zOmlua3NjYXBlPSJodHRwOi8vd3d3Lmlua3NjYXBlLm9yZy9uYW1lc3BhY2VzL2lua3NjYXBlIgogICB3aWR0aD0iNDI1LjYyMzE3bW0iCiAgIGhlaWdodD0iMTcyLjY4MzY5bW0iCiAgIHZpZXdCb3g9IjAgMCA0MjUuNjIzMTcgMTcyLjY4MzY5IgogICB2ZXJzaW9uPSIxLjEiCiAgIGlkPSJzdmc4IgogICBpbmtzY2FwZTp2ZXJzaW9uPSIwLjkyLjQgKDVkYTY4OWMzMTMsIDIwMTktMDEtMTQpIgogICBzb2RpcG9kaTpkb2NuYW1lPSJzcG90bGlnaHRvbmUuc3ZnIj4KICA8ZGVmcwogICAgIGlkPSJkZWZzMiIgLz4KICA8c29kaXBvZGk6bmFtZWR2aWV3CiAgICAgaWQ9ImJhc2UiCiAgICAgcGFnZWNvbG9yPSIjZmZmZmZmIgogICAgIGJvcmRlcmNvbG9yPSIjNjY2NjY2IgogICAgIGJvcmRlcm9wYWNpdHk9IjEuMCIKICAgICBpbmtzY2FwZTpwYWdlb3BhY2l0eT0iMC4wIgogICAgIGlua3NjYXBlOnBhZ2VzaGFkb3c9IjIiCiAgICAgaW5rc2NhcGU6em9vbT0iMC4zNSIKICAgICBpbmtzY2FwZTpjeD0iMTEzLjk1NjA4IgogICAgIGlua3NjYXBlOmN5PSIyMTMuNjAzMzIiCiAgICAgaW5rc2NhcGU6ZG9jdW1lbnQtdW5pdHM9Im1tIgogICAgIGlua3NjYXBlOmN1cnJlbnQtbGF5ZXI9ImxheWVyMSIKICAgICBzaG93Z3JpZD0iZmFsc2UiCiAgICAgaW5rc2NhcGU6d2luZG93LXdpZHRoPSIxMzY2IgogICAgIGlua3NjYXBlOndpbmRvdy1oZWlnaHQ9IjcwNSIKICAgICBpbmtzY2FwZTp3aW5kb3cteD0iLTgiCiAgICAgaW5rc2NhcGU6d2luZG93LXk9Ii04IgogICAgIGlua3NjYXBlOndpbmRvdy1tYXhpbWl6ZWQ9IjEiCiAgICAgaW5rc2NhcGU6cGFnZWNoZWNrZXJib2FyZD0idHJ1ZSI+CiAgICA8c29kaXBvZGk6Z3VpZGUKICAgICAgIHBvc2l0aW9uPSI0NDQuNTAwMDEsMTAuNTgzMzM0IgogICAgICAgb3JpZW50YXRpb249IjAsMTYwNC44NzUiCiAgICAgICBpZD0iZ3VpZGU0NjI3IgogICAgICAgaW5rc2NhcGU6bG9ja2VkPSJmYWxzZSIgLz4KICAgIDxzb2RpcG9kaTpndWlkZQogICAgICAgcG9zaXRpb249IjQyNS4xMjMxOCwwLjYwNTIzMjE4IgogICAgICAgb3JpZW50YXRpb249Ii01OTAuMTYzOCwwIgogICAgICAgaWQ9Imd1aWRlNDYyOSIKICAgICAgIGlua3NjYXBlOmxvY2tlZD0iZmFsc2UiIC8+CiAgICA8c29kaXBvZGk6Z3VpZGUKICAgICAgIHBvc2l0aW9uPSIwLDEwNy4zNDUyNCIKICAgICAgIG9yaWVudGF0aW9uPSIwLC0xNjA0Ljg3NSIKICAgICAgIGlkPSJndWlkZTQ2MzEiCiAgICAgICBpbmtzY2FwZTpsb2NrZWQ9ImZhbHNlIiAvPgogICAgPHNvZGlwb2RpOmd1aWRlCiAgICAgICBwb3NpdGlvbj0iLTQ2Ljg2OTA0OSwxNTYuNzUyNzUiCiAgICAgICBvcmllbnRhdGlvbj0iNTkwLjE2MzgsMCIKICAgICAgIGlkPSJndWlkZTQ2MzMiCiAgICAgICBpbmtzY2FwZTpsb2NrZWQ9ImZhbHNlIiAvPgogIDwvc29kaXBvZGk6bmFtZWR2aWV3PgogIDxtZXRhZGF0YQogICAgIGlkPSJtZXRhZGF0YTUiPgogICAgPHJkZjpSREY+CiAgICAgIDxjYzpXb3JrCiAgICAgICAgIHJkZjphYm91dD0iIj4KICAgICAgICA8ZGM6Zm9ybWF0PmltYWdlL3N2Zyt4bWw8L2RjOmZvcm1hdD4KICAgICAgICA8ZGM6dHlwZQogICAgICAgICAgIHJkZjpyZXNvdXJjZT0iaHR0cDovL3B1cmwub3JnL2RjL2RjbWl0eXBlL1N0aWxsSW1hZ2UiIC8+CiAgICAgICAgPGRjOnRpdGxlIC8+CiAgICAgIDwvY2M6V29yaz4KICAgIDwvcmRmOlJERj4KICA8L21ldGFkYXRhPgogIDxnCiAgICAgaW5rc2NhcGU6bGFiZWw9IkxheWVyIDEiCiAgICAgaW5rc2NhcGU6Z3JvdXBtb2RlPSJsYXllciIKICAgICBpZD0ibGF5ZXIxIgogICAgIHRyYW5zZm9ybT0idHJhbnNsYXRlKDMxLjUyODI0OCwtOTEuNTU4MzY2KSI+CiAgICA8cGF0aAogICAgICAgc3R5bGU9Im9wYWNpdHk6MC4zO2ZpbGw6I2ZmZjVkNTtmaWxsLW9wYWNpdHk6MTtzdHJva2U6I2ZmZjZkNTtzdHJva2Utd2lkdGg6MS4wMDAxOTk1NjtzdHJva2Utb3BhY2l0eTowIgogICAgICAgZD0iTSAtMzEuMDI4MjQ2LDM4Ljg2MDc4OSAzOTMuNTk0OTIsMjA1Ljc0MjI4IHYgMCBMIC0zMS4wMjgyNDYsMTAwLjY4NTczIFoiCiAgICAgICBpZD0icGF0aDM3MTMiCiAgICAgICBpbmtzY2FwZTpjb25uZWN0b3ItY3VydmF0dXJlPSIwIgogICAgICAgc29kaXBvZGk6bm9kZXR5cGVzPSJjY2NjYyIgLz4KICA8L2c+Cjwvc3ZnPgo=</tw-passagedata><tw-passagedata pid="10" name="spotlightthree" tags="Twine.image" position="1225,100">data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiIHN0YW5kYWxvbmU9Im5vIj8+CjwhLS0gQ3JlYXRlZCB3aXRoIElua3NjYXBlIChodHRwOi8vd3d3Lmlua3NjYXBlLm9yZy8pIC0tPgoKPHN2ZwogICB4bWxuczpkYz0iaHR0cDovL3B1cmwub3JnL2RjL2VsZW1lbnRzLzEuMS8iCiAgIHhtbG5zOmNjPSJodHRwOi8vY3JlYXRpdmVjb21tb25zLm9yZy9ucyMiCiAgIHhtbG5zOnJkZj0iaHR0cDovL3d3dy53My5vcmcvMTk5OS8wMi8yMi1yZGYtc3ludGF4LW5zIyIKICAgeG1sbnM6c3ZnPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIKICAgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIgogICB4bWxuczpzb2RpcG9kaT0iaHR0cDovL3NvZGlwb2RpLnNvdXJjZWZvcmdlLm5ldC9EVEQvc29kaXBvZGktMC5kdGQiCiAgIHhtbG5zOmlua3NjYXBlPSJodHRwOi8vd3d3Lmlua3NjYXBlLm9yZy9uYW1lc3BhY2VzL2lua3NjYXBlIgogICB3aWR0aD0iNTMzLjkyMjc5bW0iCiAgIGhlaWdodD0iMzgzLjE1MDE4bW0iCiAgIHZpZXdCb3g9IjAgMCA1MzMuOTIyNzkgMzgzLjE1MDE5IgogICB2ZXJzaW9uPSIxLjEiCiAgIGlkPSJzdmc4IgogICBzb2RpcG9kaTpkb2NuYW1lPSJzcG90bGlnaHR0aHJlZS5zdmciCiAgIGlua3NjYXBlOnZlcnNpb249IjAuOTIuNCAoNWRhNjg5YzMxMywgMjAxOS0wMS0xNCkiPgogIDxkZWZzCiAgICAgaWQ9ImRlZnMyIiAvPgogIDxzb2RpcG9kaTpuYW1lZHZpZXcKICAgICBpZD0iYmFzZSIKICAgICBwYWdlY29sb3I9IiNmZmZmZmYiCiAgICAgYm9yZGVyY29sb3I9IiM2NjY2NjYiCiAgICAgYm9yZGVyb3BhY2l0eT0iMS4wIgogICAgIGlua3NjYXBlOnBhZ2VvcGFjaXR5PSIwLjAiCiAgICAgaW5rc2NhcGU6cGFnZXNoYWRvdz0iMiIKICAgICBpbmtzY2FwZTp6b29tPSIwLjEyNSIKICAgICBpbmtzY2FwZTpjeD0iLTY5Mi4zMDE5MSIKICAgICBpbmtzY2FwZTpjeT0iNDc4LjE4OTAxIgogICAgIGlua3NjYXBlOmRvY3VtZW50LXVuaXRzPSJtbSIKICAgICBpbmtzY2FwZTpjdXJyZW50LWxheWVyPSJsYXllcjEiCiAgICAgc2hvd2dyaWQ9ImZhbHNlIgogICAgIGlua3NjYXBlOndpbmRvdy13aWR0aD0iMTM2NiIKICAgICBpbmtzY2FwZTp3aW5kb3ctaGVpZ2h0PSI3MDUiCiAgICAgaW5rc2NhcGU6d2luZG93LXg9Ii04IgogICAgIGlua3NjYXBlOndpbmRvdy15PSItOCIKICAgICBpbmtzY2FwZTp3aW5kb3ctbWF4aW1pemVkPSIxIgogICAgIGlua3NjYXBlOnBhZ2VjaGVja2VyYm9hcmQ9InRydWUiCiAgICAgc2hvd2d1aWRlcz0idHJ1ZSIKICAgICBpbmtzY2FwZTpndWlkZS1iYm94PSJ0cnVlIj4KICAgIDxzb2RpcG9kaTpndWlkZQogICAgICAgcG9zaXRpb249IjU5Mi42NjY2NiwzNjguMjk5OTkiCiAgICAgICBvcmllbnRhdGlvbj0iMSwwIgogICAgICAgaW5rc2NhcGU6bG9ja2VkPSJmYWxzZSIKICAgICAgIGlkPSJndWlkZTQ1MjYiIC8+CiAgICA8c29kaXBvZGk6Z3VpZGUKICAgICAgIHBvc2l0aW9uPSItMTE0LjMsMTcxLjQ1IgogICAgICAgb3JpZW50YXRpb249IjEsMCIKICAgICAgIGlua3NjYXBlOmxvY2tlZD0iZmFsc2UiCiAgICAgICBpZD0iZ3VpZGU0NTI4IiAvPgogICAgPHNvZGlwb2RpOmd1aWRlCiAgICAgICBwb3NpdGlvbj0iMjI0LjIyMjQ3LC0xMTEuMTI3MDYiCiAgICAgICBvcmllbnRhdGlvbj0iMCwxIgogICAgICAgaWQ9Imd1aWRlNDUzOCIKICAgICAgIGlua3NjYXBlOmxvY2tlZD0iZmFsc2UiIC8+CiAgICA8c29kaXBvZGk6Z3VpZGUKICAgICAgIHBvc2l0aW9uPSIzMjguOTk3NDcsNTYzLjAzMTI2IgogICAgICAgb3JpZW50YXRpb249IjAsMSIKICAgICAgIGlkPSJndWlkZTQ1NDAiCiAgICAgICBpbmtzY2FwZTpsb2NrZWQ9ImZhbHNlIiAvPgogIDwvc29kaXBvZGk6bmFtZWR2aWV3PgogIDxtZXRhZGF0YQogICAgIGlkPSJtZXRhZGF0YTUiPgogICAgPHJkZjpSREY+CiAgICAgIDxjYzpXb3JrCiAgICAgICAgIHJkZjphYm91dD0iIj4KICAgICAgICA8ZGM6Zm9ybWF0PmltYWdlL3N2Zyt4bWw8L2RjOmZvcm1hdD4KICAgICAgICA8ZGM6dHlwZQogICAgICAgICAgIHJkZjpyZXNvdXJjZT0iaHR0cDovL3B1cmwub3JnL2RjL2RjbWl0eXBlL1N0aWxsSW1hZ2UiIC8+CiAgICAgICAgPGRjOnRpdGxlIC8+CiAgICAgIDwvY2M6V29yaz4KICAgIDwvcmRmOlJERj4KICA8L21ldGFkYXRhPgogIDxnCiAgICAgaW5rc2NhcGU6bGFiZWw9IkxheWVyIDEiCiAgICAgaW5rc2NhcGU6Z3JvdXBtb2RlPSJsYXllciIKICAgICBpZD0ibGF5ZXIxIgogICAgIHRyYW5zZm9ybT0idHJhbnNsYXRlKDE3OS42NTU2OSwzMy45MzY1NDQpIj4KICAgIDxwYXRoCiAgICAgICBzdHlsZT0ib3BhY2l0eTowLjM7ZmlsbDojZmZmNWQ1O2ZpbGwtb3BhY2l0eToxO3N0cm9rZTojZmZmNmQ1O3N0cm9rZS13aWR0aDoxLjQxMTtzdHJva2Utb3BhY2l0eTowO3N0cm9rZS1taXRlcmxpbWl0OjQ7c3Ryb2tlLWRhc2hhcnJheTpub25lIgogICAgICAgZD0iTSA1OC4xMjQ1MDcsLTIzNS4zNDA0MSAzMDIuOTQ0MzIsNDYwLjM0MDcxIHYgMCBMIC01NS42NjY4NDYsLTEzMy41NTE1NCBaIgogICAgICAgaWQ9InBhdGgzNzEzIgogICAgICAgaW5rc2NhcGU6Y29ubmVjdG9yLWN1cnZhdHVyZT0iMCIKICAgICAgIHNvZGlwb2RpOm5vZGV0eXBlcz0iY2NjY2MiCiAgICAgICBpbmtzY2FwZTpleHBvcnQtZmlsZW5hbWU9IkM6XFVzZXJzXE1hZGRpZVxwYXRoMzcxMy5wbmciCiAgICAgICBpbmtzY2FwZTpleHBvcnQteGRwaT0iOTYiCiAgICAgICBpbmtzY2FwZTpleHBvcnQteWRwaT0iOTYiIC8+CiAgPC9nPgo8L3N2Zz4K</tw-passagedata><tw-passagedata pid="11" name="spotlighttwo" tags="Twine.image" position="100,225">data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiIHN0YW5kYWxvbmU9Im5vIj8+CjwhLS0gQ3JlYXRlZCB3aXRoIElua3NjYXBlIChodHRwOi8vd3d3Lmlua3NjYXBlLm9yZy8pIC0tPgoKPHN2ZwogICB4bWxuczpkYz0iaHR0cDovL3B1cmwub3JnL2RjL2VsZW1lbnRzLzEuMS8iCiAgIHhtbG5zOmNjPSJodHRwOi8vY3JlYXRpdmVjb21tb25zLm9yZy9ucyMiCiAgIHhtbG5zOnJkZj0iaHR0cDovL3d3dy53My5vcmcvMTk5OS8wMi8yMi1yZGYtc3ludGF4LW5zIyIKICAgeG1sbnM6c3ZnPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIKICAgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIgogICB4bWxuczpzb2RpcG9kaT0iaHR0cDovL3NvZGlwb2RpLnNvdXJjZWZvcmdlLm5ldC9EVEQvc29kaXBvZGktMC5kdGQiCiAgIHhtbG5zOmlua3NjYXBlPSJodHRwOi8vd3d3Lmlua3NjYXBlLm9yZy9uYW1lc3BhY2VzL2lua3NjYXBlIgogICB3aWR0aD0iMTMzMi4wOTA3IgogICBoZWlnaHQ9IjE3MzUuMzE0IgogICB2aWV3Qm94PSIwIDAgMzUyLjQ0OTAxIDQ1OS4xMzUxMSIKICAgdmVyc2lvbj0iMS4xIgogICBpZD0ic3ZnOCIKICAgc29kaXBvZGk6ZG9jbmFtZT0ic3BvdGxpZ2h0dHdvLnN2ZyIKICAgaW5rc2NhcGU6dmVyc2lvbj0iMC45Mi40ICg1ZGE2ODljMzEzLCAyMDE5LTAxLTE0KSI+CiAgPGRlZnMKICAgICBpZD0iZGVmczIiIC8+CiAgPHNvZGlwb2RpOm5hbWVkdmlldwogICAgIGlkPSJiYXNlIgogICAgIHBhZ2Vjb2xvcj0iI2ZmZmZmZiIKICAgICBib3JkZXJjb2xvcj0iIzY2NjY2NiIKICAgICBib3JkZXJvcGFjaXR5PSIxLjAiCiAgICAgaW5rc2NhcGU6cGFnZW9wYWNpdHk9IjAuMCIKICAgICBpbmtzY2FwZTpwYWdlc2hhZG93PSIyIgogICAgIGlua3NjYXBlOnpvb209IjAuMTQ3MjY2NTEiCiAgICAgaW5rc2NhcGU6Y3g9Ii0xMDQ0Ljg4NjEiCiAgICAgaW5rc2NhcGU6Y3k9IjkyOS41MTI0MyIKICAgICBpbmtzY2FwZTpkb2N1bWVudC11bml0cz0ibW0iCiAgICAgaW5rc2NhcGU6Y3VycmVudC1sYXllcj0ibGF5ZXIyIgogICAgIHNob3dncmlkPSJmYWxzZSIKICAgICBpbmtzY2FwZTp3aW5kb3ctd2lkdGg9IjEzNjYiCiAgICAgaW5rc2NhcGU6d2luZG93LWhlaWdodD0iNzA1IgogICAgIGlua3NjYXBlOndpbmRvdy14PSItOCIKICAgICBpbmtzY2FwZTp3aW5kb3cteT0iLTgiCiAgICAgaW5rc2NhcGU6d2luZG93LW1heGltaXplZD0iMSIKICAgICBpbmtzY2FwZTpwYWdlY2hlY2tlcmJvYXJkPSJ0cnVlIgogICAgIHNob3dndWlkZXM9InRydWUiCiAgICAgaW5rc2NhcGU6Z3VpZGUtYmJveD0idHJ1ZSIKICAgICB1bml0cz0icHgiPgogICAgPHNvZGlwb2RpOmd1aWRlCiAgICAgICBwb3NpdGlvbj0iLTE5MS4zMzMzMiw0OTUuNDU4OTgiCiAgICAgICBvcmllbnRhdGlvbj0iMSwwIgogICAgICAgaW5rc2NhcGU6bG9ja2VkPSJmYWxzZSIKICAgICAgIGlkPSJndWlkZTQ1MjYiIC8+CiAgICA8c29kaXBvZGk6Z3VpZGUKICAgICAgIHBvc2l0aW9uPSItNzY5LjUyNDc3LDUzOS4zOTQ4MyIKICAgICAgIG9yaWVudGF0aW9uPSIxLDAiCiAgICAgICBpbmtzY2FwZTpsb2NrZWQ9ImZhbHNlIgogICAgICAgaWQ9Imd1aWRlNDUyOCIgLz4KICAgIDxzb2RpcG9kaTpndWlkZQogICAgICAgcG9zaXRpb249Ii01MDMuNjM4MzcsMzY1Ljk5ODk3IgogICAgICAgb3JpZW50YXRpb249IjAsMSIKICAgICAgIGlkPSJndWlkZTQ1MzgiCiAgICAgICBpbmtzY2FwZTpsb2NrZWQ9ImZhbHNlIiAvPgogICAgPHNvZGlwb2RpOmd1aWRlCiAgICAgICBwb3NpdGlvbj0iLTU5MS40NzkwNyw4ODguNDM4NjciCiAgICAgICBvcmllbnRhdGlvbj0iMCwxIgogICAgICAgaWQ9Imd1aWRlNDU0MCIKICAgICAgIGlua3NjYXBlOmxvY2tlZD0iZmFsc2UiIC8+CiAgICA8c29kaXBvZGk6Z3VpZGUKICAgICAgIHBvc2l0aW9uPSItNjA5Ljg1ODA5LDM2NS42MjkyOSIKICAgICAgIG9yaWVudGF0aW9uPSIwLDE3NjEuNzMxMiIKICAgICAgIGlkPSJndWlkZTQ1OTciCiAgICAgICBpbmtzY2FwZTpsb2NrZWQ9ImZhbHNlIiAvPgogICAgPHNvZGlwb2RpOmd1aWRlCiAgICAgICBwb3NpdGlvbj0iLTc3Ljg2NzczMSwxNjYuMDA2NjIiCiAgICAgICBvcmllbnRhdGlvbj0iLTY4NC4wODQ5LDAiCiAgICAgICBpZD0iZ3VpZGU0NTk5IgogICAgICAgaW5rc2NhcGU6bG9ja2VkPSJmYWxzZSIgLz4KICAgIDxzb2RpcG9kaTpndWlkZQogICAgICAgcG9zaXRpb249IjEwMC45OTMxOSw1MjAuMDIzODgiCiAgICAgICBvcmllbnRhdGlvbj0iMCwtMTc2MS43MzEyIgogICAgICAgaWQ9Imd1aWRlNDYwMSIKICAgICAgIGlua3NjYXBlOmxvY2tlZD0iZmFsc2UiIC8+CiAgICA8c29kaXBvZGk6Z3VpZGUKICAgICAgIHBvc2l0aW9uPSItNjA5Ljg1ODA5LDU0Ni42MjY3NSIKICAgICAgIG9yaWVudGF0aW9uPSI2ODQuMDg0OSwwIgogICAgICAgaWQ9Imd1aWRlNDYwMyIKICAgICAgIGlua3NjYXBlOmxvY2tlZD0iZmFsc2UiIC8+CiAgICA8c29kaXBvZGk6Z3VpZGUKICAgICAgIHBvc2l0aW9uPSIxOTQuNTA2MjksMzAxLjMyOSIKICAgICAgIG9yaWVudGF0aW9uPSIwLDE0NjAuMDE4NiIKICAgICAgIGlkPSJndWlkZTQ2MDUiCiAgICAgICBpbmtzY2FwZTpsb2NrZWQ9ImZhbHNlIiAvPgogICAgPHNvZGlwb2RpOmd1aWRlCiAgICAgICBwb3NpdGlvbj0iMzQ4LjM1NDQsMTU3Ljc0ODk2IgogICAgICAgb3JpZW50YXRpb249Ii0xMTQyLjkxNzIsMCIKICAgICAgIGlkPSJndWlkZTQ2MDciCiAgICAgICBpbmtzY2FwZTpsb2NrZWQ9ImZhbHNlIiAvPgogICAgPHNvZGlwb2RpOmd1aWRlCiAgICAgICBwb3NpdGlvbj0iLTE0Mi43Mzk5OSw2NjguMDY2NTciCiAgICAgICBvcmllbnRhdGlvbj0iMCwtMTQ2MC4wMTg2IgogICAgICAgaWQ9Imd1aWRlNDYwOSIKICAgICAgIGlua3NjYXBlOmxvY2tlZD0iZmFsc2UiIC8+CiAgICA8c29kaXBvZGk6Z3VpZGUKICAgICAgIHBvc2l0aW9uPSItNTI5LjAzNjU1LDY2OC4wNjY1NyIKICAgICAgIG9yaWVudGF0aW9uPSIxMTQyLjkxNzIsMCIKICAgICAgIGlkPSJndWlkZTQ2MTEiCiAgICAgICBpbmtzY2FwZTpsb2NrZWQ9ImZhbHNlIiAvPgogIDwvc29kaXBvZGk6bmFtZWR2aWV3PgogIDxtZXRhZGF0YQogICAgIGlkPSJtZXRhZGF0YTUiPgogICAgPHJkZjpSREY+CiAgICAgIDxjYzpXb3JrCiAgICAgICAgIHJkZjphYm91dD0iIj4KICAgICAgICA8ZGM6Zm9ybWF0PmltYWdlL3N2Zyt4bWw8L2RjOmZvcm1hdD4KICAgICAgICA8ZGM6dHlwZQogICAgICAgICAgIHJkZjpyZXNvdXJjZT0iaHR0cDovL3B1cmwub3JnL2RjL2RjbWl0eXBlL1N0aWxsSW1hZ2UiIC8+CiAgICAgICAgPGRjOnRpdGxlIC8+CiAgICAgIDwvY2M6V29yaz4KICAgIDwvcmRmOlJERj4KICA8L21ldGFkYXRhPgogIDxnCiAgICAgaW5rc2NhcGU6bGFiZWw9IkxheWVyIDEiCiAgICAgaW5rc2NhcGU6Z3JvdXBtb2RlPSJsYXllciIKICAgICBpZD0ibGF5ZXIxIgogICAgIHRyYW5zZm9ybT0idHJhbnNsYXRlKC03NDAuODIwODYsLTIxNS40ODYwNikiIC8+CiAgPGcKICAgICBpbmtzY2FwZTpncm91cG1vZGU9ImxheWVyIgogICAgIGlkPSJsYXllcjIiCiAgICAgaW5rc2NhcGU6bGFiZWw9IkxheWVyIDIiCiAgICAgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoLTU5Ni4wNTg4LC0xMDkuNjM5NjgpIj4KICAgIDxwYXRoCiAgICAgICBzdHlsZT0ib3BhY2l0eTowLjM7ZmlsbDojZmZmNWQ1O2ZpbGwtb3BhY2l0eToxO3N0cm9rZTojZmZmNmQ1O3N0cm9rZS13aWR0aDoxLjQwMDY5NTQ0O3N0cm9rZS1vcGFjaXR5OjAiCiAgICAgICBkPSJNIDg1NS42MjkyNSw0OC43NTA5MzggNTY3LjcxODI2LDU2Ny45MDE2OCB2IDAgTCA5ODAuMzQ1OCw0OC43NTA5MzggWiIKICAgICAgIGlkPSJwYXRoMzcxMyIKICAgICAgIGlua3NjYXBlOmNvbm5lY3Rvci1jdXJ2YXR1cmU9IjAiCiAgICAgICBzb2RpcG9kaTpub2RldHlwZXM9ImNjY2NjIgogICAgICAgaW5rc2NhcGU6ZXhwb3J0LWZpbGVuYW1lPSJDOlxVc2Vyc1xNYWRkaWVccGF0aDM3MTMucG5nIgogICAgICAgaW5rc2NhcGU6ZXhwb3J0LXhkcGk9Ijk2IgogICAgICAgaW5rc2NhcGU6ZXhwb3J0LXlkcGk9Ijk2IiAvPgogIDwvZz4KPC9zdmc+Cg==</tw-passagedata><tw-passagedata pid="12" name="Display Badman" tags="" position="225,225">&lt;&lt;if _badman.length &gt; 0&gt;&gt;
+    &lt;&lt;/linkreplace&gt;&gt;</tw-passagedata><tw-passagedata pid="12" name="Happy" tags="section" position="225,225">Here is the part where everyone was happy all the time and we were all&lt;br&gt;
+&lt;&lt;indent 4 &quot;forgiven,&quot;&gt;&gt;&lt;br&gt;
+even though we didn’t deserve it.&lt;br&gt;&lt;br&gt;
+
+[[Begin]]</tw-passagedata><tw-passagedata pid="13" name="spotlightone" tags="Twine.image" position="350,225">data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiIHN0YW5kYWxvbmU9Im5vIj8+CjwhLS0gQ3JlYXRlZCB3aXRoIElua3NjYXBlIChodHRwOi8vd3d3Lmlua3NjYXBlLm9yZy8pIC0tPgoKPHN2ZwogICB4bWxuczpkYz0iaHR0cDovL3B1cmwub3JnL2RjL2VsZW1lbnRzLzEuMS8iCiAgIHhtbG5zOmNjPSJodHRwOi8vY3JlYXRpdmVjb21tb25zLm9yZy9ucyMiCiAgIHhtbG5zOnJkZj0iaHR0cDovL3d3dy53My5vcmcvMTk5OS8wMi8yMi1yZGYtc3ludGF4LW5zIyIKICAgeG1sbnM6c3ZnPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIKICAgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIgogICB4bWxuczpzb2RpcG9kaT0iaHR0cDovL3NvZGlwb2RpLnNvdXJjZWZvcmdlLm5ldC9EVEQvc29kaXBvZGktMC5kdGQiCiAgIHhtbG5zOmlua3NjYXBlPSJodHRwOi8vd3d3Lmlua3NjYXBlLm9yZy9uYW1lc3BhY2VzL2lua3NjYXBlIgogICB3aWR0aD0iMTAxNC44ODY3bW0iCiAgIGhlaWdodD0iNDk0LjY3NjA5bW0iCiAgIHZpZXdCb3g9IjAgMCAxMDE0Ljg4NjcgNDk0LjY3NjA2IgogICB2ZXJzaW9uPSIxLjEiCiAgIGlkPSJzdmc4IgogICBpbmtzY2FwZTp2ZXJzaW9uPSIwLjkyLjQgKDVkYTY4OWMzMTMsIDIwMTktMDEtMTQpIgogICBzb2RpcG9kaTpkb2NuYW1lPSJzcG90bGlnaHRvbmUuc3ZnIj4KICA8ZGVmcwogICAgIGlkPSJkZWZzMiIgLz4KICA8c29kaXBvZGk6bmFtZWR2aWV3CiAgICAgaWQ9ImJhc2UiCiAgICAgcGFnZWNvbG9yPSIjZmZmZmZmIgogICAgIGJvcmRlcmNvbG9yPSIjNjY2NjY2IgogICAgIGJvcmRlcm9wYWNpdHk9IjEuMCIKICAgICBpbmtzY2FwZTpwYWdlb3BhY2l0eT0iMC4wIgogICAgIGlua3NjYXBlOnBhZ2VzaGFkb3c9IjIiCiAgICAgaW5rc2NhcGU6em9vbT0iMC4xMjM3NDM2OSIKICAgICBpbmtzY2FwZTpjeD0iMTMuNDc0Njg1IgogICAgIGlua3NjYXBlOmN5PSIyNDUuODU2NjIiCiAgICAgaW5rc2NhcGU6ZG9jdW1lbnQtdW5pdHM9Im1tIgogICAgIGlua3NjYXBlOmN1cnJlbnQtbGF5ZXI9ImxheWVyMSIKICAgICBzaG93Z3JpZD0iZmFsc2UiCiAgICAgaW5rc2NhcGU6d2luZG93LXdpZHRoPSIxMzY2IgogICAgIGlua3NjYXBlOndpbmRvdy1oZWlnaHQ9IjcwNSIKICAgICBpbmtzY2FwZTp3aW5kb3cteD0iLTgiCiAgICAgaW5rc2NhcGU6d2luZG93LXk9Ii04IgogICAgIGlua3NjYXBlOndpbmRvdy1tYXhpbWl6ZWQ9IjEiCiAgICAgaW5rc2NhcGU6cGFnZWNoZWNrZXJib2FyZD0idHJ1ZSI+CiAgICA8c29kaXBvZGk6Z3VpZGUKICAgICAgIHBvc2l0aW9uPSIxMDMzLjg4MzksLTY3LjY1OTI0MSIKICAgICAgIG9yaWVudGF0aW9uPSIwLDE2MDQuODc1IgogICAgICAgaWQ9Imd1aWRlNDYyNyIKICAgICAgIGlua3NjYXBlOmxvY2tlZD0iZmFsc2UiIC8+CiAgICA8c29kaXBvZGk6Z3VpZGUKICAgICAgIHBvc2l0aW9uPSIxMDE0LjUwNywtNzcuNjM3MzQyIgogICAgICAgb3JpZW50YXRpb249Ii01OTAuMTYzOCwwIgogICAgICAgaWQ9Imd1aWRlNDYyOSIKICAgICAgIGlua3NjYXBlOmxvY2tlZD0iZmFsc2UiIC8+CiAgICA8c29kaXBvZGk6Z3VpZGUKICAgICAgIHBvc2l0aW9uPSIyNTkuMzU3MzksNDkzLjk1MTk3IgogICAgICAgb3JpZW50YXRpb249IjAsLTE2MDQuODc1IgogICAgICAgaWQ9Imd1aWRlNDYzMSIKICAgICAgIGlua3NjYXBlOmxvY2tlZD0iZmFsc2UiIC8+CiAgICA8c29kaXBvZGk6Z3VpZGUKICAgICAgIHBvc2l0aW9uPSI1NTAuMzU0NDcsMjU0LjI3NTg3IgogICAgICAgb3JpZW50YXRpb249IjU5MC4xNjM4LDAiCiAgICAgICBpZD0iZ3VpZGU0NjMzIgogICAgICAgaW5rc2NhcGU6bG9ja2VkPSJmYWxzZSIgLz4KICA8L3NvZGlwb2RpOm5hbWVkdmlldz4KICA8bWV0YWRhdGEKICAgICBpZD0ibWV0YWRhdGE1Ij4KICAgIDxyZGY6UkRGPgogICAgICA8Y2M6V29yawogICAgICAgICByZGY6YWJvdXQ9IiI+CiAgICAgICAgPGRjOmZvcm1hdD5pbWFnZS9zdmcreG1sPC9kYzpmb3JtYXQ+CiAgICAgICAgPGRjOnR5cGUKICAgICAgICAgICByZGY6cmVzb3VyY2U9Imh0dHA6Ly9wdXJsLm9yZy9kYy9kY21pdHlwZS9TdGlsbEltYWdlIiAvPgogICAgICAgIDxkYzp0aXRsZSAvPgogICAgICA8L2NjOldvcms+CiAgICA8L3JkZjpSREY+CiAgPC9tZXRhZGF0YT4KICA8ZwogICAgIGlua3NjYXBlOmxhYmVsPSJMYXllciAxIgogICAgIGlua3NjYXBlOmdyb3VwbW9kZT0ibGF5ZXIiCiAgICAgaWQ9ImxheWVyMSIKICAgICB0cmFuc2Zvcm09InRyYW5zbGF0ZSg2MjAuOTEyMSwzMDguNjc2NzgpIj4KICAgIDxwYXRoCiAgICAgICBzdHlsZT0ib3BhY2l0eTowLjI1O2ZpbGw6I2ZmZjVkNTtmaWxsLW9wYWNpdHk6MTtzdHJva2U6I2ZmZjZkNTtzdHJva2Utd2lkdGg6MS40NDgyNTE5NjtzdHJva2Utb3BhY2l0eTowIgogICAgICAgZD0ibSAtNDA3LjQ2MDUzLC0zMDcuOTUyNjUgODAxLjA1NTQ2LDQ5My4zMDA3OSB2IDAgbCAtMTAxNC4xOTAzLC00OTMuMzAwNzggeiIKICAgICAgIGlkPSJwYXRoMzcxMyIKICAgICAgIGlua3NjYXBlOmNvbm5lY3Rvci1jdXJ2YXR1cmU9IjAiCiAgICAgICBzb2RpcG9kaTpub2RldHlwZXM9ImNjY2NjIiAvPgogIDwvZz4KPC9zdmc+Cg==</tw-passagedata><tw-passagedata pid="14" name="spotlightthree" tags="Twine.image" position="475,225">data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiIHN0YW5kYWxvbmU9Im5vIj8+CjwhLS0gQ3JlYXRlZCB3aXRoIElua3NjYXBlIChodHRwOi8vd3d3Lmlua3NjYXBlLm9yZy8pIC0tPgoKPHN2ZwogICB4bWxuczpkYz0iaHR0cDovL3B1cmwub3JnL2RjL2VsZW1lbnRzLzEuMS8iCiAgIHhtbG5zOmNjPSJodHRwOi8vY3JlYXRpdmVjb21tb25zLm9yZy9ucyMiCiAgIHhtbG5zOnJkZj0iaHR0cDovL3d3dy53My5vcmcvMTk5OS8wMi8yMi1yZGYtc3ludGF4LW5zIyIKICAgeG1sbnM6c3ZnPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIKICAgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIgogICB4bWxuczpzb2RpcG9kaT0iaHR0cDovL3NvZGlwb2RpLnNvdXJjZWZvcmdlLm5ldC9EVEQvc29kaXBvZGktMC5kdGQiCiAgIHhtbG5zOmlua3NjYXBlPSJodHRwOi8vd3d3Lmlua3NjYXBlLm9yZy9uYW1lc3BhY2VzL2lua3NjYXBlIgogICB3aWR0aD0iNzA1LjIxMzkzbW0iCiAgIGhlaWdodD0iNDAwLjU4MDY5bW0iCiAgIHZpZXdCb3g9IjAgMCA3MDUuMjEzOTEgNDAwLjU4MDcxIgogICB2ZXJzaW9uPSIxLjEiCiAgIGlkPSJzdmc4IgogICBzb2RpcG9kaTpkb2NuYW1lPSJzcG90bGlnaHR0aHJlZS5zdmciCiAgIGlua3NjYXBlOnZlcnNpb249IjAuOTIuNCAoNWRhNjg5YzMxMywgMjAxOS0wMS0xNCkiPgogIDxkZWZzCiAgICAgaWQ9ImRlZnMyIiAvPgogIDxzb2RpcG9kaTpuYW1lZHZpZXcKICAgICBpZD0iYmFzZSIKICAgICBwYWdlY29sb3I9IiNmZmZmZmYiCiAgICAgYm9yZGVyY29sb3I9IiM2NjY2NjYiCiAgICAgYm9yZGVyb3BhY2l0eT0iMS4wIgogICAgIGlua3NjYXBlOnBhZ2VvcGFjaXR5PSIwLjAiCiAgICAgaW5rc2NhcGU6cGFnZXNoYWRvdz0iMiIKICAgICBpbmtzY2FwZTp6b29tPSIwLjEyNSIKICAgICBpbmtzY2FwZTpjeD0iLTE3NjQuMTQ2MyIKICAgICBpbmtzY2FwZTpjeT0iLTEzOC42NzgyNCIKICAgICBpbmtzY2FwZTpkb2N1bWVudC11bml0cz0ibW0iCiAgICAgaW5rc2NhcGU6Y3VycmVudC1sYXllcj0ibGF5ZXIxIgogICAgIHNob3dncmlkPSJmYWxzZSIKICAgICBpbmtzY2FwZTp3aW5kb3ctd2lkdGg9IjEzNjYiCiAgICAgaW5rc2NhcGU6d2luZG93LWhlaWdodD0iNzA1IgogICAgIGlua3NjYXBlOndpbmRvdy14PSItOCIKICAgICBpbmtzY2FwZTp3aW5kb3cteT0iLTgiCiAgICAgaW5rc2NhcGU6d2luZG93LW1heGltaXplZD0iMSIKICAgICBpbmtzY2FwZTpwYWdlY2hlY2tlcmJvYXJkPSJ0cnVlIgogICAgIHNob3dndWlkZXM9InRydWUiCiAgICAgaW5rc2NhcGU6Z3VpZGUtYmJveD0idHJ1ZSI+CiAgICA8c29kaXBvZGk6Z3VpZGUKICAgICAgIHBvc2l0aW9uPSI1NTMuOTMxNzYsNDkyLjgxMTA4IgogICAgICAgb3JpZW50YXRpb249IjEsMCIKICAgICAgIGlua3NjYXBlOmxvY2tlZD0iZmFsc2UiCiAgICAgICBpZD0iZ3VpZGU0NTI2IiAvPgogICAgPHNvZGlwb2RpOmd1aWRlCiAgICAgICBwb3NpdGlvbj0iLTE2NC4wOTA5Miw4LjIzNzIyMTQiCiAgICAgICBvcmllbnRhdGlvbj0iMSwwIgogICAgICAgaW5rc2NhcGU6bG9ja2VkPSJmYWxzZSIKICAgICAgIGlkPSJndWlkZTQ1MjgiIC8+CiAgICA8c29kaXBvZGk6Z3VpZGUKICAgICAgIHBvc2l0aW9uPSIxNzQuNDMxNTcsLTI3NC4zMzk4NSIKICAgICAgIG9yaWVudGF0aW9uPSIwLDEiCiAgICAgICBpZD0iZ3VpZGU0NTM4IgogICAgICAgaW5rc2NhcGU6bG9ja2VkPSJmYWxzZSIgLz4KICAgIDxzb2RpcG9kaTpndWlkZQogICAgICAgcG9zaXRpb249IjI3OS4yMDY1OSwzOTkuODE4NDkiCiAgICAgICBvcmllbnRhdGlvbj0iMCwxIgogICAgICAgaWQ9Imd1aWRlNDU0MCIKICAgICAgIGlua3NjYXBlOmxvY2tlZD0iZmFsc2UiIC8+CiAgPC9zb2RpcG9kaTpuYW1lZHZpZXc+CiAgPG1ldGFkYXRhCiAgICAgaWQ9Im1ldGFkYXRhNSI+CiAgICA8cmRmOlJERj4KICAgICAgPGNjOldvcmsKICAgICAgICAgcmRmOmFib3V0PSIiPgogICAgICAgIDxkYzpmb3JtYXQ+aW1hZ2Uvc3ZnK3htbDwvZGM6Zm9ybWF0PgogICAgICAgIDxkYzp0eXBlCiAgICAgICAgICAgcmRmOnJlc291cmNlPSJodHRwOi8vcHVybC5vcmcvZGMvZGNtaXR5cGUvU3RpbGxJbWFnZSIgLz4KICAgICAgICA8ZGM6dGl0bGUgLz4KICAgICAgPC9jYzpXb3JrPgogICAgPC9yZGY6UkRGPgogIDwvbWV0YWRhdGE+CiAgPGcKICAgICBpbmtzY2FwZTpsYWJlbD0iTGF5ZXIgMSIKICAgICBpbmtzY2FwZTpncm91cG1vZGU9ImxheWVyIgogICAgIGlkPSJsYXllcjEiCiAgICAgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoMTI5Ljg2NDc5LDIxNC41Nzk4NSkiPgogICAgPHBhdGgKICAgICAgIHN0eWxlPSJvcGFjaXR5OjAuMjU7ZmlsbDojZmZmNWQ1O2ZpbGwtb3BhY2l0eToxO3N0cm9rZTojZmZmNmQ1O3N0cm9rZS13aWR0aDoxLjUyNDQwODQ2O3N0cm9rZS1taXRlcmxpbWl0OjQ7c3Ryb2tlLWRhc2hhcnJheTpub25lO3N0cm9rZS1vcGFjaXR5OjAiCiAgICAgICBkPSJtIDU3Mi40NjcxMSwtMjEzLjgxNzY1IC03MDEuODUxNzMsMzk5LjE1NTk0IHYgMCBsIDQ5Mi4wNjgyNSwtMzk5LjE1NTk0IHoiCiAgICAgICBpZD0icGF0aDM3MTMiCiAgICAgICBpbmtzY2FwZTpjb25uZWN0b3ItY3VydmF0dXJlPSIwIgogICAgICAgc29kaXBvZGk6bm9kZXR5cGVzPSJjY2NjYyIKICAgICAgIGlua3NjYXBlOmV4cG9ydC1maWxlbmFtZT0iQzpcVXNlcnNcTWFkZGllXHBhdGgzNzEzLnBuZyIKICAgICAgIGlua3NjYXBlOmV4cG9ydC14ZHBpPSI5NiIKICAgICAgIGlua3NjYXBlOmV4cG9ydC15ZHBpPSI5NiIgLz4KICA8L2c+Cjwvc3ZnPgo=</tw-passagedata><tw-passagedata pid="15" name="spotlighttwo" tags="Twine.image" position="600,225">data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiIHN0YW5kYWxvbmU9Im5vIj8+CjwhLS0gQ3JlYXRlZCB3aXRoIElua3NjYXBlIChodHRwOi8vd3d3Lmlua3NjYXBlLm9yZy8pIC0tPgoKPHN2ZwogICB4bWxuczpkYz0iaHR0cDovL3B1cmwub3JnL2RjL2VsZW1lbnRzLzEuMS8iCiAgIHhtbG5zOmNjPSJodHRwOi8vY3JlYXRpdmVjb21tb25zLm9yZy9ucyMiCiAgIHhtbG5zOnJkZj0iaHR0cDovL3d3dy53My5vcmcvMTk5OS8wMi8yMi1yZGYtc3ludGF4LW5zIyIKICAgeG1sbnM6c3ZnPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIKICAgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIgogICB4bWxuczpzb2RpcG9kaT0iaHR0cDovL3NvZGlwb2RpLnNvdXJjZWZvcmdlLm5ldC9EVEQvc29kaXBvZGktMC5kdGQiCiAgIHhtbG5zOmlua3NjYXBlPSJodHRwOi8vd3d3Lmlua3NjYXBlLm9yZy9uYW1lc3BhY2VzL2lua3NjYXBlIgogICB3aWR0aD0iNjQxLjI4MDciCiAgIGhlaWdodD0iMjUxNi45NzU4IgogICB2aWV3Qm94PSIwIDAgMTY5LjY3MjA3IDY2NS45NDk4IgogICB2ZXJzaW9uPSIxLjEiCiAgIGlkPSJzdmc4IgogICBzb2RpcG9kaTpkb2NuYW1lPSJzcG90bGlnaHR0d28uc3ZnIgogICBpbmtzY2FwZTp2ZXJzaW9uPSIwLjkyLjQgKDVkYTY4OWMzMTMsIDIwMTktMDEtMTQpIj4KICA8ZGVmcwogICAgIGlkPSJkZWZzMiIgLz4KICA8c29kaXBvZGk6bmFtZWR2aWV3CiAgICAgaWQ9ImJhc2UiCiAgICAgcGFnZWNvbG9yPSIjZmZmZmZmIgogICAgIGJvcmRlcmNvbG9yPSIjNjY2NjY2IgogICAgIGJvcmRlcm9wYWNpdHk9IjEuMCIKICAgICBpbmtzY2FwZTpwYWdlb3BhY2l0eT0iMC4wIgogICAgIGlua3NjYXBlOnBhZ2VzaGFkb3c9IjIiCiAgICAgaW5rc2NhcGU6em9vbT0iMC4xNDcyNjY1MSIKICAgICBpbmtzY2FwZTpjeD0iLTE1MjUuOTExNiIKICAgICBpbmtzY2FwZTpjeT0iMTEzNC42NjM3IgogICAgIGlua3NjYXBlOmRvY3VtZW50LXVuaXRzPSJtbSIKICAgICBpbmtzY2FwZTpjdXJyZW50LWxheWVyPSJsYXllcjIiCiAgICAgc2hvd2dyaWQ9ImZhbHNlIgogICAgIGlua3NjYXBlOndpbmRvdy13aWR0aD0iMTM2NiIKICAgICBpbmtzY2FwZTp3aW5kb3ctaGVpZ2h0PSI3MDUiCiAgICAgaW5rc2NhcGU6d2luZG93LXg9Ii04IgogICAgIGlua3NjYXBlOndpbmRvdy15PSItOCIKICAgICBpbmtzY2FwZTp3aW5kb3ctbWF4aW1pemVkPSIxIgogICAgIGlua3NjYXBlOnBhZ2VjaGVja2VyYm9hcmQ9InRydWUiCiAgICAgc2hvd2d1aWRlcz0idHJ1ZSIKICAgICBpbmtzY2FwZTpndWlkZS1iYm94PSJ0cnVlIgogICAgIHVuaXRzPSJweCIKICAgICBmaXQtbWFyZ2luLXRvcD0iMCIKICAgICBmaXQtbWFyZ2luLWxlZnQ9IjAiCiAgICAgZml0LW1hcmdpbi1yaWdodD0iMCIKICAgICBmaXQtbWFyZ2luLWJvdHRvbT0iMCI+CiAgICA8c29kaXBvZGk6Z3VpZGUKICAgICAgIHBvc2l0aW9uPSItMTEyLjcwMDIxLDU0OS43MzgzNyIKICAgICAgIG9yaWVudGF0aW9uPSIxLDAiCiAgICAgICBpbmtzY2FwZTpsb2NrZWQ9ImZhbHNlIgogICAgICAgaWQ9Imd1aWRlNDUyNiIgLz4KICAgIDxzb2RpcG9kaTpndWlkZQogICAgICAgcG9zaXRpb249Ii02OTAuODkxNDUsNTkzLjY3NDIxIgogICAgICAgb3JpZW50YXRpb249IjEsMCIKICAgICAgIGlua3NjYXBlOmxvY2tlZD0iZmFsc2UiCiAgICAgICBpZD0iZ3VpZGU0NTI4IiAvPgogICAgPHNvZGlwb2RpOmd1aWRlCiAgICAgICBwb3NpdGlvbj0iLTQyNS4wMDUxNCw0MjAuMjc4NDEiCiAgICAgICBvcmllbnRhdGlvbj0iMCwxIgogICAgICAgaWQ9Imd1aWRlNDUzOCIKICAgICAgIGlua3NjYXBlOmxvY2tlZD0iZmFsc2UiIC8+CiAgICA8c29kaXBvZGk6Z3VpZGUKICAgICAgIHBvc2l0aW9uPSItNTEyLjg0NTgxLDk0Mi43MTc5NCIKICAgICAgIG9yaWVudGF0aW9uPSIwLDEiCiAgICAgICBpZD0iZ3VpZGU0NTQwIgogICAgICAgaW5rc2NhcGU6bG9ja2VkPSJmYWxzZSIgLz4KICAgIDxzb2RpcG9kaTpndWlkZQogICAgICAgcG9zaXRpb249IjE0Ny42MTgxNyw0MjAuMjc4NDEiCiAgICAgICBvcmllbnRhdGlvbj0iMCwxNzYxLjczMTIiCiAgICAgICBpZD0iZ3VpZGU0NTk3IgogICAgICAgaW5rc2NhcGU6bG9ja2VkPSJmYWxzZSIgLz4KICAgIDxzb2RpcG9kaTpndWlkZQogICAgICAgcG9zaXRpb249IjAuNzY1MzM4MzIsMjIwLjI4NjE0IgogICAgICAgb3JpZW50YXRpb249Ii02ODQuMDg0OSwwIgogICAgICAgaWQ9Imd1aWRlNDU5OSIKICAgICAgIGlua3NjYXBlOmxvY2tlZD0iZmFsc2UiIC8+CiAgICA8c29kaXBvZGk6Z3VpZGUKICAgICAgIHBvc2l0aW9uPSIyMTguNTQyNzIsNzcxLjU3MjU2IgogICAgICAgb3JpZW50YXRpb249IjAsLTE3NjEuNzMxMiIKICAgICAgIGlkPSJndWlkZTQ2MDEiCiAgICAgICBpbmtzY2FwZTpsb2NrZWQ9ImZhbHNlIiAvPgogICAgPHNvZGlwb2RpOmd1aWRlCiAgICAgICBwb3NpdGlvbj0iLTUzMS4yMjQ4Miw2MDAuOTA2MTMiCiAgICAgICBvcmllbnRhdGlvbj0iNjg0LjA4NDksMCIKICAgICAgIGlkPSJndWlkZTQ2MDMiCiAgICAgICBpbmtzY2FwZTpsb2NrZWQ9ImZhbHNlIiAvPgogICAgPHNvZGlwb2RpOmd1aWRlCiAgICAgICBwb3NpdGlvbj0iMjczLjEzOTI2LDM1NS42MDg0NyIKICAgICAgIG9yaWVudGF0aW9uPSIwLDE0NjAuMDE4NiIKICAgICAgIGlkPSJndWlkZTQ2MDUiCiAgICAgICBpbmtzY2FwZTpsb2NrZWQ9ImZhbHNlIiAvPgogICAgPHNvZGlwb2RpOmd1aWRlCiAgICAgICBwb3NpdGlvbj0iNDI2Ljk4NzMyLDIxMi4wMjg0OCIKICAgICAgIG9yaWVudGF0aW9uPSItMTE0Mi45MTcyLDAiCiAgICAgICBpZD0iZ3VpZGU0NjA3IgogICAgICAgaW5rc2NhcGU6bG9ja2VkPSJmYWxzZSIgLz4KICAgIDxzb2RpcG9kaTpndWlkZQogICAgICAgcG9zaXRpb249IjIwNi41MjM4LDY2NS4xODEzNyIKICAgICAgIG9yaWVudGF0aW9uPSIwLC0xNDYwLjAxODYiCiAgICAgICBpZD0iZ3VpZGU0NjA5IgogICAgICAgaW5rc2NhcGU6bG9ja2VkPSJmYWxzZSIgLz4KICAgIDxzb2RpcG9kaTpndWlkZQogICAgICAgcG9zaXRpb249Ii00NTAuNDAzMzEsNzIyLjM0NTkxIgogICAgICAgb3JpZW50YXRpb249IjExNDIuOTE3MiwwIgogICAgICAgaWQ9Imd1aWRlNDYxMSIKICAgICAgIGlua3NjYXBlOmxvY2tlZD0iZmFsc2UiIC8+CiAgPC9zb2RpcG9kaTpuYW1lZHZpZXc+CiAgPG1ldGFkYXRhCiAgICAgaWQ9Im1ldGFkYXRhNSI+CiAgICA8cmRmOlJERj4KICAgICAgPGNjOldvcmsKICAgICAgICAgcmRmOmFib3V0PSIiPgogICAgICAgIDxkYzpmb3JtYXQ+aW1hZ2Uvc3ZnK3htbDwvZGM6Zm9ybWF0PgogICAgICAgIDxkYzp0eXBlCiAgICAgICAgICAgcmRmOnJlc291cmNlPSJodHRwOi8vcHVybC5vcmcvZGMvZGNtaXR5cGUvU3RpbGxJbWFnZSIgLz4KICAgICAgICA8ZGM6dGl0bGUgLz4KICAgICAgPC9jYzpXb3JrPgogICAgPC9yZGY6UkRGPgogIDwvbWV0YWRhdGE+CiAgPGcKICAgICBpbmtzY2FwZTpsYWJlbD0iTGF5ZXIgMSIKICAgICBpbmtzY2FwZTpncm91cG1vZGU9ImxheWVyIgogICAgIGlkPSJsYXllcjEiCiAgICAgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoLTY2Mi4xODc3OSwtNjIuOTUwOTQxKSIgLz4KICA8ZwogICAgIGlua3NjYXBlOmdyb3VwbW9kZT0ibGF5ZXIiCiAgICAgaWQ9ImxheWVyMiIKICAgICBpbmtzY2FwZTpsYWJlbD0iTGF5ZXIgMiIKICAgICB0cmFuc2Zvcm09InRyYW5zbGF0ZSgtNTE3LjQyNTczLDQyLjg5NTQzOCkiPgogICAgPHBhdGgKICAgICAgIHN0eWxlPSJvcGFjaXR5OjAuMjU7ZmlsbDojZmZmNWQ1O2ZpbGwtb3BhY2l0eToxO3N0cm9rZTojZmZmNmQ1O3N0cm9rZS13aWR0aDoxLjUzNjQ2NzkxO3N0cm9rZS1vcGFjaXR5OjAiCiAgICAgICBkPSJtIDU3Ni4xMTk0NywtNDIuMTI3MjA0IC01Ny45Mjg0LDY2NC45OTM1MzQgdiAwIEwgNjg2LjExMTU4LC00Mi4xMjcyMDQgWiIKICAgICAgIGlkPSJwYXRoMzcxMyIKICAgICAgIGlua3NjYXBlOmNvbm5lY3Rvci1jdXJ2YXR1cmU9IjAiCiAgICAgICBzb2RpcG9kaTpub2RldHlwZXM9ImNjY2NjIgogICAgICAgaW5rc2NhcGU6ZXhwb3J0LWZpbGVuYW1lPSJDOlxVc2Vyc1xNYWRkaWVccGF0aDM3MTMucG5nIgogICAgICAgaW5rc2NhcGU6ZXhwb3J0LXhkcGk9Ijk2IgogICAgICAgaW5rc2NhcGU6ZXhwb3J0LXlkcGk9Ijk2IiAvPgogIDwvZz4KPC9zdmc+Cg==</tw-passagedata><tw-passagedata pid="16" name="Display Badman" tags="" position="725,225">&lt;&lt;if _badman.length &gt; 0&gt;&gt;
     _badman[0]
     &lt;&lt;if _badman.length &gt; 1&gt;&gt;
         //_badman[1]//
@@ -716,17 +962,17 @@ while I’m out here, slogging through the mud, breathing fire,&lt;br&gt;
     &lt;&lt;/if&gt;&gt;
 &lt;&lt;else&gt;&gt;
     &lt;br&gt;
-&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="13" name="Display Caskets" tags="" position="350,225">&lt;&lt;if _caskets.length &gt; 0&gt;&gt;
+&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="17" name="Display Caskets" tags="" position="850,225">&lt;&lt;if _caskets.length &gt; 0&gt;&gt;
     _caskets[0]
 &lt;&lt;else&gt;&gt;
     &lt;br&gt;
-&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="14" name="Display Lover" tags="" position="475,225">&lt;&lt;if _lover.length &gt; 0&gt;&gt;
+&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="18" name="Display Lover" tags="" position="975,225">&lt;&lt;if _lover.length &gt; 0&gt;&gt;
     _lover[0]
 &lt;&lt;else&gt;&gt;
     &lt;br&gt;
-&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="15" name="Display Hands" tags="" position="600,225">&lt;&lt;if _hands.length &gt; 0&gt;&gt;
+&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="19" name="Display Hands" tags="" position="1100,225">&lt;&lt;if _hands.length &gt; 0&gt;&gt;
     _hands[0]&lt;br&gt;
-&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="16" name="Display Floorboards" tags="" position="725,225">&lt;&lt;if _floorboards.length &gt; 0&gt;&gt;
+&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="20" name="Display Floorboards" tags="" position="1225,225">&lt;&lt;if _floorboards.length &gt; 0&gt;&gt;
     _floorboards[0]
     &lt;br&gt;
     &lt;&lt;if _floorboards.length &gt; 1&gt;&gt;
@@ -734,7 +980,7 @@ while I’m out here, slogging through the mud, breathing fire,&lt;br&gt;
     &lt;&lt;/if&gt;&gt;
 &lt;&lt;else&gt;&gt;
     &lt;br&gt;
-&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="17" name="Display NoPartyBack" tags="" position="850,225">I&#39;m sorry I c&lt;&lt;if _nopartyback.length &gt; 0&gt;&gt;_nopartyback[0]&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="18" name="Widgets" tags="widget silently" position="975,225">&lt;&lt;widget &quot;indent&quot;&gt;&gt;&lt;&lt;nobr&gt;&gt;
+&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="21" name="Display NoPartyBack" tags="" position="100,350">I&#39;m sorry I c&lt;&lt;if _nopartyback.length &gt; 0&gt;&gt;_nopartyback[0]&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="22" name="Widgets" tags="widget silently" position="225,350">&lt;&lt;widget &quot;indent&quot;&gt;&gt;&lt;&lt;nobr&gt;&gt;
     &lt;&lt;set _style to &quot;display:inline-block;text-indent:&quot; + $args[0] + &quot;em&quot;&gt;&gt;
     &lt;span @style=&quot;_style&quot;&gt;$args[1]&lt;/span&gt;
 &lt;&lt;/nobr&gt;&gt;&lt;&lt;/widget&gt;&gt;
