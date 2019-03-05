@@ -298,7 +298,7 @@ body.dark {
 }
 
 .mud a {
-	color: rgb(223, 48, 48);
+	color: rgb(219, 12, 12);
 }
 
 .gone {
@@ -313,20 +313,42 @@ body.dark {
     transition: unicode-bidi 100ms ease-in, direction 1000ms ease-in;
 }
 
-.strike {
-  left: -2.5px;
+.strikedef {
+    position: relative;
+    display: block;
 }
-.strike:after {
-  right: 2.5px;
-  background: #fff;
-  transition: width 0.8s cubic-bezier(0.22, 0.61, 0.36, 1);
+.strikedef:before, .strikedef:after {
+    content: '';
+    position: absolute;
+    width: 0%;
+    height: 1px;
+    top: 50%;
+    margin-top: -0.5px;
+	background: rgb(219, 12, 12);
+}
+.strikewait:before {
+    left: -2.5px;
+}
+.strikewait:after {
+    right: 2.5px;
+	background: rgb(219, 12, 12);
+	transition: width 0.8s cubic-bezier(0.22, 0.61, 0.36, 1);
+}
+.strikeit:before {
+	background: rgb(219, 12, 12);
+	width: 100%;
+    transition: width 0.5s cubic-bezier(0.22, 0.61, 0.36, 1);
+}
+.strikeit:after {
+    background: transparent;
+    width: 100%;
+    transition: 0s;
 }
 
 /*CSS for the Heaven passage*/
 .heaven {
 	color: rgb(38, 91, 235);
 }
-
 
 .heaven:hover {
     color: rgb(255, 255, 255);
@@ -635,7 +657,7 @@ What a sweet lady. Sing lady, sing! Of course, she wakes the @@.dragon;dragon.@@
                                     &lt;&lt;indent 15 &quot;And the part where I push you&lt;br&gt;
                                     flush against the wall and every part of your body rubs against the bricks,&quot;&gt;&gt;
                                 &lt;&lt;/append&gt;&gt;
-                            &lt;&lt;next 2s&gt;&gt;
+                            &lt;&lt;next 3s&gt;&gt;
                                 &lt;&lt;append &quot;#toit&quot;&gt;&gt;
                                     &lt;&lt;indent 3 &quot;shut up&quot;&gt;&gt;
                                     &lt;&lt;addclass &quot;#bricks&quot; &quot;gone&quot;&gt;&gt;
@@ -643,13 +665,7 @@ What a sweet lady. Sing lady, sing! Of course, she wakes the @@.dragon;dragon.@@
                             &lt;&lt;next 1s&gt;&gt;
                                 &lt;&lt;append &quot;#toit&quot; t8n&gt;&gt;
                                     &lt;br&gt;I’m getting to 
-                                    &lt;&lt;linkreplace &quot;it.&quot;&gt;&gt;it.&lt;br&gt;
-                                        &lt;&lt;timed 1s t8n&gt;&gt;
-                                            &lt;&lt;append &quot;#princess&quot; t8n&gt;&gt;
-                                                &lt;&lt;include &quot;Princess&quot;&gt;&gt;
-                                            &lt;&lt;/append&gt;&gt;
-                                        &lt;&lt;/timed&gt;&gt;
-                                    &lt;&lt;/linkreplace&gt;&gt;
+                                    [[it.|Princess]]&lt;br&gt;
                                 &lt;&lt;/append&gt;&gt;
                             &lt;&lt;/timed&gt;&gt;
                         &lt;&lt;/linkreplace&gt;&gt;
@@ -687,16 +703,16 @@ I guess I can tell you that
             &lt;&lt;append &quot;#stabbed&quot;&gt;&gt;
             while I’m out here
                 &lt;&lt;addclass &quot;body&quot; &quot;mud&quot;&gt;&gt; slogging through the mud, breathing fire,&lt;br&gt;
+                &lt;div style=&quot;display: inline-block;&quot;&gt;&lt;span id=&quot;clickstrike&quot; class=&quot;strikedef strikewait&quot;&gt;
                 &lt;&lt;timed 1200ms t8n&gt;&gt;
                     &lt;&lt;indent 16 &quot;and&quot;&gt;&gt; getting
-                    &lt;&lt;linkreplace &quot;stabbed&quot;&gt;&gt;stabbed
-                        &lt;&lt;addclass &quot;#stabbed&quot; &quot;strike&quot;&gt;&gt;
+                    &lt;&lt;linkreplace &quot;stabbed&quot;&gt;&gt;stabbed&lt;&lt;toggleclass &quot;#clickstrike&quot; &quot;strikewait strikeit&quot;&gt;&gt;
                         &lt;&lt;replace &quot;#death&quot;&gt;&gt;
                             [[death.|Want]]
                         &lt;&lt;/replace&gt;&gt;              
                     &lt;&lt;/linkreplace&gt;&gt;
                     to @@#death;death.@@
-                &lt;&lt;/timed&gt;&gt;
+                &lt;&lt;/timed&gt;&gt;&lt;/span&gt;&lt;/div&gt;
             &lt;&lt;/append&gt;&gt;
         &lt;&lt;/linkreplace&gt;&gt;@@&lt;br&gt;
         @@#stabbed;@@

@@ -18,16 +18,16 @@ I guess I can tell you that
             <<append "#stabbed">>
             while I’m out here
                 <<addclass "body" "mud">> slogging through the mud, breathing fire,<br>
+                <div style="display: inline-block;"><span id="clickstrike" class="strikedef strikewait">
                 <<timed 1200ms t8n>>
                     <<indent 16 "and">> getting
-                    <<linkreplace "stabbed">>stabbed
-                        <<addclass "#stabbed" "strike">>
+                    <<linkreplace "stabbed">>stabbed<<toggleclass "#clickstrike" "strikewait strikeit">>
                         <<replace "#death">>
                             [[death.|Want]]
                         <</replace>>              
                     <</linkreplace>>
                     to @@#death;death.@@
-                <</timed>>
+                <</timed>></span></div>
             <</append>>
         <</linkreplace>>@@<br>
         @@#stabbed;@@

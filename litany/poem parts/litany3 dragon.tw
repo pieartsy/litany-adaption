@@ -24,7 +24,7 @@ I can tell already you think I’m the
                                     <<indent 15 "And the part where I push you<br>
                                     flush against the wall and every part of your body rubs against the bricks,">>
                                 <</append>>
-                            <<next 2s>>
+                            <<next 3s>>
                                 <<append "#toit">>
                                     <<indent 3 "shut up">>
                                     <<addclass "#bricks" "gone">>
@@ -32,13 +32,7 @@ I can tell already you think I’m the
                             <<next 1s>>
                                 <<append "#toit" t8n>>
                                     <br>I’m getting to 
-                                    <<linkreplace "it.">>it.<br>
-                                        <<timed 1s t8n>>
-                                            <<append "#princess" t8n>>
-                                                <<include "Princess">>
-                                            <</append>>
-                                        <</timed>>
-                                    <</linkreplace>>
+                                    [[it.|Princess]]<br>
                                 <</append>>
                             <</timed>>
                         <</linkreplace>>

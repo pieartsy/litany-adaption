@@ -193,7 +193,7 @@ body.dark {
 }
 
 .mud a {
-	color: rgb(223, 48, 48);
+	color: rgb(219, 12, 12);
 }
 
 .gone {
@@ -208,20 +208,42 @@ body.dark {
     transition: unicode-bidi 100ms ease-in, direction 1000ms ease-in;
 }
 
-.strike {
-  left: -2.5px;
+.strikedef {
+    position: relative;
+    display: block;
 }
-.strike:after {
-  right: 2.5px;
-  background: #fff;
-  transition: width 0.8s cubic-bezier(0.22, 0.61, 0.36, 1);
+.strikedef:before, .strikedef:after {
+    content: '';
+    position: absolute;
+    width: 0%;
+    height: 1px;
+    top: 50%;
+    margin-top: -0.5px;
+	background: rgb(219, 12, 12);
+}
+.strikewait:before {
+    left: -2.5px;
+}
+.strikewait:after {
+    right: 2.5px;
+	background: rgb(219, 12, 12);
+	transition: width 0.8s cubic-bezier(0.22, 0.61, 0.36, 1);
+}
+.strikeit:before {
+	background: rgb(219, 12, 12);
+	width: 100%;
+    transition: width 0.5s cubic-bezier(0.22, 0.61, 0.36, 1);
+}
+.strikeit:after {
+    background: transparent;
+    width: 100%;
+    transition: 0s;
 }
 
 /*CSS for the Heaven passage*/
 .heaven {
 	color: rgb(38, 91, 235);
 }
-
 
 .heaven:hover {
     color: rgb(255, 255, 255);
