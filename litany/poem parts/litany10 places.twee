@@ -1,0 +1,34 @@
+:: Places [section]
+<span id="inthe"><<timed 1s t8n>>
+    In the living room, in the broken yard,<br>
+<<next>>
+    @@.blink;<<indent 9 "in">> the back of the car as the lights go by.@@
+<<next 4s>>
+    <<toggleclass "body" "dark pharmacy">>
+    <<addclass "#inthe" "hide">>
+    <<append "#pharmacy" t8n>>
+        In the airport<br>
+        <<indent 3 "bathroom's">> gurgle and flush, bathed in a pharmacy of<br>
+        unnatural light,
+        @@#hands;<<linkappend "my hands looking weird,">>
+            <<addclass "#hands" "hands">>
+        <</linkappend>>@@
+        @@#face;<<linkappend "my face weird,">>
+            <<addclass "#face" "face">>
+        <</linkappend>>@@
+        @@#feet;<<linkappend "my feet too far away." t8n>>
+            <<addclass "#feet" "feet">>
+            <<timed 5s t8n>>
+                <<addclass "#pharmacy" "hide">>
+                <<toggleclass "body" "pharmacy bathroom">>
+                <<append "#airplane">>
+                     And then the airplane, the window seat over the wing with [[a view|Arrived]]<br>
+                    <<indent 16 "of">> the wing and a little foil bag of peanuts.
+                <</append>>
+            <</timed>>
+        <</linkappend>>@@
+    <</append>>
+<</timed>>
+</span>
+@@#pharmacy;@@<br>
+@@#airplane;@@

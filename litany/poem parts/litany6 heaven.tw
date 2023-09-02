@@ -21,7 +21,8 @@ you know the story, simply
                     <<append "#deer">>
                         only a clearing with deer in it. Hello
                         <<linkreplace "deer.">>deer.<br>
-                            <<replace "#head">><br>
+                            <<replace "#head">><br><</replace>>
+                            <<replace "#glass">><br><br>
                                <<indent 7 "Inside your head">>
                                     <<linkreplace " the sound of glass,">><br>
                                         <<removeclass "body" "forest">>
@@ -60,6 +61,7 @@ you know the story, simply
                                         <<linkreplace "motion.">>
                                             <<removeclass "body" "flames">>
                                             <<addclass "#head" "gone">>
+                                            <<addclass "#glass" "gone">>
                                             <<append "#sorry">>
                                                 <<include "Sorry">>
                                             <</append>>
@@ -76,7 +78,8 @@ you know the story, simply
             <</replace>>
         <</silently>>
     <</linkreplace>>
-</span>
+</span><br>
 @@#head;@@
 @@#deer;@@
+@@#glass;@@
 @@#sorry;@@

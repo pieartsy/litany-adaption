@@ -1,1 +1,1 @@
-tweego -o litany.html litany
+tweego -s Jerusalem -o litany.html litany

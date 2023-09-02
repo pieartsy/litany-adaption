@@ -1,4 +1,4 @@
-:: Start
+:: Start [section]
 An adaption of [[Litany In Which Certain Things Are Crossed Out | https://www.poetryfoundation.org/poems/48158/litany-in-which-certain-things-are-crossed-out]] by Richard Siken.<br>
 <br>
 This current version is incomplete.<br><br>
@@ -27,7 +27,7 @@ This current version is incomplete.<br><br>
     <<set _nopartytime to _noparty[0].length * 50 + 'ms'>>
     <<set _nopartybacktime to _nopartyback[0].length * 50 + 'ms'>>
 <</silently>>
-@@#begin;Every morning the <<linkreplace "maple leaves." t8n>>maple leaves.<br>
+@@#begin;Every morning the maple <<linkreplace "leaves." t8n>>leaves.<br>
 <<indent 8 "Every morning another chapter where the hero shifts">><br>
 <<indent 3 "from one foot to the other. Every morning the same big">><br>
 and little words

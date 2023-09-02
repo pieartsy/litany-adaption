@@ -1,32 +1,32 @@
 :: Widgets [widget silently]
 <<widget "indent">><<nobr>>
-    <<set _style to "display:inline-block;text-indent:" + $args[0] + "em">>
-    <span @style="_style">$args[1]</span>
+    <<set _style to "display:inline-block;text-indent:" + _args[0] + "em">>
+    <span @style="_style">_args[1]</span>
 <</nobr>><</widget>>
 
 <<widget "backspace">>
 /*<<backspace "$badman" "#badman" "Display Badman">>*/
-    <<if $args[3] is "stay">>
+    <<if _args[3] is "stay">>
         <<script>>
             const $el = $(State.variables.args[1]);
             $el.css('width', $el.width() + 'px');
         <</script>>
     <</if>>
-    <<set _current to $args[0].length - 1>>    /* Third element of the array. */
+    <<set _current to _args[0].length - 1>>    /* Third element of the array. */
     <<repeat 5ms>>
-        <<if $args[0].length > 0>>
+        <<if _args[0].length > 0>>
             /* Check if the current phrase has content. */
-            <<if $args[0][_current].length > 0>>
-                <<set $args[0][_current] to $args[0][_current].slice(0, -1)>>
-                <<replace $args[1]>><<include $args[2]>><</replace>>
+            <<if _args[0][_current].length > 0>>
+                <<set _args[0][_current] to _args[0][_current].slice(0, -1)>>
+                <<replace _args[1]>><<include _args[2]>><</replace>>
                 /* If all of the current phrase has been deleted. */
-                <<if $args[0][_current].length is 0>>
-                    <<run $args[0].deleteAt(_current)>>
+                <<if _args[0][_current].length is 0>>
+                    <<run _args[0].deleteAt(_current)>>
                     <<set _current -= 1>>
                 <</if>>
             <<else>>
                 /* The current phrase is an empty string. */
-                <<run $args[0].deleteAt(_current)>>
+                <<run _args[0].deleteAt(_current)>>
                 <<set _current -= 1>>
             <</if>>
         <<else>>
@@ -40,17 +40,23 @@
 <<widget typewriter>>
     <<set _textArrayLength to 0>>
     <<repeat 5ms>>
-        <<if _textArrayLength gte $args[0].length>>
+        <<if _textArrayLength gte _args[0].length>>
             <<stop>>
         <<else>>
-            <<append $args[1]>>$args[0][_textArrayLength]<</append>>
+            <<append _args[1]>>_args[0][_textArrayLength]<</append>>
             <!-- Update the length -->
             <<set _textArrayLength++>>
         <</if>>
     <</repeat>>
 <</widget>>
 
-<<widget "timer">>
-    <<set `$args[0] + 'time'` to $args[0].length * $args[1] + 'ms'>>
-    <<print `$args[0] + time`>>
+<<widget linkphrase container>>
+    <<set _phrase = _contents.split("=")>>
+    <<run console.log(_phrase)>>
+    <<set _linkphrase = _phrase.pop()>>
+    <<for _name range _phrase>>
+        <<set _linkphrase = `<<linkappend '` + _phrase.pop() + `' t8n>> ` + _linkphrase + ` <</linkappend>>`>>
+    <</for>>
+    _linkphrase
+    <<run console.log(_linkphrase)>>
 <</widget>>

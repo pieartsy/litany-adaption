@@ -1,0 +1,30 @@
+html[data-tags~=email] {
+    font: unset;
+    padding-left: unset;
+
+}
+
+body[data-tags~=email] {
+    background-color: unset;
+	font: unset;
+}
+
+.passage[data-tags~=email] a {
+    color: #0060df;
+    font: unset;
+    text-decoration: underline;
+}
+
+.passage[data-tags~=email] a:hover {
+    color: unset;
+    font: unset;
+}
+
+.passage[data-tags~=email] a:after {
+    content: '';
+}
+
+#passages[data-tags~=email] {
+    max-width: unset;
+    margin: unset;
+}

@@ -1,9 +1,10 @@
 :: Hysterical [section]
 <<silently>>
 <<set _love to ["Love, for you,\n" ,"is larger than the usual romantic love. It’s like a religion. It’s\n", "terrifying. No one\n", "will ever want to sleep with you."]>>
-<<set _lovetime to _love[0].length * 43 + 'ms'>>
-<<set _loveonetime to _love[1].length * 43 + 'ms'>>
-<<set _lovetwotime to _love[2].length * 43 + 'ms'>>
+<<set _lovetime to _love[0].length * 55 + 'ms'>>
+<<set _loveonetime to _love[1].length * 55 + 'ms'>>
+<<set _lovetwotime to _love[2].length * 55 + 'ms'>>
+<<set _lovethreetime to _love[3].length * 55 + 2000 + 'ms'>>
 <</silently>>
 We were inside the train car when I started to cry. You were crying too,<br>
 <<indent 3 "smiling and crying in a way that made me">><br>
@@ -16,12 +17,15 @@ even more hysterical. You said @@#actually;I could have anything I wanted, but I
         <<timed _lovetime>>
             <<typewriter _love[1] "#loveone">>
         <<next _loveonetime>>
-             <<typewriter _love[2] "#lovetwo">>
+            <<typewriter _love[2] "#lovetwo">>
         <<next _lovetwotime>>
-             <<typewriter _love[3] "#lovethree">>
+            <<typewriter _love[3] "#lovethree">>
+        <<next _lovethreetime>>
+            <<append "#jerusalem" t8n>><<include "Jerusalem">><</append>>
         <</timed>>
 <</linkreplace>>
 @@#love;font-family:courier new, courier, monospace;font-style:italic;@@
 @@#loveone;display:inline-block;text-indent:8em;font-family:courier new, courier, monospace;font-style:italic;@@
 @@#lovetwo;display:inline-block;text-indent:24em;font-family:courier new, courier, monospace;font-style:italic;@@
 @@#lovethree;display:inline-block;text-indent:20em;font-family:courier new, courier, monospace;font-style:italic;@@
+<br>@@#jerusalem;@@

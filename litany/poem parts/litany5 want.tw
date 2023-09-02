@@ -30,7 +30,6 @@
                                                 <<addclass "#flashlights" "gone">>
                                                 <<append "#microphone">>
                                                     Is this microphone [[live? | Heaven]]
-                                                    <<removeclass "body">>
                                                     <<addclass "body" "dark">>
                                                 <</append>>
                                             <</linkreplace>>

@@ -1,6 +1,64 @@
-::Happy [section]
-Here is the part where everyone was happy all the time and we were all<br>
+:: Happy [section]
+<span id="part">Here is the part where @@#happy;everyone was happy all the time and we were all<br>
 <<indent 4 "forgiven,">><br>
-even though we didn’t deserve it.<br><br>
-
-[[Begin]]
+even though@@ we didn’t
+<<linkreplace "deserve it." t8n>>
+    <<addclass "#happy" "hide">>
+    deserve it.
+    <<append "#part" t8n>><br>
+        <<indent 18 "Inside">> your head you hear
+        a phone ringing,<br>
+        and when you open your
+        <<linkreplace "eyes" t8n>>
+            <<addclass "body" "bathroom">>
+            <<append "#towel" t8n>> you’re washing up<br>
+                <<indent 3 "in">> a stranger’s bathroom,<br>
+                standing by the window in a yellow towel, only twenty minutes away<br>
+                <<indent 7 "from">>
+                <<linkreplace "the dirtiest thing you know." t8n>><br>
+                    <<append "#castle" t8n>>
+                        <<addclass "#towel" "gone">>
+                        <<addclass "#part" "gone">>
+                        <span id="rooms" class="hide" style="position:absolute;z-index:10;">
+                        <<linkphrase>>
+                            All=
+                            <<addclass "body" "all">>the=
+                            <<toggleclass "body" "all the1">>rooms=
+                            <<toggleclass "body" "the1 rooms">>of=
+                            <<toggleclass "body" "rooms of">>the=
+                            <<toggleclass "body" "of the2">>castle=
+                            <<toggleclass "body" "the2 castle">>except=
+                            <<toggleclass "body" "castle except">>
+                            <<linkreplace "this one," t8n>>
+                                <<removeclass "body" "except bathroom">>
+                                <<addclass "#castle" "hide">>
+                                <<append "#darkness" t8n>>
+                                    and suddenly
+                                    <<timed 500ms t8n>>
+                                        <<addclass "body" "dark">>
+                                        <<indent 24 "darkness,">><br>
+                                    <<next 3s>>
+                                        <<indent 22 "suddenly">> only darkness.<br>
+                                    <<next 2s>>
+                                        <<addclass "#darkness" "hide">>
+                                        <<append "#places">>
+                                            <<include "Places">>
+                                        <</append>>
+                                    <</timed>>
+                                <</append>>
+                            <</linkreplace>>
+                        <</linkphrase>></span>
+                        <<linkappend "<<indent 17.5 'says'>> someone," t8n>>
+                            <<addclass "#rooms" "show">>
+                        <</linkappend>>
+                    <</append>>
+                <</linkreplace>>
+            <</append>>
+        <</linkreplace>>
+    <</append>>
+<</linkreplace>>
+</span>
+@@#towel;@@
+@@#castle;@@
+@@#darkness;@@
+@@#places;@@

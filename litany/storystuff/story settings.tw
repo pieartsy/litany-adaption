@@ -1,5 +1,9 @@
-::StoryTitle
+:: StoryTitle
 Litany Adaption
 
-::StorySettings
-ifid:4ffd855a-bb02-4ee0-9c21-9d99f47ee3fa
+:: StoryData
+{
+    "ifid": "4FFD855A-BB02-4EE0-9C21-9D99F47EE3FA",
+    "format": "SugarCube",
+    "format-version": "2.36.1"
+}

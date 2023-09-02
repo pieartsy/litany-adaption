@@ -1,4 +1,4 @@
-::Dragon [section]
+:: Dragon [section]
 I can tell already you think I’m the
 @@.dragon;<<linkreplace "dragon," t8n>>@@.dragon;dragon,@@
     <<silently>><<addclass "#that" "show">>

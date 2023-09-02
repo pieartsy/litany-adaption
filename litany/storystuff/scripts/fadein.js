@@ -1,4 +1,3 @@
-:: Fadein [script]
 // fading macro set, by chapel; for SugarCube 2
 // version 1.1.0
 // see the documentation: https://github.com/ChapelR/custom-macros-for-sugarcube-2#fading-macros

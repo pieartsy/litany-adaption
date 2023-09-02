@@ -1,4 +1,4 @@
-::Sorry [section]
+:: Sorry [section]
 @@.darling;<<indent 3 "Hello darling,">>@@
 <<linkreplace "sorry">>sorry
     <<append "#sorryelbows" t8n>><br>

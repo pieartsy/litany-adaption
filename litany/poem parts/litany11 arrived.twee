@@ -1,0 +1,31 @@
+:: Arrived [section]
+I arrived in the city and you met me at the
+<<linkappend "station," t8n>>
+    <<append "#down" t8n>>Down the
+        <<linkappend "alley," t8n>> around the
+            <<linkappend "arcade," t8n>><br>
+                <<indent 2 "up">> the stairs of the
+                <<linkappend "building" t8n>><br>
+                    to the little room with the broken faucets, your drawings, all your things,<br>
+                    <<indent 12 "I">> looked out the window and <<linkappend "said" t8n>>
+                        <br>
+                        //<<indent 8 "This">> doesn’t look that much different from home,//<br>
+                        <<addclass "body" "darkslow">>
+                        <<timed 1s t8n>>
+                            <<indent 2 "because">> it didn’t,<br>
+                        <<next 4s>>
+                            @@.blink;but then I noticed the black sky and all those lights.@@
+                        <<next>><br>
+                            <<indent 10 "We">> walked through the house to the elevated train.<br>
+                            <<indent 2 "All">> these buildings, all that glass and the shiny beautiful<br>
+                            <<indent 24 "mechanical">> [[wind.|Hysterical]]
+                        <</timed>>
+                    <</linkappend>>
+                <</linkappend>>
+            <</linkappend>>
+        <</linkappend>>
+    <</append>>
+<</linkappend>><br>
+<<indent 2 "smiling">> in a way<br>
+<<indent 4 "that">> made me frightened.
+@@#down;@@

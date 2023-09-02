@@ -40,10 +40,11 @@ textarea.macro-typesim:focus {
 
 body {	
 	background-color: #e0d2b7;
-	color: rgb(20, 20, 19);
+	color: #141413;
 	font-family: 'Vollkorn', serif;
 	font-size: 125%;
 }
+
 @media screen and (min-width: 720px) {
     #story {
 		padding-left: 20%;
@@ -112,7 +113,7 @@ body.spotlightthree {
 	color: rgb(255, 252, 213);
   }
 
-body.dark {
+.dark {
 	background-color: black;
 	color: rgb(255, 252, 213);
 }
@@ -162,10 +163,6 @@ body.dark {
 }
 
 /*Dragon text (makes it black, and red on link*/
-.dragon {
-	color: rgb(0, 0, 0);
-	font-weight: bold;
-}
 
 .dragon a {
 	color: rgb(223, 26, 0);
@@ -198,14 +195,6 @@ body.dark {
 
 .gone {
 	visibility:hidden;
-}
-
-.mirror {
-	unicode-bidi:bidi-override;
-	direction:rtl;
-	-webkit-transition: unicode-bidi 100ms ease-in, direction 1000ms ease-in;
-    -ms-transition: unicode-bidi 100ms ease-in, direction 1000ms ease-in;
-    transition: unicode-bidi 100ms ease-in, direction 1000ms ease-in;
 }
 
 .strikedef {
@@ -253,3 +242,163 @@ body.dark {
 	-ms-transition: text-shadow 1000ms, color 1000ms;
 	transition: text-shadow 1000ms, color 1000ms;
 	}
+
+
+/*CSS for the Happy passage*/
+.bathroom {
+	color: rgb(255, 237, 71);
+	background-color:#7d8c99;
+    -webkit-transition: background-color 1000ms ease-in, color 1000ms ease-in;
+    -ms-transition: background-color 1000ms ease-in, color 1000ms ease-in;
+	transition: background-color 1000ms ease-in, color 1000ms ease-in;
+}
+
+.all {
+	color: rgb(211, 13, 89);
+	background-color:#ffb1cb;
+    -webkit-transition: background-color 500ms ease-in, color 500ms ease-in;
+    -ms-transition: background-color 500ms ease-in, color 500ms ease-in;
+	transition: background-color 500ms ease-in, color 500ms ease-in;
+}
+
+.the1 {
+	color: rgb(126, 57, 0);
+	background-color:#ff9d5c;
+    -webkit-transition: background-color 500ms ease-in, color 500ms ease-in;
+    -ms-transition: background-color 500ms ease-in, color 500ms ease-in;
+	transition: background-color 500ms ease-in, color 500ms ease-in;
+}
+
+.rooms {
+	color: rgb(206, 168, 0);
+	background-color:#fff1b4;
+    -webkit-transition: background-color 500ms ease-in, color 500ms ease-in;
+    -ms-transition: background-color 500ms ease-in, color 500ms ease-in;
+	transition: background-color 500ms ease-in, color 500ms ease-in;
+}
+
+.of {
+	color: rgb(21, 95, 27);
+	background-color:#7bc06d;
+    -webkit-transition: background-color 500ms ease-in, color 500ms ease-in;
+    -ms-transition: background-color 500ms ease-in, color 500ms ease-in;
+	transition: background-color 500ms ease-in, color 500ms ease-in;
+}
+
+.the2 {
+	color: rgb(13, 99, 99);
+	background-color:#90ffff;
+    -webkit-transition: background-color 500ms ease-in, color 500ms ease-in;
+    -ms-transition: background-color 500ms ease-in, color 500ms ease-in;
+	transition: background-color 500ms ease-in, color 500ms ease-in;
+}
+
+.castle {
+	color: rgb(31, 37, 124);
+	background-color:#568bff;
+    -webkit-transition: background-color 500ms ease-in, color 500ms ease-in;
+    -ms-transition: background-color 500ms ease-in, color 500ms ease-in;
+	transition: background-color 500ms ease-in, color 500ms ease-in;
+}
+
+.except {
+	color: rgb(66, 16, 99);
+	background-color:#a65fcf;
+    -webkit-transition: background-color 500ms ease-in, color 500ms ease-in;
+    -ms-transition: background-color 500ms ease-in, color 500ms ease-in;
+	transition: background-color 500ms ease-in, color 500ms ease-in;
+}
+
+.except a:hover {
+	color: red;
+}
+
+/*CSS for Places passage */
+.blink
+{
+  background-image: linear-gradient(
+    -225deg,
+    black 0%,
+	rgb(255, 252, 213) 50%,
+	black 100%
+  );
+  background-size: auto auto;
+  background-clip: border-box;
+  background-size: 200% auto;
+  color: rgb(255, 252, 213) 50%;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: textclip 3s linear infinite reverse;
+}
+
+@keyframes textclip {
+  to {
+    background-position: 200% center;
+  }
+}
+
+.pharmacy {
+  color: rgb(255, 237, 71);
+  animation: flicker 3s linear infinite alternate;
+}
+
+@keyframes flicker {
+	0% {
+		background-color:#72818f;    }
+    30% {
+		background-color:#788a99;    }
+    50% {
+		background-color:#768491;    }
+    100% {
+		background-color:#8695a3;    }
+}
+
+.hands {
+  	animation: hands 20s ease-in-out infinite alternate;
+	position: relative;
+	display: inline-block;
+}
+
+@keyframes hands {
+	0% {translate: 0;}
+	25% {translate: -3px 5px;}
+	50% {translate: 4px -2px;}
+	75% {translate: 6px 1px;}
+	100% {translate: -2px -3px;}
+}
+
+.face {
+	animation: face 10s ease-in-out infinite alternate;
+	position: relative;
+	display: inline-block;
+}
+
+@keyframes face {
+	0% {rotate: 0;}
+	30% {rotate: 2deg;}
+	60% {rotate: -3deg;}
+	80% {rotate: 1deg;}
+	100% {rotate: -2;}
+}
+
+.feet {
+	animation: feet 10s ease-in-out infinite alternate;
+	position: relative;
+	display: inline-block;
+}
+
+@keyframes feet {
+	0% {scale: 1;}
+	45% {scale: 1.05 1}
+	100% {scale: 1;}
+}
+
+/*CSS for arrived passage */
+.darkslow {
+	background-color: black;
+	color: rgb(255, 252, 213);
+	-webkit-transition: background-color 6000ms ease-in, color 6000ms ease-in;
+    -ms-transition: background-color 6000ms ease-in, color 6000ms ease-in;
+    transition: background-color 6000ms ease-in, color 6000ms ease-in;
+}
